@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <!-- Q circle (dark blue ring) -->
+  <circle cx="75" cy="72" r="58" stroke="#2B4E8C" stroke-width="11" fill="none"/>
+  <!-- Q tail (diagonal, extends from lower-right of circle) -->
+  <line x1="108" y1="108" x2="148" y2="148" stroke="#2B4E8C" stroke-width="11" stroke-linecap="round"/>
+  <!-- I vertical bar (lighter blue, slightly left of center, extends above and below circle) -->
+  <rect x="68" y="8" width="11" height="128" rx="1" fill="#4A82BA"/>
+</svg>

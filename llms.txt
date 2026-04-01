@@ -1,0 +1,59 @@
+# Mainstreet IQ
+
+> Mainstreet IQ is a fractional CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm works across e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. Every engagement is built on the proprietary RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
+
+## Core Services
+
+- [Fractional CFO — Ongoing](https://www.mainstreetiq.com/our-services): 10–15 hours/week embedded finance leadership covering month-end close, cash/margin visibility, investor reporting, and cross-functional strategy.
+- [Advisory — Light Touch](https://www.mainstreetiq.com/our-services): ~10 hours/month strategic oversight for companies with existing finance teams.
+- [Project-Based](https://www.mainstreetiq.com/our-services): Discrete engagements — financial modeling, M&A preparation, close process redesign, investor reporting packages.
+
+## About
+
+- [About Scott Hess](https://www.mainstreetiq.com/about): 20+ years CFO experience. Former CFO at Watch Gang ($40M subscription ecommerce) and Haberdash (luxury menswear). 12 years at Northern Trust in institutional finance. Navy veteran. MBA from Pepperdine Graziadio School of Business.
+
+## Case Studies
+
+- [E-Commerce: $15M Company](https://www.mainstreetiq.com/our-work/e-commercegrowth): Scaling finance through hypergrowth — inventory forecasting, margin analysis by channel, KPI dashboards, enterprise accounting migration.
+- [Manufacturing: $300M Divestiture](https://www.mainstreetiq.com/our-work/divesting-manufacturer): Financial carve-out, standalone financials, data room construction, deal support for business unit sale.
+- [Apparel/DTC: $10M Brand](https://www.mainstreetiq.com/our-work/designer-led-apparel): Product costing, seasonal cash flow forecasting, channel profitability analysis, working capital optimization.
+- [Hospitality: Six-Location Restaurant Group](https://www.mainstreetiq.com/our-work/restaurant-group): Unified multi-location reporting, food/labor cost controls, expansion modeling for coastal California restaurants.
+- [Turnaround: Asset Purchase](https://www.mainstreetiq.com/our-work/asset-purchase): Management-led acquisition from bankruptcy — valuation, financing, 100-day integration, finance function built from scratch.
+- [SaaS: Post-Seed Series A Prep](https://www.mainstreetiq.com/our-work/saas-post-seed-funding): SaaS metrics implementation (ARR, MRR, CAC, LTV, churn), cohort analysis, revenue recognition, investor-ready reporting.
+- [Family Office](https://www.mainstreetiq.com/our-work/family-office): Unified reporting across PE, real estate, operating businesses. Institutional-grade investment analysis and multigenerational governance.
+
+## The RAID Framework
+
+Every engagement is structured around four principles:
+- **Redundant**: Documented, cross-trained processes — no single points of failure.
+- **Agile**: Automation-first — build systems before hiring people.
+- **Intelligent**: Finance teams as owner-operators, not scorekeepers.
+- **Data-Driven**: Every team member owns 3–5 KPIs tied to real business levers.
+
+## Contact
+
+- [Book a 30-Minute Call](https://calendly.com/scott_mainstreetiq/30min): Free initial consultation.
+- [Contact Page](https://www.mainstreetiq.com/contact): Calendly booking and contact information.
+- [LinkedIn](https://www.linkedin.com/in/johnscotthess): Scott Hess profile.
+
+## Blog — Finance Insights
+
+### Latest Posts
+- [The Cash Flow Illusion](https://www.mainstreetiq.com/blog/the-cash-flow-illusion): How cash hides in inventory, accounts receivable, and expense timing — and the 13-week forecast that fixes it. (December 2025)
+- [Your MER Looks Healthy. Here's Why Your Margin Is Still Disappearing.](https://www.mainstreetiq.com/blog/mer-margin-disappearing): Marketing efficiency ratio vs. contribution margin — why the metric everyone watches isn't the one that matters. (November 2025)
+- [If Your Month-End Close Takes More Than 7 Days](https://www.mainstreetiq.com/blog/month-end-close): How to go from an 18-day close to a 5-day close in 90 days. (October 2025)
+
+### The RAID Framework Series (8 parts)
+- [Why Most Finance Teams Fail to Scale](https://www.mainstreetiq.com/blog/why-finance-teams-fail-to-scale): The pattern of finance breaking at $20M — and the 4 failure modes. Series opener. (June 2025)
+- [Automate First — Why Tools Come Before People](https://www.mainstreetiq.com/blog/automate-first): The "Agile" principle — automation before headcount. AP, AR, expense, and reconciliation automation. (June 2025)
+- [Build Redundant Finance — No More Single Points of Failure](https://www.mainstreetiq.com/blog/build-redundant-finance): The "Redundant" principle — documentation, cross-training, and system access redundancy. (July 2025)
+- [Stay Agile — Shrink the Team, Grow the Revenue](https://www.mainstreetiq.com/blog/stay-agile): Organizational agility — why a $25M company needs 3 finance people, not 8. (July 2025)
+- [Intelligent Teams Think Like Owners](https://www.mainstreetiq.com/blog/intelligent-teams): The "Intelligent" principle — scorekeepers vs. owner-operators. Building teams that drive decisions. (July 2025)
+- [Moneyball Metrics — The 3–5 KPIs Each Role Must Own](https://www.mainstreetiq.com/blog/moneyball-metrics): The "Data-Driven" principle — stage-based KPI selection and ownership by role. (July 2025)
+- [RAID Tech Stack — Tools That Reduce FTEs](https://www.mainstreetiq.com/blog/raid-tech-stack): The specific tools — QBO vs NetSuite, Bill.com, Ramp, FloQast, Mosaic. (July 2025)
+- [Investor-Ready Finance — Fewer FTE, More Control](https://www.mainstreetiq.com/blog/investor-ready-finance): The 5 things investors look for in your finance function. Series conclusion. (July 2025)
+
+## Optional
+
+- [Central Coast IQ](https://www.mainstreetiq.com/central-coast-iq): Wine country intelligence and back office operations for owner-operator wineries on California's Central Coast.
+- [All Case Studies](https://www.mainstreetiq.com/our-work): Full portfolio of anonymized engagement summaries.

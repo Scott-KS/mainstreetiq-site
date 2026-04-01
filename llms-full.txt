@@ -1,0 +1,228 @@
+# Mainstreet IQ — Full Site Content
+
+> Mainstreet IQ is a fractional CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm specializes in e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. All engagements use the RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
+
+---
+
+## Homepage
+
+### Value Proposition
+
+Finance Teams Break. RAID Teams Scale.
+
+Most companies hit a wall at $20M. The close takes three weeks. Margins are a mystery. The CEO is flying blind. It's not a people problem — it's a systems problem. Mainstreet IQ fixes it.
+
+### Key Metrics
+- 20+ years of CFO experience
+- 5-day average book close
+- $10M–$300M client revenue range
+- 100% embedded, not advisory
+
+### The Problem: You've Outgrown Your Finance Function
+
+The tools that worked at $8M don't work at $20M. Common symptoms:
+
+- **Slow Closes**: Monthly close takes weeks, not days. Decisions are made before numbers arrive.
+- **No Margin Visibility**: Can't tell which products, channels, or customers make money.
+- **Knowledge Silos**: One person holds all the keys. If they leave, finance collapses.
+- **Spreadsheet Chaos**: Critical decisions run through disconnected spreadsheets nobody trusts.
+- **Cash Flow Surprises**: No forecasting, no runway visibility, no early warning system.
+- **Investor Anxiety**: Board meetings feel like fire drills. Reporting wouldn't survive due diligence.
+
+### The RAID Operating System
+
+Every engagement is built on four principles:
+
+- **Redundant**: Documented, cross-trained processes. No single points of failure. Finance runs whether any one person is there or not.
+- **Agile**: Automation-first. Build systems before hiring people. Technology handles repetitive work so the team handles thinking.
+- **Intelligent**: Finance teams operate as owner-operators, not scorekeepers. They don't just report what happened — they drive what happens next.
+- **Data-Driven**: Every team member owns 3–5 KPIs tied to real business levers. Real-time visibility into cash, margins, and metrics that matter.
+
+### Social Proof
+
+Clients include IPS Corporation, RTA, Warner Loughlin, Watch Gang, and Simkhai.
+
+Testimonial: "Scott helped us close our books in under 5 days and finally gave us real visibility into our margins. It changed how we run the business." — CEO, $30M Ecommerce Brand
+
+### FAQ
+
+**What is a fractional CFO?**
+A fractional CFO is an experienced Chief Financial Officer who works with your company on a part-time basis — typically 10–15 hours per week. Unlike a consultant who delivers a report and leaves, a fractional CFO embeds in your operations. They attend your meetings, manage your finance team, and own the numbers. It's ideal for companies between $15M and $100M that need senior finance leadership but aren't ready for a $400K+ full-time hire.
+
+**How is a fractional CFO different from a bookkeeper or controller?**
+A bookkeeper records transactions. A controller ensures accuracy and compliance. A CFO drives strategy. A fractional CFO sits in leadership meetings, builds financial models that inform decisions, negotiates with banks and investors, and designs the systems that make your finance function scale. It's the difference between knowing what happened last month and knowing what to do next month.
+
+**What does the RAID Framework mean?**
+RAID stands for Redundant, Agile, Intelligent, and Data-Driven. It means no single points of failure in your finance team. Automation before headcount. Finance people who think like operators. And KPIs tied to real business levers. It's the operating system we install in every engagement.
+
+**How much does a fractional CFO cost?**
+A full-time CFO at a growth-stage company typically costs $300K–$500K in total compensation. Fractional CFO services run at a fraction of that — the exact cost depends on the engagement model (ongoing, advisory, or project-based) and hours needed. We scope every engagement to your specific situation during an initial call.
+
+**What industries do you work with?**
+We work across e-commerce and DTC brands, SaaS companies, manufacturers, restaurant and hospitality groups, designer-led apparel brands, PE-backed companies, and family offices. The common thread is companies between $10M and $300M that have outgrown their finance infrastructure.
+
+**How quickly will I see results?**
+Most clients have a 5-day close process within 90 days. Real-time dashboards and KPI tracking are typically live within the first month. The timeline depends on your current systems and team, but the RAID Framework is designed for fast implementation — we build systems while operating inside them.
+
+---
+
+## About Scott Hess
+
+### Bio
+
+"I Don't Report on the Business. I Run Inside It."
+
+Scott Hess is a CFO with 20+ years of experience building finance functions that operationalize business decisions. He has worked across DTC, ecommerce, SaaS, and PE-backed companies ranging from $10M to $300M in revenue. He is a Navy veteran with an MBA from Pepperdine's Graziadio School of Business.
+
+### Experience
+
+**Watch Gang — CFO**
+$40M subscription ecommerce company.
+Results: 5% CAC reduction, 7% retention increase, 40% faster close cycle, 22% ARR growth with 12% OPEX reduction.
+
+**Haberdash — CFO, VP Operations**
+Luxury menswear retailer.
+Results: Restructured sales compensation around profitability (23% sales increase, 9% comp expense reduction). Led Shopify migration with 30% ecommerce revenue growth.
+
+**Northern Trust — 12 years**
+Institutional finance, modeling, M&A due diligence, ERP implementation.
+
+### Capabilities
+- RAID Framework implementation
+- Finance function optimization
+- Marketing analytics integration
+- Supply chain strategy
+- Organizational design
+
+---
+
+## Services
+
+### Engagement Models
+
+**Fractional CFO — Ongoing (10–15 hours/week)**
+Embedded finance leadership. Month-end close, cash and margin visibility, investor reporting, cross-functional strategy — without full-time cost. Weekly on-site presence plus remote availability.
+
+**Advisory — Light Touch (~10 hours/month)**
+Strategic oversight for companies with competent finance teams. Senior-level perspective on major decisions and growth planning.
+
+**Project-Based (Defined scope)**
+Discrete engagements: financial modeling, finance team assessments, close process redesign, M&A preparation, investor reporting packages.
+
+### Promised Outcomes
+- Book closes in 5 days or less
+- Real-time visibility into cash, margin, and KPIs
+- Finance team ready for investor scrutiny
+- No knowledge silos
+- Systems that scale without adding headcount
+- Clean financials that survive due diligence
+
+---
+
+## Case Studies
+
+### $15M E-Commerce Company — Scaling Finance Through Hypergrowth
+
+**Industry**: E-Commerce
+**Challenge**: 20%+ annual growth with finance processes from $8M stage. Inventory managed by intuition, invisible margins by channel, no real-time profitability.
+
+**Solutions**:
+- Inventory & Cash Flow Integration: Forecasting models tied to cash flow projections
+- Margin Analysis: Contribution margin tracking by product line and marketing channel
+- KPI Dashboard: Unified CAC, LTV, inventory turns, fulfillment cost tracking
+- Strategic Finance: Warehouse vs 3PL economics, credit facilities, QuickBooks to enterprise migration
+
+**Engagement**: 25–30 hours/month, weekly on-site, embedded operational role.
+
+### $300M Manufacturer — Divesting a Business Unit at Maximum Value
+
+**Industry**: Manufacturing
+**Challenge**: Making a business unit look like a standalone profitable business for sale, not a cost center.
+
+**Solutions**:
+- Financial Carve-Out: Clean standalone financials, proper shared services allocation
+- Deal Support: Investment banking coordination, data room construction, buyer inquiry management
+- Post-Divestiture: P&L impact modeling, overhead obligation identification, transition service agreements
+
+**Engagement**: Project-based with success fee tied to transaction value.
+
+### $10M Designer-Led Apparel Brand — Building Financial Infrastructure
+
+**Industry**: Apparel / DTC
+**Challenge**: Had product-market fit but lacked financial infrastructure. Unpredictable seasonal cash flow, estimated margins, production decisions without cost visibility.
+
+**Solutions**:
+- Product Costing: Detailed models with margin transparency before production
+- Cash Flow Forecasting: Seasonal forecasting tied to fashion calendar
+- Channel Profitability: Analysis across wholesale, DTC, department store channels
+- Working Capital: Inventory management, renegotiated manufacturer terms
+- Investment-Ready Packages: Financial documentation for partnerships
+
+**Engagement**: 20 hours/month retainer with surge capacity during peak seasons.
+
+### Six-Location Restaurant Group — Financial Discipline
+
+**Industry**: Hospitality
+**Challenge**: Six California Central Coast locations operating independently with inconsistent reporting and no cross-portfolio visibility.
+
+**Solutions**:
+- Standardization: Unified financial reporting across all locations
+- Operational Controls: Food/labor cost systems, centralized purchasing, multi-location KPI dashboard
+- Financial Planning: Expansion models, seasonal cash flow analysis, reserve requirements, bank lending preparation
+
+**Engagement**: Bi-weekly on-site rotation plus monthly reviews.
+
+### Management-Led Asset Purchase — Building from Bankruptcy
+
+**Industry**: Turnaround
+**Challenge**: Acquiring assets from bankrupt company. Required rapid execution, lender persuasion, and operational readiness from day one.
+
+**Solutions**:
+- Pre-Close: Valuation, financing proposals, comprehensive financial modeling
+- Post-Close: 100-day integration plan, accounting systems from scratch, internal controls, reporting cadences
+- Stabilization: Quick-win profitability improvements, milestone-based tracking
+
+**Engagement**: 30+ hours/week during acquisition, scaled to retainer once stabilized.
+
+### SaaS Company Post-Seed — Series A Preparation
+
+**Industry**: SaaS
+**Challenge**: Needed financial infrastructure for Series A. Inconsistent metrics, unformalized revenue recognition, cap table not integrated with financial story.
+
+**Solutions**:
+- Metrics: Proper SaaS metrics (ARR, MRR, CAC, LTV, churn) with consistent definitions
+- Cohort Analysis: Customer acquisition, retention, and funnel visibility
+- Financial Modeling: Product milestones connected to revenue projections
+- Revenue Recognition: Formalized policies for due diligence
+- Compensation Design: Growth-aligned incentives managing burn rate
+
+**Engagement**: 15–20 hours/month retainer with equity option.
+
+### Family Office — Institutional Discipline for Private Wealth
+
+**Industry**: Family Office
+**Challenge**: Complexity outpacing oversight. Fragmented reporting, no holistic risk assessment, missing multigenerational governance.
+
+**Solutions**:
+- Unified Reporting: All investment vehicles (PE, real estate, operating businesses, liquid investments)
+- Investment Analysis: Institutional-grade rigor, stress testing, risk-adjusted returns
+- Structural Optimization: Tax efficiency, liability protection, coordinated with counsel
+- Governance: Distribution forecasting, multigenerational decision-making structures
+
+**Engagement**: Quarterly reviews, monthly reporting, ongoing investment analysis.
+
+---
+
+## Central Coast IQ
+
+Wine country intelligence and back office operations for owner-operator wineries on California's Central Coast. We run the back office so the winemaker can focus on the wine.
+
+Services: Wine country intelligence, back office operations, digital visibility management, financial operations support, data-driven decision-making tools. Based in Santa Barbara Wine Country.
+
+---
+
+## Contact
+
+- **Book a call**: https://calendly.com/scott_mainstreetiq/30min (free 30-minute consultation)
+- **LinkedIn**: https://www.linkedin.com/in/johnscotthess
+- **Website**: https://www.mainstreetiq.com

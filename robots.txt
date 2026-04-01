@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mainstreetiq.com/sitemap.xml
+
+# AI Discoverability
+# See https://llmstxt.org for specification
+# llms.txt: https://www.mainstreetiq.com/llms.txt
+# llms-full.txt: https://www.mainstreetiq.com/llms-full.txt

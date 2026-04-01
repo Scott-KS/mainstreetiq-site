@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Simplified IQ mark for favicon/tab icon -->
+  <circle cx="14.5" cy="14" r="10.5" stroke="#2B4E8C" stroke-width="3" fill="none"/>
+  <line x1="21" y1="21" x2="29" y2="29" stroke="#2B4E8C" stroke-width="3" stroke-linecap="round"/>
+  <rect x="13" y="2" width="2.5" height="24" rx="0.5" fill="#4A82BA"/>
+</svg>
