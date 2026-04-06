@@ -1,6 +1,6 @@
 # Mainstreet IQ — Full Site Content
 
-> Mainstreet IQ is a fractional CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm specializes in e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. All engagements use the RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
+> Mainstreet IQ is a fractional and interim CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm specializes in e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. All engagements use the RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
 
 ---
 
@@ -47,7 +47,7 @@ Testimonial: "Scott helped us close our books in under 5 days and finally gave u
 ### FAQ
 
 **What is a fractional CFO?**
-A fractional CFO is an experienced Chief Financial Officer who works with your company on a part-time basis — typically 10–15 hours per week. Unlike a consultant who delivers a report and leaves, a fractional CFO embeds in your operations. They attend your meetings, manage your finance team, and own the numbers. It's ideal for companies between $15M and $100M that need senior finance leadership but aren't ready for a $400K+ full-time hire.
+A fractional CFO is an experienced Chief Financial Officer who works with your company on a part-time basis — typically 10–15 hours per week. An interim CFO fills the same role on a temporary, full-time basis during leadership transitions or critical periods. Unlike a consultant who delivers a report and leaves, a fractional or interim CFO embeds in your operations. They attend your meetings, manage your finance team, and own the numbers. It's ideal for companies between $15M and $100M that need senior finance leadership but aren't ready for a $400K+ full-time hire.
 
 **How is a fractional CFO different from a bookkeeper or controller?**
 A bookkeeper records transactions. A controller ensures accuracy and compliance. A CFO drives strategy. A fractional CFO sits in leadership meetings, builds financial models that inform decisions, negotiates with banks and investors, and designs the systems that make your finance function scale. It's the difference between knowing what happened last month and knowing what to do next month.
@@ -101,13 +101,13 @@ Institutional finance, modeling, M&A due diligence, ERP implementation.
 ### Engagement Models
 
 **Fractional CFO — Ongoing (10–15 hours/week)**
-Embedded finance leadership. Month-end close, cash and margin visibility, investor reporting, cross-functional strategy — without full-time cost. Weekly on-site presence plus remote availability.
+Embedded finance leadership as fractional or interim CFO. Month-end close, cash and margin visibility, investor reporting, cross-functional strategy — without full-time cost. Weekly on-site presence plus remote availability.
 
 **Advisory — Light Touch (~10 hours/month)**
 Strategic oversight for companies with competent finance teams. Senior-level perspective on major decisions and growth planning.
 
 **Project-Based (Defined scope)**
-Discrete engagements: financial modeling, finance team assessments, close process redesign, M&A preparation, investor reporting packages.
+Discrete engagements: financial modeling, finance team assessments, close process redesign, M&A preparation, investor reporting packages. Also available as interim CFO during leadership transitions or critical operational periods.
 
 ### Promised Outcomes
 - Book closes in 5 days or less
@@ -226,3 +226,13 @@ Services: Wine country intelligence, back office operations, digital visibility 
 - **Book a call**: https://calendly.com/scott_mainstreetiq/30min (free 30-minute consultation)
 - **LinkedIn**: https://www.linkedin.com/in/johnscotthess
 - **Website**: https://www.mainstreetiq.com
+
+---
+
+## Service Areas
+
+- [Santa Barbara County](https://www.mainstreetiq.com/fractional-cfo-santa-barbara): Fractional and interim CFO services for Santa Barbara County — wine, tourism, tech, agriculture.
+- [San Luis Obispo County](https://www.mainstreetiq.com/fractional-cfo-san-luis-obispo): Fractional and interim CFO services for SLO County — Paso Robles wine, agriculture, Cal Poly tech pipeline.
+- [Ventura County](https://www.mainstreetiq.com/fractional-cfo-ventura): Fractional and interim CFO services for Ventura County — agriculture, defense, manufacturing, biotech.
+- [Los Angeles](https://www.mainstreetiq.com/fractional-cfo-los-angeles): Fractional and interim CFO services for LA — entertainment, DTC/ecommerce, apparel, PE-backed companies.
+- [Orange County](https://www.mainstreetiq.com/fractional-cfo-orange-county): Fractional and interim CFO services for Orange County — tech/SaaS, ecommerce, medical devices, franchises.

@@ -1,10 +1,10 @@
 # Mainstreet IQ
 
-> Mainstreet IQ is a fractional CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm works across e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. Every engagement is built on the proprietary RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
+> Mainstreet IQ is a fractional and interim CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm works across e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. Every engagement is built on the proprietary RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
 
 ## Core Services
 
-- [Fractional CFO — Ongoing](https://www.mainstreetiq.com/our-services): 10–15 hours/week embedded finance leadership covering month-end close, cash/margin visibility, investor reporting, and cross-functional strategy.
+- [Fractional CFO — Ongoing](https://www.mainstreetiq.com/our-services): 10–15 hours/week embedded finance leadership (fractional or interim CFO) covering month-end close, cash/margin visibility, investor reporting, and cross-functional strategy.
 - [Advisory — Light Touch](https://www.mainstreetiq.com/our-services): ~10 hours/month strategic oversight for companies with existing finance teams.
 - [Project-Based](https://www.mainstreetiq.com/our-services): Discrete engagements — financial modeling, M&A preparation, close process redesign, investor reporting packages.
 
@@ -52,6 +52,14 @@ Every engagement is structured around four principles:
 - [Moneyball Metrics — The 3–5 KPIs Each Role Must Own](https://www.mainstreetiq.com/blog/moneyball-metrics): The "Data-Driven" principle — stage-based KPI selection and ownership by role. (July 2025)
 - [RAID Tech Stack — Tools That Reduce FTEs](https://www.mainstreetiq.com/blog/raid-tech-stack): The specific tools — QBO vs NetSuite, Bill.com, Ramp, FloQast, Mosaic. (July 2025)
 - [Investor-Ready Finance — Fewer FTE, More Control](https://www.mainstreetiq.com/blog/investor-ready-finance): The 5 things investors look for in your finance function. Series conclusion. (July 2025)
+
+## Service Areas
+
+- [Santa Barbara County](https://www.mainstreetiq.com/fractional-cfo-santa-barbara): Fractional and interim CFO services for Santa Barbara County — wine, tourism, tech, agriculture.
+- [San Luis Obispo County](https://www.mainstreetiq.com/fractional-cfo-san-luis-obispo): Fractional and interim CFO services for SLO County — Paso Robles wine, agriculture, Cal Poly tech pipeline.
+- [Ventura County](https://www.mainstreetiq.com/fractional-cfo-ventura): Fractional and interim CFO services for Ventura County — agriculture, defense, manufacturing, biotech.
+- [Los Angeles](https://www.mainstreetiq.com/fractional-cfo-los-angeles): Fractional and interim CFO services for LA — entertainment, DTC/ecommerce, apparel, PE-backed companies.
+- [Orange County](https://www.mainstreetiq.com/fractional-cfo-orange-county): Fractional and interim CFO services for Orange County — tech/SaaS, ecommerce, medical devices, franchises.
 
 ## Optional
 
