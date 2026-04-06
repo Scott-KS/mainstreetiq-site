@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Mainstreet IQ",
+  "name_for_model": "mainstreet_iq",
+  "description_for_human": "Fractional and interim CFO services for growing companies between $15M and $100M in revenue. Based on California's Central Coast.",
+  "description_for_model": "Mainstreet IQ is a fractional and interim CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based on California's Central Coast (Santa Barbara and San Luis Obispo counties), serving companies across Southern California and nationwide. Services include ongoing fractional CFO engagements (10-15 hours/week), advisory (10 hours/month), and project-based work. All engagements use the proprietary RAID Framework (Redundant, Agile, Intelligent, Data-Driven). Industries served: e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. Contact: https://calendly.com/scott_mainstreetiq/30min",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none",
+    "url": "https://www.mainstreetiq.com"
+  },
+  "logo_url": "https://www.mainstreetiq.com/assets/logos/logo-mark.svg",
+  "contact_email": "",
+  "legal_info_url": "https://www.mainstreetiq.com"
+}

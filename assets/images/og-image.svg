@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b1a2e"/>
+      <stop offset="50%" style="stop-color:#122240"/>
+      <stop offset="100%" style="stop-color:#1a2d4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Gold accent line -->
+  <rect x="80" y="200" width="60" height="4" fill="#c8a255" rx="2"/>
+  <!-- Company name -->
+  <text x="80" y="270" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="-0.03em">Mainstreet IQ</text>
+  <!-- Tagline -->
+  <text x="80" y="330" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="400" fill="rgba(255,255,255,0.7)">Fractional &amp; Interim CFO Services</text>
+  <!-- Sub-tagline -->
+  <text x="80" y="375" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.5)">Embedded finance leadership for companies $15M&#x2013;$100M</text>
+  <!-- Location -->
+  <text x="80" y="430" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="600" fill="#c8a255" letter-spacing="0.1em" text-transform="uppercase">CENTRAL COAST, CALIFORNIA</text>
+  <!-- URL -->
+  <text x="80" y="560" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="500" fill="rgba(255,255,255,0.4)">mainstreetiq.com</text>
+  <!-- Decorative circle -->
+  <circle cx="1050" cy="200" r="180" fill="none" stroke="rgba(200,162,85,0.08)" stroke-width="2"/>
+  <circle cx="1050" cy="200" r="120" fill="none" stroke="rgba(200,162,85,0.05)" stroke-width="2"/>
+</svg>
