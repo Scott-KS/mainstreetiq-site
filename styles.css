@@ -426,6 +426,8 @@ section { padding: var(--section-padding); }
   padding: 10rem 0 4rem;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
   color: var(--white);
+  position: relative;
+  overflow: hidden;
 }
 .about-hero h1 { color: var(--white); }
 .about-hero p  { color: rgba(255,255,255,0.7); font-size: 1.15rem; max-width: 600px; }
