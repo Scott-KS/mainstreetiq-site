@@ -235,6 +235,15 @@ section { padding: var(--section-padding); }
   padding: 2rem;
   transition: all 0.25s ease;
 }
+/* Card images (location pages) */
+.card-img {
+  width: calc(100% + 4rem);
+  margin: -2rem -2rem 1.25rem;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+}
 .card:hover { border-color: var(--gold); box-shadow: 0 8px 30px rgba(0,0,0,0.06); transform: translateY(-2px); }
 .card-icon {
   width: 48px;
