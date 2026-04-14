@@ -186,7 +186,7 @@
         <h2 class="section-title" style="color: var(--white);">Quarterly. Free. Delivered by Email.</h2>
         <p class="section-subtitle" style="color: rgba(255,255,255,0.6);">Drop your details and we'll send you the latest Central Coast Wine Industry Analysis, plus each new quarterly report as they publish. No spam, no pitch — just the report. Unsubscribe any time.</p>
       </div>
-      <div id="cciq-signup-form-wrap" style="max-width: 520px; margin: 0 auto;">
+      <div id="cciq-signup-form-wrap" style="max-width: 640px; margin: 0 auto;">
         <!-- Zoho Web-to-Lead form — creates a Lead in Zoho CRM on submit -->
         <form action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" id="cciqReportForm" onsubmit="return cciqValidateForm()">
           <input type="hidden" name="xnQsjsdp" value="bcecda9f0eab69c00ff8f57ea5c482b6761d884f1ec24a204337c0c418eec8c6">
@@ -194,20 +194,52 @@
           <input type="hidden" name="xmIwtLD" value="018d9c55b39bcc964b6358b4b42e8422434a3675ecb428f9393dea330128fb1aacda970c37ae4afcbf97bc4fb716e482">
           <input type="hidden" name="actionType" value="TGVhZHM=">
           <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/central-coast-iq?signup=success">
-          <input type="hidden" name="Lead Source" value="Web Download">
-          <input type="hidden" name="Description" value="CCIQ Report Signup — Central Coast Wine Industry Analysis">
+          <input type="hidden" name="Description" id="cciqDescription" value="CCIQ Report Signup — Central Coast Wine Industry Analysis">
           <input type="text" name="aG9uZXlwb3Q" value="" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div class="cciq-grid-2">
             <input type="text" name="First Name" placeholder="First name" aria-label="First name" maxlength="40" class="cciq-input">
             <input type="text" name="Last Name" placeholder="Last name" required aria-label="Last name" maxlength="80" class="cciq-input">
           </div>
-          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-            <input type="email" name="Email" placeholder="your@winery.com" required aria-label="Email address" maxlength="100" class="cciq-input" style="flex: 1 1 260px; min-width: 0;">
-            <button type="submit" class="btn btn-white" style="flex: 0 0 auto;">Send Me the Report &rarr;</button>
+          <div class="cciq-grid-2">
+            <input type="email" name="Email" placeholder="your@winery.com" required aria-label="Email address" maxlength="100" class="cciq-input">
+            <input type="text" name="Company" placeholder="Winery or company name" required aria-label="Winery or company name" maxlength="100" class="cciq-input">
+          </div>
+          <div class="cciq-grid-1">
+            <select name="AVA Region" id="cciqAvaRegion" required aria-label="AVA or region" class="cciq-input cciq-select">
+              <option value="" disabled selected>Which AVA or region is your winery in?</option>
+              <option value="Santa Ynez Valley">Santa Ynez Valley</option>
+              <option value="Sta. Rita Hills">Sta. Rita Hills</option>
+              <option value="Ballard Canyon">Ballard Canyon</option>
+              <option value="Happy Canyon of Santa Barbara">Happy Canyon of Santa Barbara</option>
+              <option value="Los Olivos District">Los Olivos District</option>
+              <option value="Santa Maria Valley">Santa Maria Valley</option>
+              <option value="Paso Robles (all sub-AVAs)">Paso Robles (all sub-AVAs)</option>
+              <option value="Edna Valley">Edna Valley</option>
+              <option value="Arroyo Grande Valley">Arroyo Grande Valley</option>
+              <option value="San Luis Obispo Coast">San Luis Obispo Coast</option>
+              <option value="Other Central Coast">Other Central Coast</option>
+              <option value="Not a Central Coast winery">Not a Central Coast winery</option>
+            </select>
+          </div>
+          <div class="cciq-grid-1">
+            <select name="Lead Source" aria-label="How did you hear about us" class="cciq-input cciq-select">
+              <option value="Web Download" selected>How did you hear about us? (optional)</option>
+              <option value="Web Research">Search engine (Google, etc.)</option>
+              <option value="Linkedin">LinkedIn</option>
+              <option value="Facebook">Facebook / Instagram / Meta</option>
+              <option value="X (Twitter)">X (Twitter)</option>
+              <option value="External Referral">Referral from another winery</option>
+              <option value="Trade Show">Industry event or trade show</option>
+              <option value="Public Relations">Press or article</option>
+              <option value="Chat">Other</option>
+            </select>
+          </div>
+          <div class="cciq-grid-1" style="margin-top: 0.5rem;">
+            <button type="submit" class="btn btn-white" style="width: 100%; justify-content: center;">Send Me the Report &rarr;</button>
           </div>
         </form>
-        <p style="margin-top: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5); text-align: center; letter-spacing: 0.05em;">We'll send the latest report within one business day. Quarterly thereafter.</p>
+        <p style="margin-top: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5); text-align: center; letter-spacing: 0.05em;">Central Coast wineries receive the report within one business day. Everyone else, we'll be in touch.</p>
       </div>
       <div id="cciq-signup-success" style="display: none; max-width: 520px; margin: 0 auto; text-align: center; padding: 2rem; border: 1px solid rgba(91,184,255,0.3); border-radius: 4px; background: rgba(91,184,255,0.05);">
         <h3 style="color: var(--color-sky); font-weight: 400; margin-bottom: 0.75rem;">Thank you &mdash; you're on the list.</h3>
@@ -231,6 +263,30 @@
     }
     .cciq-input::placeholder { color: rgba(255,255,255,0.4); }
     .cciq-input:focus { outline: none; border-color: var(--color-sky); background: rgba(255,255,255,0.12); }
+    .cciq-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='rgba(255,255,255,0.5)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+    .cciq-select option { background: var(--color-midnight); color: var(--color-white); }
+    .cciq-select:invalid { color: rgba(255,255,255,0.4); }
+    .cciq-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .cciq-grid-1 {
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    @media (max-width: 520px) {
+      .cciq-grid-2 { grid-template-columns: 1fr; }
+    }
   </style>
 
   <!-- ===== WINERY-SPECIFIC INTELLIGENCE ===== -->
@@ -447,28 +503,32 @@
       }
     })();
 
-    // CCIQ report signup: client-side validation before POSTing to Zoho
+    // CCIQ report signup: client-side validation + Description enrichment
+    // before POSTing to Zoho. The AVA value is appended to the Description field
+    // so the data is captured in Zoho regardless of whether the custom
+    // "AVA Region" field has been configured in the CRM yet.
     function cciqValidateForm() {
       var form = document.getElementById('cciqReportForm');
       var lastName = form['Last Name'].value.trim();
       var email = form.Email.value.trim();
-      if (!lastName) {
-        alert('Please enter your last name.');
-        form['Last Name'].focus();
-        return false;
-      }
-      if (!email) {
-        alert('Please enter your email address.');
-        form.Email.focus();
-        return false;
-      }
+      var company = form['Company'].value.trim();
+      var ava = form['AVA Region'].value;
+
+      if (!lastName) { alert('Please enter your last name.'); form['Last Name'].focus(); return false; }
+      if (!email) { alert('Please enter your email address.'); form.Email.focus(); return false; }
       var atpos = email.indexOf('@');
       var dotpos = email.lastIndexOf('.');
       if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
-        alert('Please enter a valid email address.');
-        form.Email.focus();
-        return false;
+        alert('Please enter a valid email address.'); form.Email.focus(); return false;
       }
+      if (!company) { alert('Please enter your winery or company name.'); form['Company'].focus(); return false; }
+      if (!ava) { alert('Please select your AVA or region.'); form['AVA Region'].focus(); return false; }
+
+      // Append the AVA value to the Description field so the data lands in Zoho
+      // even if the custom AVA Region field hasn't been set up in the CRM yet.
+      var desc = document.getElementById('cciqDescription');
+      if (desc) { desc.value = desc.value + ' | AVA: ' + ava; }
+
       return true;
     }
   </script>
