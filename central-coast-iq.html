@@ -179,23 +179,59 @@
   </section>
 
   <!-- ===== REPORT SIGNUP ===== -->
-  <section class="bg-navy">
+  <section class="bg-navy" id="report-signup">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Get the Latest Report</span>
         <h2 class="section-title" style="color: var(--white);">Quarterly. Free. Delivered by Email.</h2>
-        <p class="section-subtitle" style="color: rgba(255,255,255,0.6);">Drop your email and we'll send you the latest Central Coast Wine Industry Analysis plus each new quarterly report as they publish. No spam, no pitch — just the report. Unsubscribe any time.</p>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.6);">Drop your details and we'll send you the latest Central Coast Wine Industry Analysis, plus each new quarterly report as they publish. No spam, no pitch — just the report. Unsubscribe any time.</p>
       </div>
-      <div style="max-width: 520px; margin: 0 auto;">
-        <!-- Form POSTs to a Google Form / Formspree / Klaviyo endpoint — replace action URL with live endpoint -->
-        <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <input type="email" name="email" placeholder="your@winery.com" required aria-label="Email address" style="flex: 1 1 260px; min-width: 0; padding: 0.85rem 1.25rem; border-radius: 3px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--white); font-family: var(--font-body); font-weight: 300; font-size: 0.95rem; letter-spacing: 0.02em;">
-          <button type="submit" class="btn btn-white" style="flex: 0 0 auto;">Send Me the Report &rarr;</button>
+      <div id="cciq-signup-form-wrap" style="max-width: 520px; margin: 0 auto;">
+        <!-- Zoho Web-to-Lead form — creates a Lead in Zoho CRM on submit -->
+        <form action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" id="cciqReportForm" onsubmit="return cciqValidateForm()">
+          <input type="hidden" name="xnQsjsdp" value="bcecda9f0eab69c00ff8f57ea5c482b6761d884f1ec24a204337c0c418eec8c6">
+          <input type="hidden" name="zc_gad" id="zc_gad" value="">
+          <input type="hidden" name="xmIwtLD" value="018d9c55b39bcc964b6358b4b42e8422434a3675ecb428f9393dea330128fb1aacda970c37ae4afcbf97bc4fb716e482">
+          <input type="hidden" name="actionType" value="TGVhZHM=">
+          <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/central-coast-iq?signup=success">
+          <input type="hidden" name="Lead Source" value="Web Download">
+          <input type="hidden" name="Description" value="CCIQ Report Signup — Central Coast Wine Industry Analysis">
+          <input type="text" name="aG9uZXlwb3Q" value="" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <input type="text" name="First Name" placeholder="First name" aria-label="First name" maxlength="40" class="cciq-input">
+            <input type="text" name="Last Name" placeholder="Last name" required aria-label="Last name" maxlength="80" class="cciq-input">
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <input type="email" name="Email" placeholder="your@winery.com" required aria-label="Email address" maxlength="100" class="cciq-input" style="flex: 1 1 260px; min-width: 0;">
+            <button type="submit" class="btn btn-white" style="flex: 0 0 auto;">Send Me the Report &rarr;</button>
+          </div>
         </form>
         <p style="margin-top: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5); text-align: center; letter-spacing: 0.05em;">We'll send the latest report within one business day. Quarterly thereafter.</p>
       </div>
+      <div id="cciq-signup-success" style="display: none; max-width: 520px; margin: 0 auto; text-align: center; padding: 2rem; border: 1px solid rgba(91,184,255,0.3); border-radius: 4px; background: rgba(91,184,255,0.05);">
+        <h3 style="color: var(--color-sky); font-weight: 400; margin-bottom: 0.75rem;">Thank you &mdash; you're on the list.</h3>
+        <p style="color: rgba(255,255,255,0.75); font-weight: 300; margin: 0;">We'll send the latest Central Coast Wine Industry Analysis within one business day. Check your inbox (and your spam folder, just in case).</p>
+      </div>
     </div>
   </section>
+
+  <style>
+    .cciq-input {
+      padding: 0.85rem 1.25rem;
+      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      width: 100%;
+    }
+    .cciq-input::placeholder { color: rgba(255,255,255,0.4); }
+    .cciq-input:focus { outline: none; border-color: var(--color-sky); background: rgba(255,255,255,0.12); }
+  </style>
 
   <!-- ===== WINERY-SPECIFIC INTELLIGENCE ===== -->
   <section class="bg-light">
@@ -396,6 +432,45 @@
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
     });
+
+    // CCIQ report signup: show thank-you state when Zoho redirects back with ?signup=success
+    (function(){
+      if (new URLSearchParams(window.location.search).get('signup') === 'success') {
+        var formWrap = document.getElementById('cciq-signup-form-wrap');
+        var success = document.getElementById('cciq-signup-success');
+        if (formWrap) formWrap.style.display = 'none';
+        if (success) success.style.display = 'block';
+        setTimeout(function(){
+          var target = document.getElementById('report-signup');
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
+    })();
+
+    // CCIQ report signup: client-side validation before POSTing to Zoho
+    function cciqValidateForm() {
+      var form = document.getElementById('cciqReportForm');
+      var lastName = form['Last Name'].value.trim();
+      var email = form.Email.value.trim();
+      if (!lastName) {
+        alert('Please enter your last name.');
+        form['Last Name'].focus();
+        return false;
+      }
+      if (!email) {
+        alert('Please enter your email address.');
+        form.Email.focus();
+        return false;
+      }
+      var atpos = email.indexOf('@');
+      var dotpos = email.lastIndexOf('.');
+      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+        alert('Please enter a valid email address.');
+        form.Email.focus();
+        return false;
+      }
+      return true;
+    }
   </script>
 </body>
 </html>
