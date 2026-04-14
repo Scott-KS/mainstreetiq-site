@@ -6,33 +6,33 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Colors — MSIQ Brand System (CFO + AI) */
-  --color-navy:        #2B4E8C;
-  --color-sky:         #5BB8FF;
-  --color-mid-blue:    #1E7FD4;
-  --color-deep-navy:   #1A2C4E;
-  --color-midnight:    #09111E;
-  --color-ice:         #F0F4FA;
-  --color-pale-blue:   #D8E4F0;
-  --color-muted-steel: #7A9ABF;
+  /* Colors — MSIQ Brand System (CFO + AI) — consolidated: 3 blues + warm neutrals */
+  --color-midnight:    #0F1C2E;   /* single dark — backgrounds, overlays, footer */
+  --color-navy:        #2B4E8C;   /* primary — CTAs, headings, logo, card top-border */
+  --color-sky:         #5BB8FF;   /* single accent — links, hover, emphasis on dark bg */
+  --color-neutral:     #6B7480;   /* warm gray — body text, nav, captions */
+  --color-border:      #E5E2DC;   /* warm gray — borders, dividers */
+  --color-ice:         #FAFAF7;   /* true warm off-white — light sections */
   --color-white:       #FFFFFF;
-  --color-dark-text:   #1A2C4E;
+  --color-dark-text:   #1A1F2B;   /* near-black (slightly warm) — primary text on light */
 
-  /* Legacy variable aliases — remapped to new palette so existing rules still work */
-  --navy:       #09111E;
-  --navy-light: #1A2C4E;
+  /* Legacy variable aliases — remapped to consolidated palette */
+  --navy:       #0F1C2E;
+  --navy-light: #0F1C2E;
   --navy-mid:   #2B4E8C;
-  --slate:      #4A5668;
-  --slate-light:#7A9ABF;
+  --slate:      #6B7480;
+  --slate-light:#6B7480;
   --white:      #FFFFFF;
-  --off-white:  #F0F4FA;
-  --gold:       #1E7FD4;
-  --gold-light: #5BB8FF;
-  --gold-dark:  #1A5FA3;
+  --off-white:  #FAFAF7;
+  --gold:       #2B4E8C;      /* accent → navy everywhere gold was used on light bg */
+  --gold-light: #5BB8FF;      /* accent-lighter → sky for highlights */
+  --gold-dark:  #1A3560;      /* hover state for navy */
   --accent:     #2B4E8C;
   --accent-light:#5BB8FF;
   --success:    #10b981;
-  --border:     #D8E4F0;
+  --border:     #E5E2DC;
+
+  /* Removed tokens (now absent): --color-deep-navy, --color-mid-blue, --color-pale-blue, --color-muted-steel */
 
   /* Typography — Outfit only (weights 200,300,400,500,600,700) */
   --font-heading: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
@@ -78,7 +78,7 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  color: var(--color-mid-blue);
+  color: var(--color-navy);
   margin-bottom: 1rem;
   display: block;
 }
@@ -104,11 +104,11 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   background: var(--color-navy);
   color: var(--white);
 }
-.btn-primary:hover { background: var(--color-mid-blue); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
 .btn-secondary {
   background: transparent;
   color: var(--color-dark-text);
-  border: 1px solid var(--color-pale-blue);
+  border: 1px solid var(--color-border);
 }
 .btn-secondary:hover { border-color: var(--color-navy); color: var(--color-navy); }
 .btn-white {
@@ -161,7 +161,7 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: var(--color-muted-steel);
+  color: var(--color-neutral);
   transition: color 0.2s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--color-navy); }
@@ -176,7 +176,7 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   letter-spacing: 0.08em !important;
   transition: background 0.2s !important;
 }
-.nav-cta:hover { background: var(--color-mid-blue) !important; }
+.nav-cta:hover { background: var(--gold-dark) !important; }
 
 /* Mobile nav toggle */
 .nav-toggle {
@@ -277,7 +277,7 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
 /* --- Sections --- */
 section { padding: var(--section-padding); }
 .bg-light { background: var(--color-ice); }
-.bg-navy  { background: var(--color-deep-navy); color: var(--white); }
+.bg-navy  { background: var(--color-midnight); color: var(--white); }
 .bg-navy p { color: rgba(255,255,255,0.7); }
 .bg-navy .section-title { color: var(--white); }
 .bg-navy .section-label { color: var(--color-sky); }
@@ -293,7 +293,7 @@ section { padding: var(--section-padding); }
 }
 .card {
   background: var(--white);
-  border: 1px solid var(--color-pale-blue);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 2rem;
   transition: all 0.25s ease;
@@ -437,7 +437,7 @@ section { padding: var(--section-padding); }
 
 /* --- Footer --- */
 .site-footer {
-  background: var(--color-deep-navy);
+  background: var(--color-midnight);
   color: rgba(255,255,255,0.6);
   padding: 4rem 0 2rem;
 }
