@@ -23,7 +23,7 @@
   --border:     #E0DBD2;
 
   /* Typography */
-  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'DM Serif Display', Georgia, 'Times New Roman', serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Spacing */
@@ -53,8 +53,8 @@ ul, ol { list-style: none; }
 
 /* --- Typography --- */
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
-h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -0.03em; }
-h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: 0em; }
 h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); }
 h4 { font-size: 1.15rem; }
 p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; }
@@ -262,32 +262,26 @@ section { padding: var(--section-padding); }
 .card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 2rem;
   transition: all 0.25s ease;
+  position: relative;
+  border-top: 3px solid var(--accent);
 }
+/* Cards with images skip the top accent (image is the visual anchor) */
+.card:has(.card-img) { border-top: 1px solid var(--border); }
 /* Card images (location pages) */
 .card-img {
   width: calc(100% + 4rem);
   margin: -2rem -2rem 1.25rem;
   height: 200px;
   object-fit: cover;
-  border-radius: 12px 12px 0 0;
+  border-radius: 5px 5px 0 0;
   background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
 }
-.card:hover { border-color: var(--gold); box-shadow: 0 8px 30px rgba(0,0,0,0.06); transform: translateY(-2px); }
-.card-icon {
-  width: 48px;
-  height: 48px;
-  background: rgba(212,145,59,0.12);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-  color: var(--gold);
-  font-size: 1.3rem;
-}
+.card:hover { border-color: var(--accent-light); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+/* Hide emoji icons — replaced by top accent bar */
+.card-icon { display: none; }
 .card h3 { margin-bottom: 0.5rem; }
 .card p  { font-size: 0.95rem; margin: 0; }
 
@@ -300,17 +294,18 @@ section { padding: var(--section-padding); }
 .raid-card {
   background: var(--navy-light);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 2rem;
   text-align: center;
   transition: border-color 0.3s;
 }
-.raid-card:hover { border-color: var(--gold); }
+.raid-card:hover { border-color: var(--accent-light); }
 .raid-letter {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2.75rem;
+  font-weight: 400;
   color: var(--gold);
   margin-bottom: 0.25rem;
+  font-family: var(--font-heading);
 }
 .raid-card h4 { color: var(--white); margin-bottom: 0.5rem; }
 .raid-card p  { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin: 0; }
@@ -333,7 +328,7 @@ section { padding: var(--section-padding); }
   position: absolute;
   top: -1.5rem;
   left: -1.5rem;
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   line-height: 1;
 }
 .testimonial-author {
@@ -363,21 +358,21 @@ section { padding: var(--section-padding); }
   display: block;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 2rem;
   transition: all 0.25s ease;
 }
-.case-card:hover { border-color: var(--gold); box-shadow: 0 8px 30px rgba(0,0,0,0.06); transform: translateY(-2px); }
+.case-card:hover { border-color: var(--accent); box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-3px); }
 .case-tag {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--gold);
-  background: rgba(212,145,59,0.12);
+  color: var(--accent);
+  background: rgba(43,78,140,0.08);
   padding: 0.25rem 0.75rem;
-  border-radius: 100px;
+  border-radius: 3px;
   margin-bottom: 0.75rem;
 }
 .case-card h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
@@ -449,9 +444,9 @@ section { padding: var(--section-padding); }
 .headshot {
   width: 180px;
   height: 180px;
-  border-radius: 12px;
+  border-radius: 4px;
   object-fit: cover;
-  border: 3px solid var(--gold);
+  border: 3px solid var(--accent);
 }
 
 /* Case study card images */
@@ -460,7 +455,7 @@ section { padding: var(--section-padding); }
   margin: -2rem -2rem 1.25rem;
   height: 180px;
   object-fit: cover;
-  border-radius: 12px 12px 0 0;
+  border-radius: 5px 5px 0 0;
   background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
 }
 
@@ -470,7 +465,7 @@ section { padding: var(--section-padding); }
 
 .experience-card {
   background: var(--off-white);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -544,7 +539,7 @@ section { padding: var(--section-padding); }
   color: var(--gold);
   flex-shrink: 0;
 }
-.calendly-embed { min-height: 650px; border-radius: 12px; overflow: hidden; }
+.calendly-embed { min-height: 650px; border-radius: 6px; overflow: hidden; }
 
 /* --- Responsive --- */
 @media (max-width: 968px) {
@@ -688,11 +683,11 @@ section { padding: var(--section-padding); }
   display: block;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
   transition: all 0.25s ease;
 }
-.blog-card:hover { border-color: var(--gold); box-shadow: 0 8px 30px rgba(0,0,0,0.06); transform: translateY(-2px); }
+.blog-card:hover { border-color: var(--accent); box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
 .blog-card-body { padding: 1.5rem; }
 .blog-card .case-tag { margin-bottom: 0.5rem; }
 .blog-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; line-height: 1.35; }
@@ -734,7 +729,7 @@ section { padding: var(--section-padding); }
 .post-cta {
   background: var(--off-white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 2rem;
   text-align: center;
   margin-top: 3rem;
@@ -747,4 +742,102 @@ section { padding: var(--section-padding); }
 
 @media (max-width: 480px) {
   .blog-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== De-template: layout variants ===== */
+
+/* Split section: header left, content right */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+.split-section .section-header {
+  text-align: left;
+  margin-bottom: 0;
+  position: sticky;
+  top: 6rem;
+}
+.split-section .section-header .section-subtitle {
+  margin: 0.5rem 0 0;
+}
+
+/* Problem items (replaces cards for the problem section) */
+.problem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.problem-item {
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+.problem-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+.problem-item p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--slate);
+}
+
+/* Numbered engagement list (replaces card grid for How We Work) */
+.engagement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.engagement-item {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.engagement-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--accent);
+  line-height: 1;
+  padding-top: 0.15rem;
+}
+.engagement-item h3 {
+  margin-bottom: 0.15rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+.engagement-item .engagement-hours {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.engagement-item p:last-child {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Left-aligned section header variant */
+.section-header-left {
+  text-align: left;
+}
+.section-header-left .section-subtitle {
+  margin: 0.5rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .split-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .split-section .section-header {
+    position: static;
+  }
+  .engagement-item {
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+  }
 }
