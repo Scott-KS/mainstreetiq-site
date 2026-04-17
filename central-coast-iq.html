@@ -247,6 +247,8 @@
           <input type="hidden" name="Industry" value="Winery">
           <input type="hidden" name="Lead Status" value="Pre-Qualified">
           <input type="hidden" name="LEADCF6" value="Submitted">
+          <input type="hidden" name="LEADCF5" id="hiddenLEADCF5" value="">
+          <input type="hidden" name="LEADCF4" id="hiddenLEADCF4" value="">
           <input type="text" name="aG9uZXlwb3Q" value="" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="cciq-grid-2">
@@ -258,7 +260,7 @@
             <input type="text" name="Company" placeholder="Winery or company name" required aria-label="Winery or company name" maxlength="100" class="cciq-input">
           </div>
           <div class="cciq-grid-1">
-            <select name="LEADCF5" id="cciqAvaRegion" required aria-label="Wine region" class="cciq-input cciq-select">
+            <select id="cciqAvaRegion" required aria-label="Wine region" class="cciq-input cciq-select">
               <option value="-None-" disabled selected>Which AVA or region is your winery in?</option>
               <option value="Santa Ynez Valley">Santa Ynez Valley</option>
               <option value="Sta. Rita Hills">Sta. Rita Hills</option>
@@ -275,7 +277,7 @@
             </select>
           </div>
           <div class="cciq-grid-1">
-            <select name="LEADCF4" id="cciqReferralSource" aria-label="How did you hear about us" class="cciq-input cciq-select">
+            <select id="cciqReferralSource" aria-label="How did you hear about us" class="cciq-input cciq-select">
               <option value="-None-" selected>How did you hear about us?</option>
               <option value="Search engine (Google, etc.)">Search engine (Google, etc.)</option>
               <option value="Linkedin">Linkedin</option>
@@ -598,7 +600,10 @@
       var lastName = form['Last Name'].value.trim();
       var email = form.Email.value.trim();
       var company = form['Company'].value.trim();
-      var ava = form['LEADCF5'].value;
+      var avaSelect = document.getElementById('cciqAvaRegion');
+      var referralSelect = document.getElementById('cciqReferralSource');
+      var ava = avaSelect.value;
+      var referral = referralSelect.value;
 
       if (!lastName) { alert('Please enter your last name.'); form['Last Name'].focus(); return false; }
       if (!email) { alert('Please enter your email address.'); form.Email.focus(); return false; }
@@ -608,12 +613,17 @@
         alert('Please enter a valid email address.'); form.Email.focus(); return false;
       }
       if (!company) { alert('Please enter your winery or company name.'); form['Company'].focus(); return false; }
-      if (!ava || ava === '-None-') { alert('Please select your AVA or region.'); form['LEADCF5'].focus(); return false; }
+      if (!ava || ava === '-None-') { alert('Please select your AVA or region.'); avaSelect.focus(); return false; }
 
-      // Append the AVA value to the Description field so the data lands in Zoho
-      // Append AVA and referral source to Description as a fallback.
+      // Copy select values into hidden inputs — Zoho's Web-to-Lead endpoint
+      // reliably accepts hidden input values but drops select values.
+      document.getElementById('hiddenLEADCF5').value = ava;
+      if (referral && referral !== '-None-') {
+        document.getElementById('hiddenLEADCF4').value = referral;
+      }
+
+      // Append to Description as a fallback
       var desc = document.getElementById('cciqDescription');
-      var referral = form['LEADCF4'].value;
       if (desc) {
         desc.value = desc.value + ' | AVA: ' + ava;
         if (referral && referral !== '-None-') { desc.value = desc.value + ' | Referral: ' + referral; }
