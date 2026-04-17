@@ -749,7 +749,30 @@ section { padding: var(--section-padding); }
   border-radius: 0 8px 8px 0;
 }
 .post-body blockquote p { font-style: italic; color: var(--navy); margin: 0; }
+.post-body .tldr {
+  background: var(--ice, #eef4fb);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+.post-body .tldr p { font-size: 1.05rem; line-height: 1.8; color: var(--slate); margin: 0; }
+.post-body .tldr strong { color: var(--navy); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.35rem; }
 .post-body strong { color: var(--navy); }
+
+.post-body .series-nav {
+  background: var(--ice, #eef4fb);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 2.5rem;
+}
+.post-body .series-nav p { font-size: 0.95rem; line-height: 1.7; color: var(--slate); margin: 0 0 0.75rem; }
+.post-body .series-nav p:last-child { margin-bottom: 0; }
+.post-body .series-nav strong { color: var(--navy); }
+.post-body .series-nav ul { margin: 0.5rem 0 0.75rem 1.25rem; padding: 0; }
+.post-body .series-nav li { font-size: 0.95rem; line-height: 1.7; color: var(--slate); margin-bottom: 0.25rem; }
+.post-body .series-nav a { color: var(--gold); font-weight: 500; }
 
 .post-cta {
   background: var(--off-white);

@@ -236,3 +236,109 @@ Services: Wine country intelligence, back office operations, digital visibility 
 - [Ventura County](https://www.mainstreetiq.com/fractional-cfo-ventura): Fractional and interim CFO services for Ventura County — agriculture, defense, manufacturing, biotech.
 - [Los Angeles](https://www.mainstreetiq.com/fractional-cfo-los-angeles): Fractional and interim CFO services for LA — entertainment, DTC/ecommerce, apparel, PE-backed companies.
 - [Orange County](https://www.mainstreetiq.com/fractional-cfo-orange-county): Fractional and interim CFO services for Orange County — tech/SaaS, ecommerce, medical devices, franchises.
+
+---
+
+## RAID in Action
+
+A real-world case study of the RAID Framework applied to a growing company. Covers the specific problems found — slow close, single points of failure, manual processes, no KPI ownership — and the step-by-step fixes that resolved them, with measurable results.
+
+---
+
+## Annual Planning Series (6 parts)
+
+### Why an Annual Plan Matters: Building a Roadmap
+
+The real value of annual planning isn't the document — it's the process of forcing alignment between revenue targets, expense budgets, headcount plans, and cash flow. A good annual plan gives leadership a shared set of assumptions to test decisions against all year long. Covers how to structure the plan, why you need to plan the entire business (not just revenue), how the RAID framework applies, and best practices by industry.
+
+### Revenue Growth Planning: Building Realistic and Stretch Targets
+
+Revenue planning isn't about picking a growth target and hoping — it's about building a bottoms-up model that connects channel-level inputs to a topline number you can actually defend. Start with unit economics by channel, layer in capacity constraints, and stress-test against 3 scenarios. Covers cross-functional collaboration between finance, sales, and marketing, and the real cost of revenue growth.
+
+### Expense Controls: Protecting Margins While Scaling
+
+Cutting costs is easy. Building expense controls that don't kill growth is hard. The goal isn't spending less — it's spending better. Covers separating fixed from variable costs, headcount planning, how expenses affect cash flow, expense control by industry, RAID framework application, and KPI tracking.
+
+### Marketing Spend Planning
+
+Marketing spend is the most debated line item in every budget. Covers tying spend to CAC targets by channel, setting payback period guardrails, giving marketing a budget framework they can flex within, and why finance and marketing need to collaborate on spend planning rather than fight about it.
+
+### Balance Sheet Management
+
+Most growing companies obsess over the P&L and ignore the balance sheet until cash gets tight. The balance sheet tells you what the P&L can't: how much cash you actually have, how much is trapped in inventory and receivables, and whether your working capital can support next quarter's growth. Covers key considerations, industry-specific approaches, and proactive vs. reactive management.
+
+### Planning for Unknowns
+
+No annual plan survives contact with reality — so build one that doesn't need to. Scenario planning, contingency reserves, and monthly reforecasting turn your plan from a rigid target into a flexible operating framework. The companies that navigate uncertainty best aren't the ones with the best predictions — they're the ones with the fastest response time.
+
+---
+
+## Acquisition & Growth Series (5 parts)
+
+### If Your Month-End Close Takes More Than 7 Days, Read This
+
+A slow month-end close isn't a minor inconvenience — it's a structural problem that compounds every month. Covers why closes take too long (manual reconciliations, vendor invoice waiting, one-person bottlenecks, no close checklist, unclear ownership), how to get to a 5-day close, and the specific automation and process changes that make it happen. Most companies can achieve a 5-day close within 90 days.
+
+### Your Marketing Team Might Be Destroying Your Margin
+
+Your marketing team might be hitting their MER targets while quietly destroying your margins. The gap between marketing efficiency and actual profitability lives in COGS assumptions, shipping costs, and return rates that never make it into the marketing dashboard. Finance needs to own the contribution margin view — not to overrule marketing, but to make sure everyone is optimizing for the same number.
+
+### Tariffs and Lower Middle Market COGS
+
+Tariffs don't just raise your COGS — they cascade through pricing, margins, inventory strategy, and cash flow in ways most finance teams aren't modeling. Covers what the founders handling it well are doing differently vs. those who are struggling, and how to build scenario models before the next tariff announcement forces reactive decision-making.
+
+### Your Comp Structure Is Driving the Wrong Behavior
+
+Your compensation structure is driving behavior whether you designed it to or not. Sales teams paid on revenue will sell unprofitable deals. Finance teams rewarded for accuracy will avoid risk. Covers how to identify misaligned incentives, redesign comp structures to align with margin, cash collection, and retention, and real results from comp redesigns.
+
+### The Payback Window Problem
+
+Most companies know their CAC. Far fewer know their payback period — and the ones that do are often calculating it wrong. Payback isn't CAC divided by monthly revenue — it's CAC divided by monthly contribution margin, net of returns and churn. Getting this number right changes which channels you scale and which you cut.
+
+---
+
+## Finance Leadership & Operations (11 posts)
+
+### The Cash Flow Illusion — Why Your Bank Balance Lies
+
+Your bank account looks healthy but your business might not be. Cash hides in three places: inventory you've paid for but haven't sold, accounts receivable you've booked but haven't collected, and expenses you've committed to but haven't paid. Covers the difference between bank balance and cash position, where cash actually hides, and why every company needs a 13-week rolling cash flow forecast.
+
+### MER Looks Healthy — Here's Why Your Margin Is Still Disappearing
+
+Marketing efficiency ratio (MER) is the metric everyone watches. Contribution margin is the one that matters. Covers why MER can look great while margins erode, how to break down contribution margin by channel, why companies keep optimizing for the wrong metric, and how to fix marketing spend allocation.
+
+### CFO vs. Finance Director vs. Controller — Which Do You Actually Need?
+
+Three titles. Three very different roles. Covers what each role actually owns, what your company is really asking of the finance seat, which role fits your revenue stage, what happens when one person wears all three hats, and how to decide between fractional, interim, or permanent.
+
+### How to Evaluate a Fractional CFO
+
+Not all fractional CFOs are the same. Covers what to look for: industry experience that matches your business, engagement models that fit your needs, communication style, and red flags that signal a bad fit. Practical evaluation criteria for companies making this hiring decision.
+
+### Your Finance Team Stopped Scaling — Five Signs
+
+Five signs your finance function has stalled: the close keeps getting slower, the CEO has stopped trusting the numbers, nobody can explain variances, the team is reactive instead of proactive, and one person holds all the keys. Covers why the fix is structural (better systems and processes) rather than tactical (more headcount).
+
+### The Hero Problem Is a Liability
+
+When one person holds all the keys to your finance function — the close process, the system passwords, the vendor relationships, the reconciliation workarounds — you don't have a team. You have a single point of failure with a salary. Covers how to identify hero dependencies, what happens when the hero leaves, and how to build redundancy.
+
+### The Marketing Problem Is a Merchandising Problem
+
+When revenue underperforms, the instinct is to blame marketing — increase spend, change creative, switch agencies. But the root cause is often product mix and merchandising. Covers how to diagnose whether the gap is marketing (can't drive traffic) or merchandising (wrong products, wrong pricing, wrong assortment).
+
+### Running a Business With a Better CFO
+
+What changes when you bring in senior finance leadership that actually understands the business — not just the books. Covers the difference between a CFO who reports on the business and one who runs inside it, and how embedded finance leadership drives better decisions across operations, marketing, and growth strategy.
+
+### What Your CAC Number Doesn't Include
+
+The CAC your marketing dashboard reports is almost certainly too low. Hidden costs that inflate real customer acquisition cost: creative production, agency fees, software subscriptions, team time, returns processing, and onboarding costs. Covers how to calculate fully-loaded CAC and why the gap between platform CAC and real CAC matters for growth decisions.
+
+### The Finance Side of a PE Exit
+
+What gets tested in a serious quality of earnings (QofE) process and how to prepare your finance function before the LOI lands. Covers EBITDA adjustments, revenue quality, working capital normalization, and the specific documentation PE firms expect during diligence.
+
+### What PE Sponsors Actually Ask About EBITDA
+
+The specific EBITDA questions PE firms ask in diligence — and what "can answer them cleanly" actually means. Covers addbacks, normalization adjustments, run-rate assumptions, and how to present EBITDA in a way that builds credibility rather than raising questions.
