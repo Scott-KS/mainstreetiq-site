@@ -237,13 +237,16 @@
       <div id="cciq-signup-form-wrap" style="max-width: 640px; margin: 0 auto;">
         <!-- Zoho Web-to-Lead form — creates a Lead in Zoho CRM on submit -->
         <form action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" id="cciqReportForm" onsubmit="return cciqValidateForm()">
-          <input type="hidden" name="xnQsjsdp" value="955dd3647b384dbbc3383e8e0b20c49a6a1feec41c8feb0f27b2a668066b5e23">
+          <input type="hidden" name="xnQsjsdp" value="b20d9533cf4fc99c3bf706d8c6c71a4a3954a07e69e9285bf3e5dba36994b362">
           <input type="hidden" name="zc_gad" id="zc_gad" value="">
-          <input type="hidden" name="xmIwtLD" value="e3f3b55ff1fc620dd80acb024798b0f4719650f283773cc4668d00bb0dab79c08cd63e96d93e8dede09081614e124fa8">
+          <input type="hidden" name="xmIwtLD" value="815a9111e999269efd4d1d2db372b902a70c171679ef4b5b670edcda3a91cb3c5cd8963718a85063b57d553234721aae">
           <input type="hidden" name="actionType" value="TGVhZHM=">
           <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/central-coast-iq?signup=success">
           <input type="hidden" name="Description" id="cciqDescription" value="CCIQ Report Signup — Central Coast Wine Industry Analysis">
           <input type="hidden" name="Lead Source" value="CCIQ Webform">
+          <input type="hidden" name="Industry" value="Winery">
+          <input type="hidden" name="Lead Status" value="Pre-Qualified">
+          <input type="hidden" name="LEADCF6" value="Submitted">
           <input type="text" name="aG9uZXlwb3Q" value="" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="cciq-grid-2">
@@ -255,18 +258,18 @@
             <input type="text" name="Company" placeholder="Winery or company name" required aria-label="Winery or company name" maxlength="100" class="cciq-input">
           </div>
           <div class="cciq-grid-1">
-            <select name="AVA Region" id="cciqAvaRegion" required aria-label="AVA or region" class="cciq-input cciq-select">
+            <select name="LEADCF5" id="cciqAvaRegion" required aria-label="AVA or region" class="cciq-input cciq-select">
               <option value="" disabled selected>Which AVA or region is your winery in?</option>
               <option value="Santa Ynez Valley">Santa Ynez Valley</option>
               <option value="Sta. Rita Hills">Sta. Rita Hills</option>
-              <option value="Ballard Canyon">Ballard Canyon</option>
-              <option value="Happy Canyon of Santa Barbara">Happy Canyon of Santa Barbara</option>
-              <option value="Los Olivos District">Los Olivos District</option>
+              <option value="Happy Canyon">Happy Canyon</option>
               <option value="Santa Maria Valley">Santa Maria Valley</option>
-              <option value="Paso Robles (all sub-AVAs)">Paso Robles (all sub-AVAs)</option>
-              <option value="Edna Valley">Edna Valley</option>
-              <option value="Arroyo Grande Valley">Arroyo Grande Valley</option>
-              <option value="San Luis Obispo Coast">San Luis Obispo Coast</option>
+              <option value="Ballard Canyon">Ballard Canyon</option>
+              <option value="Los Olivos District">Los Olivos District</option>
+              <option value="Alisos Canyon">Alisos Canyon</option>
+              <option value="Paso Robles">Paso Robles</option>
+              <option value="York Mountain">York Mountain</option>
+              <option value="SLO Coast (Edna Valley, Arroyo Grande)">SLO Coast (Edna Valley, Arroyo Grande)</option>
               <option value="Other Central Coast">Other Central Coast</option>
               <option value="Not a Central Coast winery">Not a Central Coast winery</option>
             </select>
@@ -583,7 +586,7 @@
       var lastName = form['Last Name'].value.trim();
       var email = form.Email.value.trim();
       var company = form['Company'].value.trim();
-      var ava = form['AVA Region'].value;
+      var ava = form['LEADCF5'].value;
 
       if (!lastName) { alert('Please enter your last name.'); form['Last Name'].focus(); return false; }
       if (!email) { alert('Please enter your email address.'); form.Email.focus(); return false; }
@@ -593,7 +596,7 @@
         alert('Please enter a valid email address.'); form.Email.focus(); return false;
       }
       if (!company) { alert('Please enter your winery or company name.'); form['Company'].focus(); return false; }
-      if (!ava) { alert('Please select your AVA or region.'); form['AVA Region'].focus(); return false; }
+      if (!ava) { alert('Please select your AVA or region.'); form['LEADCF5'].focus(); return false; }
 
       // Append the AVA value to the Description field so the data lands in Zoho
       // even if the custom AVA Region field hasn't been set up in the CRM yet.
