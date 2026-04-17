@@ -258,8 +258,8 @@
             <input type="text" name="Company" placeholder="Winery or company name" required aria-label="Winery or company name" maxlength="100" class="cciq-input">
           </div>
           <div class="cciq-grid-1">
-            <select name="LEADCF5" id="cciqAvaRegion" required aria-label="AVA or region" class="cciq-input cciq-select">
-              <option value="" disabled selected>Which AVA or region is your winery in?</option>
+            <select name="LEADCF5" id="cciqAvaRegion" required aria-label="Wine region" class="cciq-input cciq-select">
+              <option value="-None-" disabled selected>Which AVA or region is your winery in?</option>
               <option value="Santa Ynez Valley">Santa Ynez Valley</option>
               <option value="Sta. Rita Hills">Sta. Rita Hills</option>
               <option value="Happy Canyon">Happy Canyon</option>
@@ -272,6 +272,19 @@
               <option value="SLO Coast (Edna Valley, Arroyo Grande)">SLO Coast (Edna Valley, Arroyo Grande)</option>
               <option value="Other Central Coast">Other Central Coast</option>
               <option value="Not a Central Coast winery">Not a Central Coast winery</option>
+            </select>
+          </div>
+          <div class="cciq-grid-1">
+            <select name="LEADCF4" id="cciqReferralSource" aria-label="How did you hear about us" class="cciq-input cciq-select">
+              <option value="-None-" selected>How did you hear about us?</option>
+              <option value="Search engine (Google, etc.)">Search engine (Google, etc.)</option>
+              <option value="Linkedin">Linkedin</option>
+              <option value="Facebook / Instagram / Meta">Facebook / Instagram / Meta</option>
+              <option value="X (Twitter)">X (Twitter)</option>
+              <option value="Referral from another winery">Referral from another winery</option>
+              <option value="Industry event or trade show">Industry event or trade show</option>
+              <option value="Press or article">Press or article</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div class="cciq-grid-1" style="margin-top: 0.5rem;">
@@ -578,10 +591,9 @@
     })();
 
     // CCIQ report signup: client-side validation + Description enrichment
-    // before POSTing to Zoho. The AVA value is appended to the Description field
-    // so the data is captured in Zoho regardless of whether the custom
-    // "AVA Region" field has been configured in the CRM yet.
+    // before POSTing to Zoho.
     function cciqValidateForm() {
+      document.charset = 'UTF-8';
       var form = document.getElementById('cciqReportForm');
       var lastName = form['Last Name'].value.trim();
       var email = form.Email.value.trim();
@@ -596,12 +608,16 @@
         alert('Please enter a valid email address.'); form.Email.focus(); return false;
       }
       if (!company) { alert('Please enter your winery or company name.'); form['Company'].focus(); return false; }
-      if (!ava) { alert('Please select your AVA or region.'); form['LEADCF5'].focus(); return false; }
+      if (!ava || ava === '-None-') { alert('Please select your AVA or region.'); form['LEADCF5'].focus(); return false; }
 
       // Append the AVA value to the Description field so the data lands in Zoho
-      // even if the custom AVA Region field hasn't been set up in the CRM yet.
+      // Append AVA and referral source to Description as a fallback.
       var desc = document.getElementById('cciqDescription');
-      if (desc) { desc.value = desc.value + ' | AVA: ' + ava; }
+      var referral = form['LEADCF4'].value;
+      if (desc) {
+        desc.value = desc.value + ' | AVA: ' + ava;
+        if (referral && referral !== '-None-') { desc.value = desc.value + ' | Referral: ' + referral; }
+      }
 
       return true;
     }
