@@ -342,3 +342,7 @@ What gets tested in a serious quality of earnings (QofE) process and how to prep
 ### What PE Sponsors Actually Ask About EBITDA
 
 The specific EBITDA questions PE firms ask in diligence — and what "can answer them cleanly" actually means. Covers addbacks, normalization adjustments, run-rate assumptions, and how to present EBITDA in a way that builds credibility rather than raising questions.
+
+### Why Your CPA's "Fractional CFO" Service Isn't Actually CFO Work
+
+Most "fractional CFO" services are CPA firms adding a strategic line item to a tax-and-bookkeeping package. Real CFO work is different — capital allocation, tech stack revitalization, AI-first operations, and the operator judgment that turns numbers into decisions. Covers what CPAs are trained to do vs. what CFOs actually do, where the gap shows up in practice (contribution margin, cash conversion cycle, tech stack, AI integration, board reporting, fundraising), how to tell the difference before hiring, and the four diagnostic questions to ask a fractional CFO candidate. The test: ask your current provider what they've rebuilt in your finance function in the last six months. If the answer is "we closed the books," they're a controller, not a CFO.
