@@ -66,7 +66,7 @@
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=head-of-finance-services" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
       </nav>
@@ -83,7 +83,7 @@
       <h1>One Person to Own Finance.<br>Without Hiring One Yet.</h1>
       <p>For founder-led companies, venture-backed startups, and operators who don't yet have a dedicated finance team. Head of Finance, VP Finance, Finance Lead, Finance Chief — whatever you call the top finance seat, we cover it. Fractional or interim, depending on what you need.</p>
       <div class="hero-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=head-of-finance-services" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/blog/cfo-finance-director-controller" class="btn btn-outline-white">Which Role Do You Need?</a>
       </div>
     </div>
@@ -195,7 +195,7 @@
       <h2>Not Sure What Title Fits Your Company?</h2>
       <p>Book a free 30-minute call. We'll talk through what the seat needs to cover and help you figure out the right shape.</p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=head-of-finance-services" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/blog/cfo-finance-director-controller" class="btn btn-outline-white">Read the Guide &rarr;</a>
       </div>
     </div>
@@ -221,7 +221,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=head-of-finance-services" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
@@ -257,6 +257,18 @@
     const toggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
     toggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+
+    // Calendly click tracking — fires book_call_click event for GA4 attribution
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'book_call_click', {
+            page_path: window.location.pathname,
+            link_url: a.href
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>

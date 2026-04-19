@@ -204,7 +204,7 @@
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=homepage" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -224,7 +224,7 @@
       <h1>Finance Teams Break.<br>RAID Teams Scale.</h1>
       <p>Most companies hit a wall at $20M. The close takes three weeks. Margins are a mystery. The CEO is flying blind. It's not a people problem — it's a systems problem. We fix it, and we build the tools around it.</p>
       <div class="hero-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=homepage" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/our-work" class="btn btn-outline-white">See Our Work</a>
       </div>
       <div class="stat-bar">
@@ -607,7 +607,7 @@
       <h2>Ready to Fix Your Finance Function?</h2>
       <p>Book a free 30-minute call. We'll talk about where you are, where the gaps are, and whether we're the right fit.</p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=homepage" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/contact" class="btn btn-outline-white">Send a Message</a>
       </div>
     </div>
@@ -634,7 +634,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=homepage" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
@@ -709,6 +709,18 @@
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
+    });
+
+    // Calendly click tracking — fires book_call_click event for GA4 attribution
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'book_call_click', {
+            page_path: window.location.pathname,
+            link_url: a.href
+          });
+        }
+      });
     });
   </script>
 </body>

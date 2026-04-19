@@ -54,7 +54,7 @@
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=inland-empire" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
       </nav>
@@ -71,7 +71,7 @@
       <h1>The Inland Empire Is Southern California's<br>Operational Backbone.</h1>
       <p>Ontario warehouses fulfill half the ecommerce you order. Riverside hospitals serve two million people. Temecula wineries are becoming a destination. San Bernardino manufacturers build the goods that show up in LA stores. It's the region nobody writes about — and it needs CFO services that understand heavy operations, logistics economics, and diversified portfolios.</p>
       <div class="hero-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=inland-empire" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/our-work" class="btn btn-outline-white">See Our Work</a>
       </div>
     </div>
@@ -173,7 +173,7 @@
       <h2>Ready for CFO-Level Leadership in the Inland Empire?</h2>
       <p>Book a free 30-minute call. We'll talk about where your finance function is today, where the gaps are, and whether Mainstreet IQ is the right fit.</p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=inland-empire" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/contact" class="btn btn-outline-white">Send a Message</a>
       </div>
     </div>
@@ -199,7 +199,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=inland-empire" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
@@ -235,6 +235,18 @@
     const toggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
     toggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+
+    // Calendly click tracking — fires book_call_click event for GA4 attribution
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'book_call_click', {
+            page_path: window.location.pathname,
+            link_url: a.href
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>

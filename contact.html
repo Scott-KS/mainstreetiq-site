@@ -55,7 +55,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Sales",
-        "url": "https://calendly.com/scott_mainstreetiq/30min"
+        "url": "https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=contact"
       }
     }
   }
@@ -74,7 +74,7 @@
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=contact" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -131,7 +131,7 @@
 
           <div id="contact-form-success" style="display: none; text-align: center; padding: 2rem; border: 1px solid var(--border); border-radius: 6px; background: var(--ice, #eef4fb);">
             <h3 style="color: var(--navy); font-weight: 500; margin-bottom: 0.75rem;">Message sent.</h3>
-            <p style="color: var(--slate); font-weight: 300; margin: 0;">I'll get back to you within one business day. If you'd like to skip ahead, <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener" style="color: var(--gold); font-weight: 500;">book a call now</a>.</p>
+            <p style="color: var(--slate); font-weight: 300; margin: 0;">I'll get back to you within one business day. If you'd like to skip ahead, <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=contact" target="_blank" rel="noopener" style="color: var(--gold); font-weight: 500;">book a call now</a>.</p>
           </div>
 
           <div class="contact-methods" style="margin-top: 2rem;">
@@ -149,7 +149,7 @@
 
         <!-- Right Column: Calendly Embed -->
         <div class="contact-calendly">
-          <div class="calendly-inline-widget" data-url="https://calendly.com/scott_mainstreetiq/30min" style="min-width:320px;height:700px;"></div>
+          <div class="calendly-inline-widget" data-url="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=contact" style="min-width:320px;height:700px;"></div>
           <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
 
@@ -178,7 +178,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=contact" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
@@ -279,6 +279,18 @@
 
       return true;
     }
+
+    // Calendly click tracking — fires book_call_click event for GA4 attribution
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'book_call_click', {
+            page_path: window.location.pathname,
+            link_url: a.href
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>

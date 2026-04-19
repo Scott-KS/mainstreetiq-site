@@ -64,7 +64,7 @@
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=blog-cfo-finance-director-controller" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
       </nav>
@@ -201,14 +201,14 @@
 
       <p>The companies that get this right do two things. They diagnose the scope first, the title second. And they don't over-hire for stage — a fractional CFO plus a strong controller beats a full-time CFO with nobody underneath, at almost every mid-market stage.</p>
 
-      <p>If you're trying to figure out which role you need, <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">book 20 minutes</a>. No pitch — just a conversation about what the seat actually needs to cover.</p>
+      <p>If you're trying to figure out which role you need, <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=blog-cfo-finance-director-controller" target="_blank" rel="noopener">book 20 minutes</a>. No pitch — just a conversation about what the seat actually needs to cover.</p>
 
       <p>We serve companies across <a href="/fractional-cfo-santa-barbara">Santa Barbara County</a>, <a href="/fractional-cfo-san-luis-obispo">SLO County</a>, <a href="/fractional-cfo-ventura">Ventura County</a>, <a href="/fractional-cfo-los-angeles">Los Angeles</a>, and <a href="/fractional-cfo-orange-county">Orange County</a>.</p>
 
       <div class="post-cta">
         <h3>Not Sure What Role You Need?</h3>
         <p>Book a free 30-minute call. We'll talk through the scope and help you figure out whether the right answer is CFO, Finance Director, Controller, or some combination.</p>
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a Call &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=blog-cfo-finance-director-controller" class="btn btn-primary" target="_blank" rel="noopener">Book a Call &rarr;</a>
       </div>
 
       <nav class="post-nav">
@@ -224,7 +224,7 @@
       <h2>Ready to Fix Your Finance Function?</h2>
       <p>Book a free 30-minute call. We'll talk about where you are, where the gaps are, and whether we're the right fit.</p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=blog-cfo-finance-director-controller" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/contact" class="btn btn-outline-white">Send a Message</a>
       </div>
     </div>
@@ -250,7 +250,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=blog-cfo-finance-director-controller" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
@@ -286,6 +286,18 @@
     const toggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
     toggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+
+    // Calendly click tracking — fires book_call_click event for GA4 attribution
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'book_call_click', {
+            page_path: window.location.pathname,
+            link_url: a.href
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>

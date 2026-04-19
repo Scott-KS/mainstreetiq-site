@@ -153,7 +153,7 @@
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=san-luis-obispo" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -173,7 +173,7 @@
       <h1>Finance Leadership for San Luis Obispo County's<br>Growth-Stage Companies</h1>
       <p>San Luis Obispo County's economy runs on Paso Robles wine, coastal hospitality, a growing tech scene feeding off Cal Poly, and a rising cluster of DTC brands. What these companies share isn't geography — it's a growth curve that outpaces their finance team. A fractional CFO gives you senior finance leadership without the $400K full-time commitment. Mainstreet IQ embeds directly in your business to build the financial infrastructure that turns growth into profit.</p>
       <div class="hero-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=san-luis-obispo" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/our-work" class="btn btn-outline-white">See Our Work</a>
       </div>
       <div class="stat-bar">
@@ -425,7 +425,7 @@
       <h2>Ready for CFO Leadership in SLO County?</h2>
       <p>Book a free 30-minute call. We'll talk about your business, the gaps in your finance function, and whether a fractional CFO is the right fit for your San Luis Obispo company.</p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/scott_mainstreetiq/30min" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=san-luis-obispo" class="btn btn-white" target="_blank" rel="noopener">30 Minutes. No Pitch. &rarr;</a>
         <a href="/contact" class="btn btn-outline-white">Send a Message</a>
       </div>
     </div>
@@ -452,7 +452,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">Book a Call</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=san-luis-obispo" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
@@ -520,6 +520,18 @@
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
+    });
+
+    // Calendly click tracking — fires book_call_click event for GA4 attribution
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'book_call_click', {
+            page_path: window.location.pathname,
+            link_url: a.href
+          });
+        }
+      });
     });
   </script>
 </body>
