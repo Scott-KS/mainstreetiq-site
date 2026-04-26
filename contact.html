@@ -116,6 +116,7 @@
               <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/contact?sent=success">
               <input type="hidden" name="Lead Source" value="MSIQ Website">
               <input type="hidden" name="Lead Status" value="Pre-Qualified">
+              <input type="hidden" name="Revenue Band" id="msiqHiddenRevenueBand" value="">
               <input type="text" name="aG9uZXlwb3Q" value="" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
               <div class="contact-form-row">
@@ -124,7 +125,16 @@
               </div>
               <input type="email" name="Email" placeholder="Email address" required aria-label="Email address" maxlength="100" class="contact-input">
               <input type="text" name="Company" placeholder="Company name" required aria-label="Company name" maxlength="100" class="contact-input">
-              <textarea name="Description" id="msiqMessage" placeholder="Tell us about your situation — revenue range, industry, what's prompting the inquiry..." aria-label="Message" rows="5" class="contact-input"></textarea>
+              <select id="msiqRevenueRange" required aria-label="Annual revenue range" class="contact-input contact-select">
+                <option value="-None-" disabled selected>Annual revenue range</option>
+                <option value="Under $5M">&lt;$5M</option>
+                <option value="$5M-$10M">$5M – $10M</option>
+                <option value="$10M-$25M">$10M – $25M</option>
+                <option value="$25M-$50M">$25M – $50M</option>
+                <option value="$50M-$100M">$50M – $100M</option>
+                <option value="Over $100M">&gt;$100M</option>
+              </select>
+              <textarea name="Description" id="msiqMessage" placeholder="Tell us about your situation — industry, what's prompting the inquiry, what you've tried..." aria-label="Message" rows="5" class="contact-input"></textarea>
               <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message &rarr;</button>
             </form>
           </div>
@@ -178,6 +188,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
+          <a href="/cfo-assessment">CFO Diagnostic</a>
           <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=contact" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
@@ -232,6 +243,16 @@
       font-weight: 300;
     }
     textarea.contact-input { resize: vertical; min-height: 100px; }
+    .contact-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%236B7480' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+    .contact-select:invalid { color: var(--neutral, #6B7480); }
     .contact-form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -272,10 +293,21 @@
       var lastName = form['Last Name'].value.trim();
       var email = form['Email'].value.trim();
       var company = form['Company'].value.trim();
+      var revSel = document.getElementById('msiqRevenueRange');
 
       if (!lastName) { alert('Please enter your last name.'); form['Last Name'].focus(); return false; }
       if (!email) { alert('Please enter your email address.'); form['Email'].focus(); return false; }
+      var atpos = email.indexOf('@');
+      var dotpos = email.lastIndexOf('.');
+      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+        alert('Please enter a valid email address.'); form['Email'].focus(); return false;
+      }
       if (!company) { alert('Please enter your company name.'); form['Company'].focus(); return false; }
+      if (!revSel.value || revSel.value === '-None-') { alert('Please select your annual revenue range.'); revSel.focus(); return false; }
+
+      // Mirror revenue select into the Revenue Band hidden input — Zoho's
+      // Web-to-Lead drops <select> values, so the hidden input is what lands.
+      document.getElementById('msiqHiddenRevenueBand').value = revSel.value;
 
       return true;
     }

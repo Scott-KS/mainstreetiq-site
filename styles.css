@@ -889,3 +889,42 @@ section { padding: var(--section-padding); }
     gap: 1rem;
   }
 }
+
+/* --- CFO Assessment Teaser (embedded on high-intent pages) --- */
+.assessment-teaser {
+  padding: 4rem 0;
+  background: var(--color-ice);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.assessment-teaser-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+.assessment-teaser .section-label { margin-bottom: 0.65rem; }
+.assessment-teaser h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  color: var(--color-dark-text);
+  line-height: 1.25;
+}
+.assessment-teaser p {
+  font-size: 1rem;
+  color: var(--slate);
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+}
+.assessment-teaser .btn { white-space: nowrap; }
+@media (max-width: 720px) {
+  .assessment-teaser-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .assessment-teaser .btn { width: 100%; justify-content: center; }
+}
