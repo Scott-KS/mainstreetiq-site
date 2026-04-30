@@ -646,6 +646,164 @@
       .cciq-specialty-grid { grid-template-columns: 1fr; }
     }
 
+    /* Where to Start: assessment-hook CTA stack */
+    .cciq-where-cta {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .cciq-where-or {
+      font-size: 0.9rem;
+      opacity: 0.55;
+      letter-spacing: 0.04em;
+    }
+
+    /* Journey strip */
+    .cciq-journey-wrap {
+      max-width: 1100px;
+      margin: 2.5rem auto 0;
+    }
+    .cciq-journey-lead {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: 300;
+      margin: 0 auto 1.5rem;
+      max-width: 900px;
+      opacity: 0.85;
+    }
+    .cciq-journey {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+      gap: 0.4rem;
+      align-items: stretch;
+    }
+    .cciq-journey-node {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 6px;
+      padding: 1.1rem 0.9rem;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .cciq-journey-node:hover {
+      border-color: var(--color-sky, #5BB8FF);
+      transform: translateY(-2px);
+    }
+    .cciq-journey-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-sky, #5BB8FF);
+      font-weight: 500;
+    }
+    .cciq-journey-node p {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      margin: 0;
+      font-weight: 300;
+    }
+    .cciq-journey-arrow {
+      color: var(--color-sky, #5BB8FF);
+      font-size: 1.3rem;
+      align-self: center;
+      opacity: 0.45;
+    }
+    @media (max-width: 900px) {
+      .cciq-journey {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      .cciq-journey-arrow {
+        transform: rotate(90deg);
+        margin: 0 auto;
+        font-size: 1rem;
+      }
+    }
+
+    /* Compare-at-a-glance strip */
+    .cciq-compare-lead {
+      max-width: 900px;
+      margin: 3rem auto 1.5rem;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.65;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+    .cciq-compare {
+      max-width: 1200px;
+      margin: 0 auto;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 6px;
+      overflow-x: auto;
+      background: var(--white);
+    }
+    .cciq-compare-row {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(6, 1fr);
+      gap: 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      min-width: 880px;
+    }
+    .cciq-compare-row:last-child { border-bottom: none; }
+    .cciq-compare-row > div,
+    .cciq-compare-row > a {
+      padding: 1rem 0.85rem;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      border-right: 1px solid rgba(0,0,0,0.06);
+    }
+    .cciq-compare-row > div:last-child,
+    .cciq-compare-row > a:last-child { border-right: none; }
+    .cciq-compare-rowlabel {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-navy, inherit);
+      font-weight: 500;
+      background: rgba(0,0,0,0.025);
+      align-self: stretch;
+    }
+    .cciq-compare-header { background: rgba(0,0,0,0.04); }
+    .cciq-compare-header > div,
+    .cciq-compare-header > a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--color-navy, inherit);
+      text-decoration: none;
+    }
+    .cciq-compare-tier {
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .cciq-compare-tier:hover {
+      background: var(--color-ice, rgba(91,184,255,0.08));
+      color: var(--color-sky, #5BB8FF);
+    }
+    .cciq-compare-sub {
+      display: block;
+      font-size: 0.76rem;
+      opacity: 0.65;
+      font-weight: 400;
+      margin-top: 0.18rem;
+    }
+    .cciq-compare-foot {
+      max-width: 900px;
+      margin: 1.25rem auto 0;
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
     /* What We Do (three-step) */
     .cciq-do-grid {
       display: grid;
@@ -892,11 +1050,106 @@
   <section>
     <div class="container">
       <div class="section-header">
-        <span class="section-label">The Catalog</span>
-        <h2 class="section-title">Six tiers, by how much help you want</h2>
-        <p class="section-subtitle">Discover is the door: the regional view, lowest-friction entry, free first issue per region. Monitor is the operating floor for any winery that wants to act on the data each month rather than read about the region each quarter. Diagnose, Engage, and Manage scale up from there as decisions and execution coordination demand more.</p>
-        <p class="section-subtitle" style="margin-top: 1rem;"><strong>Not sure which tier fits?</strong> <a href="/cciq-assessment" style="color: var(--color-sky); font-weight: 500;">Take the 6-minute CCIQ Assessment</a> for a personalized recommendation.</p>
+        <span class="section-label">Where to Start</span>
+        <h2 class="section-title">Three ways to find the right fit</h2>
+        <p class="section-subtitle">Most operators do not start by picking a tier. They start by figuring out which tier fits. The 6-minute Assessment names a recommended starting point. The journey below shows how the tiers connect. The comparison strip lets you scan all six at once.</p>
+        <div class="cciq-where-cta">
+          <a href="/cciq-assessment" class="btn btn-primary">Take the CCIQ Assessment &rarr;</a>
+          <span class="cciq-where-or">or</span>
+          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=cciq-where-to-start" class="btn btn-secondary" target="_blank" rel="noopener">Book a 30-min call</a>
+        </div>
       </div>
+
+      <!-- Layer 2: Journey strip -->
+      <div class="cciq-journey-wrap">
+        <p class="cciq-journey-lead">Most operators start with Discover or Diagnose. Monitor is the ongoing floor when the data is worth checking each month. Engage and Manage are where we run with you.</p>
+        <div class="cciq-journey">
+          <a href="#discover" class="cciq-journey-node">
+            <span class="cciq-journey-label">Discover</span>
+            <p>The regional view, free first issue.</p>
+          </a>
+          <span class="cciq-journey-arrow" aria-hidden="true">&rarr;</span>
+          <a href="#diagnose" class="cciq-journey-node">
+            <span class="cciq-journey-label">Diagnose</span>
+            <p>A one-time deep look at your winery.</p>
+          </a>
+          <span class="cciq-journey-arrow" aria-hidden="true">&rarr;</span>
+          <a href="#monitor" class="cciq-journey-node">
+            <span class="cciq-journey-label">Monitor</span>
+            <p>Ongoing monthly intelligence.</p>
+          </a>
+          <span class="cciq-journey-arrow" aria-hidden="true">&rarr;</span>
+          <a href="#engage" class="cciq-journey-node">
+            <span class="cciq-journey-label">Engage</span>
+            <p>We coordinate your partners; you decide.</p>
+          </a>
+          <span class="cciq-journey-arrow" aria-hidden="true">&rarr;</span>
+          <a href="#manage" class="cciq-journey-node">
+            <span class="cciq-journey-label">Manage</span>
+            <p>Scott in the room when the call is made.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Layer 3: Compare-at-a-glance -->
+      <p class="cciq-compare-lead">Most operators are already paying $7K to $30K a year across SEO contractors, social tools, agency retainers, listing services, and reputation SaaS. Central Coast IQ either replaces those line items or coordinates them under one practice, often for less than the sum of the parts. Each tier below is also priced in the language you already speak.</p>
+      <div class="cciq-compare">
+        <div class="cciq-compare-row cciq-compare-header">
+          <div></div>
+          <a href="#discover" class="cciq-compare-tier">Discover</a>
+          <a href="#monitor" class="cciq-compare-tier">Monitor</a>
+          <a href="#monitor-plus" class="cciq-compare-tier">Monitor Plus</a>
+          <a href="#diagnose" class="cciq-compare-tier">Diagnose</a>
+          <a href="#engage" class="cciq-compare-tier">Engage</a>
+          <a href="#manage" class="cciq-compare-tier">Manage</a>
+        </div>
+        <div class="cciq-compare-row">
+          <div class="cciq-compare-rowlabel">Cadence</div>
+          <div>Quarterly</div>
+          <div>Monthly</div>
+          <div>Monthly + 1-on-1</div>
+          <div>One-time</div>
+          <div>Monthly retainer</div>
+          <div>Monthly retainer</div>
+        </div>
+        <div class="cciq-compare-row">
+          <div class="cciq-compare-rowlabel">Who decides</div>
+          <div>You</div>
+          <div>You</div>
+          <div>You</div>
+          <div>You</div>
+          <div>You, with our oversight</div>
+          <div>You, with Scott in the room</div>
+        </div>
+        <div class="cciq-compare-row">
+          <div class="cciq-compare-rowlabel">Best fit revenue</div>
+          <div>Any</div>
+          <div>$300K to $3M</div>
+          <div>$1M to $5M</div>
+          <div>Any</div>
+          <div>$3M+</div>
+          <div>$3M+</div>
+        </div>
+        <div class="cciq-compare-row">
+          <div class="cciq-compare-rowlabel">Starting price</div>
+          <div>$1K/yr<span class="cciq-compare-sub">free first issue</span></div>
+          <div>$3,600/yr<span class="cciq-compare-sub">or $400/mo</span></div>
+          <div>$6,000/yr<span class="cciq-compare-sub">or $600/mo</span></div>
+          <div>$1,495+<span class="cciq-compare-sub">per project</span></div>
+          <div>Custom<span class="cciq-compare-sub">scoped per engagement</span></div>
+          <div>Custom<span class="cciq-compare-sub">scoped per engagement</span></div>
+        </div>
+        <div class="cciq-compare-row">
+          <div class="cciq-compare-rowlabel">Pays for itself with</div>
+          <div>≈ 3 new club members on the year</div>
+          <div>≈ 10 new club members on the year</div>
+          <div>≈ 15 new club members on the year</div>
+          <div>≈ one busy Saturday at the tasting room</div>
+          <div>Less than the agency line it replaces</div>
+          <div>Less than the CFO + agency stack it replaces</div>
+        </div>
+      </div>
+      <p class="cciq-compare-foot">All six tiers in full detail below. Tap a column header to jump to that tier.</p>
 
       <div class="cciq-tier-grid">
 
@@ -914,7 +1167,7 @@
           </ul>
           <div class="cciq-pricing-block">
             <div class="cciq-price-row">
-              <span><strong>Bundle (recommended)</strong><span class="price-amt-sub">Regional + Pricing reports</span></span>
+              <span><strong>Bundle (recommended)</strong><span class="price-amt-sub">Save ~38% vs single issues. Regional + Pricing reports.</span></span>
               <span class="price-amt">$1,000/yr<span class="price-amt-sub">$800/yr each additional county</span></span>
             </div>
             <div class="cciq-price-row">
@@ -973,7 +1226,7 @@
           </details>
           <div class="cciq-pricing-block">
             <div class="cciq-price-row">
-              <span><strong>Annual</strong><span class="price-amt-sub">Includes Discover Bundle, $1,000 value, at no additional cost</span></span>
+              <span><strong>Annual</strong><span class="price-amt-sub">Save 25% vs monthly. Includes Discover Bundle, $1,000 value, at no additional cost.</span></span>
               <span class="price-amt">$3,600/yr</span>
             </div>
             <div class="cciq-price-row">
@@ -1020,7 +1273,7 @@
           </details>
           <div class="cciq-pricing-block">
             <div class="cciq-price-row">
-              <span><strong>Annual</strong><span class="price-amt-sub">Discover Bundle included</span></span>
+              <span><strong>Annual</strong><span class="price-amt-sub">Save ~17% vs monthly. Discover Bundle included.</span></span>
               <span class="price-amt">$6,000/yr</span>
             </div>
             <div class="cciq-price-row">
