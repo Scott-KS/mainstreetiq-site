@@ -646,6 +646,20 @@
       .cciq-specialty-row { grid-template-columns: 1fr; gap: 0.25rem; padding: 0.75rem 0; }
     }
 
+    /* Methodology handoff (compact link to /cciq-methodology) */
+    .cciq-methodology-handoff {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .cciq-methodology-handoff h2 { margin-top: 0.5rem; }
+    .cciq-methodology-handoff-cta {
+      margin-top: 1.25rem;
+      display: flex;
+      justify-content: center;
+    }
+
     /* Proof section */
     .cciq-proof-strip {
       display: grid;
@@ -1147,7 +1161,7 @@
       <div class="cciq-proof-blocks">
         <div class="cciq-proof-block">
           <h3>The methodology is on the public record.</h3>
-          <p>Our SEO, GEO, and AEO framework is documented in <a href="/blog/seo-vs-geo-vs-aeo-explained">the SEO vs GEO vs AEO explainer</a>. The eight dimensions we score are detailed in the methodology section below. The Drift Watch alerts (Search and AI, Reputation, Discoverability Wall, Schema, Social Cadence) run live on every Monitor scorecard. None of this is theory. It is the work.</p>
+          <p>Our SEO, GEO, and AEO framework is documented in <a href="/blog/seo-vs-geo-vs-aeo-explained">the SEO vs GEO vs AEO explainer</a>. The eight dimensions we score are detailed on <a href="/cciq-methodology">the methodology page</a>. The Drift Watch alerts (Search and AI, Reputation, Discoverability Wall, Schema, Social Cadence) run live on every Monitor scorecard. None of this is theory. It is the work.</p>
         </div>
         <div class="cciq-proof-block">
           <h3>The Wine Country Intelligence Report is the visible artifact.</h3>
@@ -1668,240 +1682,15 @@
     </div>
   </section>
 
-  <!-- ===== 8 DIMENSIONS WE SCORE ===== -->
+  <!-- ===== METHODOLOGY HANDOFF ===== -->
   <section>
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">How we measure</span>
-        <h2 class="section-title">The 8 dimensions we score every winery on</h2>
-        <p class="section-subtitle">Every winery in our coverage scores monthly on the same eight dimensions. Five are universal, applying to any local operator-led business. Three are wine-specific. The same framework powers every Discover report, every Diagnose audit, and every Monitor scorecard.</p>
-      </div>
-
-      <p class="cciq-framework-pillar-label">Five Universal Dimensions</p>
-      <div class="cciq-framework-grid">
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Online Visibility</h4>
-            <p>Discoverability across Google, Yelp, AI assistants (ChatGPT, Claude, Perplexity, Gemini), and category directories.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-20 points</p>
-            <ul>
-              <li>Google Business Profile presence and completeness (categories, hours, photos, attributes)</li>
-              <li>Google Maps ranking on AVA-specific and winery-name queries</li>
-              <li>Yelp listing claimed and complete</li>
-              <li>Wine-Searcher merchant listing (single, consolidated)</li>
-              <li>Vivino producer listing</li>
-              <li>TripAdvisor listing presence</li>
-              <li>AI assistant mentions across 48 monthly queries (12 prompts run against ChatGPT, Claude, Perplexity, Gemini)</li>
-              <li>Wine-industry directory presence (regional wine routes, varietal directories)</li>
-            </ul>
-          </div>
-        </details>
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Review Authority</h4>
-            <p>Volume, recency, ratings, sentiment across primary platforms.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-15 points</p>
-            <ul>
-              <li>Total review volume across Google, Yelp, TripAdvisor</li>
-              <li>Star rating consistency across platforms (divergence is a signal)</li>
-              <li>Review velocity in the trailing 90 days vs. historical baseline</li>
-              <li>Owner-response rate per platform</li>
-              <li>Owner-response speed and voice quality</li>
-              <li>Review-source diversification (over-concentration on one platform is fragile)</li>
-            </ul>
-          </div>
-        </details>
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Brand Consistency</h4>
-            <p>Cross-platform brand integrity: name, hours, links, contact info, schema.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-10 points</p>
-            <ul>
-              <li>NAP (Name, Address, Phone) consistency across Google, Yelp, Wine-Searcher, Vivino, your own site</li>
-              <li>Social handle consistency (Instagram, Facebook, TikTok use the same handle)</li>
-              <li>Hours match across Google, Yelp, your site</li>
-              <li>Schema markup name matches the brand name displayed</li>
-              <li>Dual / fragmented listings flagged (e.g., Wine-Searcher merging)</li>
-              <li>Brand transition handling for rebrands (old name still pointed at correctly)</li>
-              <li>Footer / homepage social links resolve to live, owned accounts</li>
-            </ul>
-          </div>
-        </details>
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Web Presence</h4>
-            <p>Site quality, technical health, schema, content depth, mobile parity.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-10 points</p>
-            <ul>
-              <li>Core Web Vitals (LCP, INP, CLS)</li>
-              <li>Mobile parity with desktop content</li>
-              <li>HTTPS valid certificate, no expiration risk</li>
-              <li>Schema markup depth (LocalBusiness, Winery, Product, FAQPage, Event)</li>
-              <li>llms.txt and AI-discoverability files present</li>
-              <li>robots.txt configuration (allowing GPTBot, ClaudeBot, PerplexityBot, Google-Extended)</li>
-              <li>Key pages present (visit, club, shipping, food, events, story)</li>
-              <li>sitemap.xml present, valid, submitted to Google Search Console</li>
-            </ul>
-          </div>
-        </details>
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Customer Experience</h4>
-            <p>Review response rate, complaint resolution patterns, engagement signals.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-10 points</p>
-            <ul>
-              <li>Owner-response rate to reviews (especially on Google)</li>
-              <li>Response speed (7-day SLA on new reviews is the bar)</li>
-              <li>Tone and quality of responses (templated vs. personal)</li>
-              <li>Complaint resolution patterns (do negative reviews get addressed)</li>
-              <li>Hospitality signals in review text (warmth, recall of guests, named staff praise)</li>
-              <li>Sentiment themes across the review corpus (fed by the Sentiment Synthesizer module)</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-
-      <p class="cciq-framework-pillar-label">Three Wine-Specific Dimensions</p>
-      <div class="cciq-framework-grid row-3">
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Social Signals</h4>
-            <p>Instagram, TikTok, Facebook cadence and engagement.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-15 points</p>
-            <ul>
-              <li>Instagram presence, follower base, posting cadence, engagement rate</li>
-              <li>Facebook presence, posting cadence, link integrity from your site</li>
-              <li>TikTok presence and engagement (where applicable)</li>
-              <li>YouTube presence and content cadence (where applicable)</li>
-              <li>Cross-platform handle consistency</li>
-              <li>Comment activity and response rate</li>
-              <li>Content mix variety (winemaking, tasting room, food, vineyard, customer moments)</li>
-            </ul>
-          </div>
-        </details>
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Conversion Flow</h4>
-            <p>DTC commerce friction (Commerce7, Shopify, Orderport), club signup conversion.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-10 points</p>
-            <ul>
-              <li>Commerce platform health (Commerce7, Shopify, Orderport, WineDirect)</li>
-              <li>Product page quality (unique titles, schema, photography, tasting notes)</li>
-              <li>Cart-to-checkout friction (steps, required fields, guest checkout)</li>
-              <li>Shipping page presence and clarity (states, costs, thresholds)</li>
-              <li>Wine club signup form usability and conversion mechanics</li>
-              <li>Mobile checkout completion path</li>
-              <li>Trust signals near purchase CTAs</li>
-              <li>Reservation system (Tock, SevenRooms, Commerce7 native, OpenTable) and booking lead time</li>
-            </ul>
-          </div>
-        </details>
-        <details class="cciq-framework-cell">
-          <summary>
-            <h4>Offering Depth</h4>
-            <p>SKU count, wine club tiers, varietal breadth.</p>
-          </summary>
-          <div class="cell-detail">
-            <p class="cell-score">Scored 0-10 points</p>
-            <ul>
-              <li>Wine portfolio breadth (varietals, vintages currently available)</li>
-              <li>Library access (older vintages still purchasable)</li>
-              <li>Wine club tier count and tier differentiation</li>
-              <li>Tasting flight menu structure and variety</li>
-              <li>Food program (snacks, full pairing menu, on-site kitchen, food trucks)</li>
-              <li>Events calendar (release parties, member events, public tastings, dinners)</li>
-              <li>Lodging or destination amenities (where applicable)</li>
-              <li>Allocation or scarcity-driven offerings</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== AI SEARCH VISIBILITY ===== -->
-  <section class="bg-light">
-    <div class="container">
-      <div class="split-section">
-        <div class="section-header">
-          <span class="section-label">The New Search Reality</span>
-          <h2 class="section-title">Get Found in the New World of AI Search</h2>
-          <p class="section-subtitle">Fewer people are typing queries into Google. More are asking ChatGPT, Claude, Perplexity, and Gemini for winery recommendations, tasting room suggestions, and wine club picks. Most wineries are completely invisible to these systems. We track and fix that.</p>
-        </div>
-        <div class="problem-list">
-          <div class="problem-item">
-            <h3>Structured Data and AI-Readable Schema</h3>
-            <p>AI models rely on structured data to understand what your winery is, where it is, what it offers, and why it's worth recommending. We surface the schema.org gaps and the location, product, and review signals that make your winery legible to AI.</p>
-          </div>
-          <div class="problem-item">
-            <h3>Content That AI Can Cite</h3>
-            <p>AI search engines prefer sources with clear, factual, well-organized content. Our reports name where your winery descriptions, tasting notes, varietal profiles, and regional context fall short, and what to do about it.</p>
-          </div>
-          <div class="problem-item">
-            <h3>Citation and Authority Signals</h3>
-            <p>AI recommendations are heavily weighted toward wineries that appear in trusted publications, review sites, and wine industry sources. We track which citations move you from invisible to recommended.</p>
-          </div>
-          <div class="problem-item">
-            <h3>llms.txt and AI Discoverability Files</h3>
-            <p>The emerging standards for telling AI crawlers what your site is about, which content they can use, and how to represent your brand. Most wineries don't have these yet. We flag whether you do, and what should be in them.</p>
-          </div>
-          <div class="problem-item">
-            <h3>Ongoing AI Search Monitoring</h3>
-            <p>We test what ChatGPT, Claude, Perplexity, and Gemini say when someone asks about Central Coast wineries, and track your winery's presence in those answers over time. The same way you'd track Google rankings, but for AI.</p>
-          </div>
-          <div class="problem-item">
-            <h3>Why This Matters Now</h3>
-            <p>AI search is still young. The wineries that get visible now, while competitors are still figuring it out, will be the ones AI recommends for the next five years. This is the equivalent of SEO in 2005. Get it right now or play catch-up later.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SEO vs GEO vs AEO ===== -->
-  <section>
-    <div class="container">
-      <div class="split-section">
-        <div class="section-header">
-          <span class="section-label">Understanding the Landscape</span>
-          <h2 class="section-title">SEO, GEO, and AEO: what they mean for your winery</h2>
-          <p class="section-subtitle">The way people find wineries is changing. There are now three distinct channels your winery needs to be visible in, and most wineries are only thinking about one of them.</p>
-        </div>
-        <div class="problem-list">
-          <div class="problem-item">
-            <h3>SEO, Search Engine Optimization</h3>
-            <p>This is the one most people know. SEO is about showing up when someone types a query into Google: "best wineries in Santa Ynez Valley" or "Sta. Rita Hills tasting rooms open Sunday." It's driven by keywords, backlinks, page speed, and Google's ranking algorithm. SEO still matters. Google still sends traffic. But it's no longer the only game.</p>
-          </div>
-          <div class="problem-item">
-            <h3>GEO, Generative Engine Optimization</h3>
-            <p>GEO is about showing up in AI-generated search results: the summaries that Google, Bing, and other search engines now produce at the top of the page before traditional blue links. When someone searches "romantic wine tasting experience Central Coast" and Google shows an AI-generated overview recommending specific wineries, that's GEO. The wineries that appear in those summaries get the click; the ones below the fold don't. GEO requires structured content, clear factual claims, and well-organized information that AI models can confidently quote.</p>
-          </div>
-          <div class="problem-item">
-            <h3>AEO, Answer Engine Optimization</h3>
-            <p>AEO is the newest and fastest-growing channel. It's about showing up when someone asks ChatGPT, Claude, Perplexity, or Gemini a direct question: "What wineries in Paso Robles have the best Rhone blends?" or "Where should I do a wine tasting in Santa Barbara this weekend?" These aren't search engines. They're answer engines. They don't show a list of links; they recommend specific wineries by name. If your winery isn't in their training data, isn't cited by trusted sources, and doesn't have structured, AI-readable content, you won't get recommended. Period.</p>
-          </div>
-          <div class="problem-item">
-            <h3>Why does this matter right now?</h3>
-            <p>AI-referred visitors convert at three times the rate of traditional search visitors. They arrive with higher intent because they've already been told your winery is worth visiting, by a system they trust. The wineries that get visible in AI answers now, while competitors are still focused exclusively on Google, will own the recommendation layer for years. SEO took a decade to become competitive. AEO is in its first year. The window is open.</p>
-          </div>
-          <div class="problem-item">
-            <h3>What CCIQ does about it</h3>
-            <p>We track all three channels for every Central Coast winery in our coverage, every month. Discover reports surface regional patterns. Diagnose audits surface site-specific gaps. Monitor scorecards alert when your visibility shifts. The data is the deliverable; the recommendations follow from it. For a deeper look at how the three layers interact, read <a href="/blog/seo-vs-geo-vs-aeo-explained">the full SEO vs GEO vs AEO breakdown on the MSIQ blog</a>.</p>
-          </div>
+      <div class="cciq-methodology-handoff">
+        <span class="section-label">Methodology</span>
+        <h2 class="section-title">See the full scoring framework</h2>
+        <p class="section-subtitle">The eight dimensions we score, the SEO / GEO / AEO landscape, and how AI search is changing winery discoverability are all documented in full on the methodology page.</p>
+        <div class="cciq-methodology-handoff-cta">
+          <a href="/cciq-methodology" class="btn btn-primary">Read the CCIQ Methodology &rarr;</a>
         </div>
       </div>
     </div>
