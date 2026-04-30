@@ -646,6 +646,56 @@
       .cciq-specialty-grid { grid-template-columns: 1fr; }
     }
 
+    /* What We Do (three-step) */
+    .cciq-do-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 2rem auto 0;
+    }
+    .cciq-do-step {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 6px;
+      padding: 2rem 1.75rem;
+      position: relative;
+    }
+    .cciq-do-step h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 0 0 0.75rem;
+      color: var(--color-navy, inherit);
+    }
+    .cciq-do-step p {
+      font-size: 0.93rem;
+      line-height: 1.6;
+      margin: 0;
+      font-weight: 300;
+    }
+    .cciq-do-num {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-sky, #5BB8FF);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .cciq-do-num::before { content: "STEP "; }
+    .cciq-do-closing {
+      max-width: 900px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 300;
+      opacity: 0.85;
+    }
+    @media (max-width: 900px) {
+      .cciq-do-grid { grid-template-columns: 1fr; gap: 1rem; }
+    }
+
     /* Problem-section closing line */
     .cciq-problem-closing {
       max-width: 820px;
@@ -776,6 +826,35 @@
         </div>
       </div>
       <p class="cciq-problem-closing">Your tasting room is beautiful. Your wine is great. The Valley has a deep bench of personable, talented hospitality people who could have made every one of these visits unforgettable. They never got the chance, because the visitors never made it through the door. The gap is not at the door. It is upstream of it, on the digital surface around your winery, and nobody is watching it.</p>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE DO ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">The whole digital surface, watched every month, by one team</h2>
+        <p class="section-subtitle">Central Coast IQ runs a single coordinated practice across the work that decides whether visitors find you. Every month, on every winery in our coverage, we do three things.</p>
+      </div>
+      <div class="cciq-do-grid">
+        <div class="cciq-do-step">
+          <span class="cciq-do-num">1</span>
+          <h3>We watch.</h3>
+          <p>Across Google, Yelp, Maps, Wine-Searcher, Vivino, Instagram, ChatGPT, Claude, Perplexity, and Gemini, we measure where you are showing up, where you are not, and where the wineries you compete with are gaining ground. Eight scoring dimensions, 48 monthly AI prompts, every signal we can capture.</p>
+        </div>
+        <div class="cciq-do-step">
+          <span class="cciq-do-num">2</span>
+          <h3>We surface.</h3>
+          <p>When something changes, we name it. A listing went stale. A schema field disappeared after a Commerce7 update. A peer took your AI citation slot. Your Yelp hours went out of sync with your real hours. We turn the change into a one-line finding you can read in ten seconds.</p>
+        </div>
+        <div class="cciq-do-step">
+          <span class="cciq-do-num">3</span>
+          <h3>We coordinate.</h3>
+          <p>You decide what happens next. Fix it yourself with the finding in hand. Hand it to us through Engage or Manage. Send it to your existing partners and let them act. Whichever path, the work moves and we track whether it lands.</p>
+        </div>
+      </div>
+      <p class="cciq-do-closing">That is the practice. The Wine Country Intelligence Report is the quarterly view of it. The Monitor scorecard is the monthly view. The Diagnose project is the deep view of one winery. Every product is a different lens on the same continuous work.</p>
     </div>
   </section>
 
