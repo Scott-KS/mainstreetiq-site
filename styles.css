@@ -123,6 +123,26 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
 }
 .btn-outline-white:hover { border-color: var(--color-sky); color: var(--color-sky); }
 
+/* --- Accessibility: skip link (visible on focus) --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background: var(--color-navy);
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  outline: 2px solid var(--color-sky);
+  outline-offset: 2px;
+}
+
 /* --- Header / Nav --- */
 .site-header {
   position: fixed;
