@@ -619,31 +619,31 @@
       .cciq-framework-grid.row-3 { grid-template-columns: 1fr; }
     }
 
-    /* Specialty services */
-    .cciq-specialty-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      max-width: 900px;
+    /* Specialty services (compact list) */
+    .cciq-specialty-compact {
+      max-width: 1000px;
       margin: 2rem auto 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
     }
-    .cciq-specialty-item {
-      padding: 1.25rem 0 1.25rem 1.25rem;
-      border-left: 2px solid rgba(0,0,0,0.15);
+    .cciq-specialty-row {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      display: grid;
+      grid-template-columns: minmax(220px, 32%) 1fr;
+      gap: 1.5rem;
+      font-size: 0.93rem;
+      align-items: baseline;
     }
-    .cciq-specialty-item h4 {
-      font-size: 1rem;
+    .cciq-specialty-row strong {
       font-weight: 500;
-      margin-bottom: 0.35rem;
+      color: var(--color-navy, inherit);
     }
-    .cciq-specialty-item p {
-      font-size: 0.9rem;
-      line-height: 1.55;
-      margin: 0;
+    .cciq-specialty-row span {
       opacity: 0.78;
+      line-height: 1.55;
     }
-    @media (max-width: 640px) {
-      .cciq-specialty-grid { grid-template-columns: 1fr; }
+    @media (max-width: 720px) {
+      .cciq-specialty-row { grid-template-columns: 1fr; gap: 0.25rem; padding: 0.75rem 0; }
     }
 
     /* Proof section */
@@ -1913,7 +1913,7 @@
       <div class="section-header">
         <span class="section-label">Coverage</span>
         <h2 class="section-title">Where we serve</h2>
-        <p class="section-subtitle">CCIQ tracks 188+ Santa Barbara County wineries today, with San Luis Obispo County coverage launching Q3 2026 and Monterey County to follow. The Wine Country Intelligence Report ships per county, with subheading for the region covered.</p>
+        <p class="section-subtitle">Central Coast IQ tracks 188+ Santa Barbara County wineries today, with San Luis Obispo County coverage launching Q3 2026 and Monterey County to follow.</p>
       </div>
       <div class="card-grid">
         <a href="#discover" class="case-card">
@@ -1939,47 +1939,46 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label">Beyond the Catalog</span>
-        <h2 class="section-title">Specialty Services Through Our Referral Network</h2>
-        <p class="section-subtitle">For project-specific work that does not fit the standard catalog, Mainstreet IQ maintains a referral network of vetted independent professionals. Scott handles the introduction and scoping; the referred professional engages with you directly under their own terms.</p>
+        <h2 class="section-title">Specialty services through our referral network</h2>
+        <p class="section-subtitle">For project-specific work that does not fit the standard catalog, Mainstreet IQ maintains a network of vetted independent professionals. Scott handles introduction and scoping; the partner engages with you directly under their own terms.</p>
       </div>
-      <div class="cciq-specialty-grid">
-        <div class="cciq-specialty-item">
-          <h4>Social Media Management</h4>
-          <p>Ongoing content planning, posting cadence, community management, paid social.</p>
+      <div class="cciq-specialty-compact">
+        <div class="cciq-specialty-row">
+          <strong>Social media management</strong>
+          <span>Content planning, posting cadence, community management, paid social.</span>
         </div>
-        <div class="cciq-specialty-item">
-          <h4>Website Management</h4>
-          <p>Site operations, content updates, technical maintenance, integrations.</p>
+        <div class="cciq-specialty-row">
+          <strong>Website management</strong>
+          <span>Site operations, content updates, technical maintenance, integrations.</span>
         </div>
-        <div class="cciq-specialty-item">
-          <h4>Event Planning and Management</h4>
-          <p>Event design, vendor coordination, on-site execution, ROI tracking.</p>
+        <div class="cciq-specialty-row">
+          <strong>Event planning and management</strong>
+          <span>Event design, vendor coordination, on-site execution, ROI tracking.</span>
         </div>
-        <div class="cciq-specialty-item">
-          <h4>Real Estate</h4>
-          <p>Lease negotiations, buildouts, capital project management.</p>
+        <div class="cciq-specialty-row">
+          <strong>Real estate</strong>
+          <span>Lease negotiations, buildouts, capital project management.</span>
         </div>
-        <div class="cciq-specialty-item">
-          <h4>Organizational Management and Training</h4>
-          <p>Team training, hiring rubrics, performance frameworks, internal communication, organizational design.</p>
+        <div class="cciq-specialty-row">
+          <strong>Organizational management and training</strong>
+          <span>Team training, hiring rubrics, performance frameworks, internal communication.</span>
         </div>
-        <div class="cciq-specialty-item">
-          <h4>Sales Training</h4>
-          <p>Tasting room sales, club conversion, wholesale account management, hospitality sales.</p>
+        <div class="cciq-specialty-row">
+          <strong>Sales training</strong>
+          <span>Tasting room sales, club conversion, wholesale account management.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FINAL CTA STACK ===== -->
+  <!-- ===== FINAL CTA ===== -->
   <section class="cta-banner">
     <div class="container">
-      <h2>Pick the mode that matches the bottleneck.</h2>
-      <p>Three ways in. All start with a single email or a 30-minute call.</p>
+      <h2>Find out where your winery stands.</h2>
+      <p>Six minutes, a personalized CCIQ Profile, a recommended starting point. No pitch.</p>
       <div class="cta-buttons">
-        <a href="mailto:scott@mainstreetiq.com?subject=Subscribe%20to%20CCIQ%20Discover%20Bundle" class="btn btn-white">Subscribe to Discover &rarr;</a>
-        <a href="mailto:scott@mainstreetiq.com?subject=Diagnose%20project%20request" class="btn btn-outline-white">Request a Diagnose project</a>
-        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=cciq" class="btn btn-outline-white" target="_blank" rel="noopener">Schedule a Call</a>
+        <a href="/cciq-assessment" class="btn btn-white">Take the CCIQ Assessment &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=cciq-final-cta" class="btn btn-outline-white" target="_blank" rel="noopener">Book a 30-min call</a>
       </div>
     </div>
   </section>
