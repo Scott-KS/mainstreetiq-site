@@ -102,7 +102,7 @@
         "name": "Is this a sales pitch?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Your CCIQ Profile is yours regardless of whether you ever engage further. The recommendation may be Discover (free first issue) or self-serve, depending on your situation. Scott reaches out only for the highest-priority profiles within 48 business hours, and only if you ask for a call."
+          "text": "No. Your CCIQ Profile is yours regardless of whether you ever engage further. The recommendation may be Discover or self-serve, depending on your situation. Scott reaches out only for the highest-priority profiles within 48 business hours, and only if you ask for a call."
         }
       }
     ]
@@ -210,8 +210,8 @@
         <div class="cciq-form-divider"></div>
 
         <div id="cciq-form-wrap">
-          <h3 class="cciq-form-h">Send my CCIQ Profile and the free first issue of the Wine Country Intelligence Report</h3>
-          <p class="cciq-form-p">Drop your details and we'll email your CCIQ Profile, plus the latest Wine Country Intelligence Report for your county. If you ask for a call, Scott reaches out within 48 business hours. No drip blast, no spam.</p>
+          <h3 class="cciq-form-h">Send my CCIQ Profile and a sample of the Wine Country Intelligence Report</h3>
+          <p class="cciq-form-p">Drop your details and we'll email your CCIQ Profile, plus a sample of the Wine Country Intelligence Report for your county. If you ask for a call, Scott reaches out within 48 business hours. No drip blast, no spam.</p>
 
           <!-- Zoho Web-to-Lead form -->
           <form action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" id="cciqAssessmentForm" onsubmit="return cciqValidateForm()">
@@ -263,7 +263,7 @@
               <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Me My CCIQ Profile &rarr;</button>
             </div>
           </form>
-          <p class="cciq-form-fineprint">Central Coast wineries receive their CCIQ Profile within minutes and the report within one business day. Unsubscribe any time.</p>
+          <p class="cciq-form-fineprint">Central Coast wineries receive their CCIQ Profile within minutes and the sample report within one business day. Unsubscribe any time.</p>
         </div>
       </div>
 
@@ -366,11 +366,11 @@
         </details>
         <details class="faq-item">
           <summary>Is this a sales pitch?</summary>
-          <p>No. Your CCIQ Profile is yours regardless of whether you ever engage further. The recommendation may be Discover (free first issue), a one-time Diagnose project, a Monitor subscription, or a retainer. Scott reaches out only for the highest-priority profiles within 48 business hours, and only if you asked for a call.</p>
+          <p>No. Your CCIQ Profile is yours regardless of whether you ever engage further. The recommendation may be Discover, a one-time Diagnose project, a Monitor subscription, or a retainer. Scott reaches out only for the highest-priority profiles within 48 business hours, and only if you asked for a call.</p>
         </details>
         <details class="faq-item">
           <summary>What happens to my data?</summary>
-          <p>Your responses and contact information are sent to our CRM (Zoho) so we can build and send your CCIQ Profile, plus the inaugural issue of the Wine Country Intelligence Report. We do not sell or share your data. Unsubscribe at any time.</p>
+          <p>Your responses and contact information are sent to our CRM (Zoho) so we can build and send your CCIQ Profile, plus a sample of the Wine Country Intelligence Report. We do not sell or share your data. Unsubscribe at any time.</p>
         </details>
       </div>
     </div>
@@ -1145,8 +1145,8 @@
     // Tier metadata used in the rec block.
     const cciqTiers = {
       "discover": {
-        headline: "Discover: stay ahead of your peers, starting with the free first issue",
-        pricing: "Free inaugural issue per region, then $1,000/yr for the Discover Bundle (Wine Country Intelligence Report + Wine Pricing Report)",
+        headline: "Discover: stay ahead of your peers, starting with a free sample of the report",
+        pricing: "$1,000/yr for the Discover Bundle (Wine Country Intelligence Report + Wine Pricing Report). Free sample summary available before you subscribe.",
         roi: "Regional view of who is gaining ground and what playbooks are working. 5-15x ROI at $1M scale; 10-30x at $5M+."
       },
       "monitor": {
@@ -1292,7 +1292,7 @@
       if (revUnder300K || amb === "Hold steady (focus is on operations, not growth)" || tl === "Just exploring, no specific timeline") {
         return { tier: "discover",
           reasons: [
-            `Discover is the right starting point: lowest friction, fastest insight, free first issue per region.`,
+            `Discover is the right starting point: lowest friction, fastest insight, free sample summary available before you subscribe.`,
             `You'll see how your peer set is moving and which playbooks are working, without committing to anything more.`,
             `When you're ready to act on the data each month rather than read about the region each quarter, Monitor is the natural next step.`
           ]
