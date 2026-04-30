@@ -646,6 +646,20 @@
       .cciq-specialty-grid { grid-template-columns: 1fr; }
     }
 
+    /* Problem-section closing line */
+    .cciq-problem-closing {
+      max-width: 820px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      font-weight: 300;
+      color: var(--color-dark-text, inherit);
+    }
+    @media (max-width: 720px) {
+      .cciq-problem-closing { font-size: 1rem; line-height: 1.6; margin-top: 2rem; }
+    }
+
     /* Tier-card grid container */
     .cciq-tier-grid {
       display: grid;
@@ -725,9 +739,9 @@
     <img src="assets/images/locations/santa-ynez-vineyards.jpg" alt="" class="hero-bg" aria-hidden="true">
     <div class="hero-overlay"></div>
     <div class="container">
-      <span class="section-label">CCIQ | A Mainstreet IQ Practice</span>
+      <span class="section-label">Central Coast IQ | A Mainstreet IQ Practice</span>
       <h1>You make the wine. We make sure they find you.</h1>
-      <p>Every day, visitors are searching for a Central Coast winery to visit this weekend, a Pinot to ship to a friend, a tasting room to book for an anniversary. CCIQ makes sure your winery is the one they find. We watch the digital surface around your business every month, name what's leaking visitors, and give you the choice: fix it yourself, hand it to us, or send the findings to your existing partners.</p>
+      <p>Every day, visitors are searching for a Central Coast winery to visit this weekend, a Pinot to ship to a friend, a tasting room to book for an anniversary. Central Coast IQ makes sure your winery is the one they find. We watch the digital surface around your business every month, name what's leaking visitors, and give you the choice: fix it yourself, hand it to us, or send the findings to your existing partners.</p>
       <div class="hero-ctas" style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
         <a href="/cciq-assessment" class="btn btn-primary">Take the CCIQ Assessment &rarr;</a>
         <a href="#report-signup" class="btn btn-outline-white">Get the free Wine Country Intelligence Report</a>
@@ -741,9 +755,27 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label">The Problem</span>
-        <h2 class="section-title">Most wineries are losing visitors they never knew were searching.</h2>
-        <p class="section-subtitle">Across the Central Coast, wineries are quietly losing chances to be found: an outdated listing, a missing AI citation, a pricing page that hasn't been touched in two years. CCIQ coordinates the work that keeps your digital surface sharp every month, so the right people keep finding you. Whether you fix what we surface yourself, hand it to us, or send it to your existing partners, the goal is the same: more visitors at your door, fewer chances slipping by.</p>
+        <h2 class="section-title">Four visitors who would have loved your winery this week. None of them found you.</h2>
       </div>
+      <div class="problem-list">
+        <div class="problem-item">
+          <h3>The weekend planner</h3>
+          <p>Sarah is booking an anniversary weekend in the Santa Ynez Valley. She asks ChatGPT for "a winery with a beautiful patio, great food, and Sunday hours, somewhere quiet." Three names come back. Yours has all three. None of them are yours. Sarah books one of the three, walks in expecting magic, and gets exactly what your Sunday afternoons deliver every week. Your patio sits half empty.</p>
+        </div>
+        <div class="problem-item">
+          <h3>The wedding party</h3>
+          <p>A group of twelve is in town for a Saturday wedding in Los Olivos. They want somewhere fun and lively for Sunday afternoon, open later than five, ideally with music. They scroll Instagram and Yelp. Your tasting room runs a vinyl-and-food-truck Sunday until eight in summer, but your Yelp still says you close at five and your Instagram has been quiet for three weeks. They book a competitor. Your dance floor sits empty while twelve people go home and tell friends about a winery they loved. Not yours.</p>
+        </div>
+        <div class="problem-item">
+          <h3>The day-trippers</h3>
+          <p>A couple from Los Angeles spends Saturday in Solvang and taps "wineries near me" into Google Maps. The map surfaces the eight closest pins. You are twelve miles further with a 4.9-star rating, a courtyard with vines climbing the walls, and a tasting room manager who could have walked them into a club membership in forty-five minutes. They never see your pin. You never know they were fifteen minutes away.</p>
+        </div>
+        <div class="problem-item">
+          <h3>The gift buyer</h3>
+          <p>Mike's wife visited a winery in the Santa Ynez Valley two years ago and still talks about the Syrah. He wants to ship her a bottle for their anniversary. He searches "best Santa Ynez Syrah for a gift." Your Syrah won a 93 in Wine Enthusiast last spring. He never finds the review, and he never finds you. He ships a bottle from a name he half-remembers from a billboard.</p>
+        </div>
+      </div>
+      <p class="cciq-problem-closing">Your tasting room is beautiful. Your wine is great. The Valley has a deep bench of personable, talented hospitality people who could have made every one of these visits unforgettable. They never got the chance, because the visitors never made it through the door. The gap is not at the door. It is upstream of it, on the digital surface around your winery, and nobody is watching it.</p>
     </div>
   </section>
 
@@ -900,7 +932,7 @@
               <ul>
                 <li><strong>1-on-1 monthly office hours</strong> (30 min) with Scott, replacing the group format</li>
                 <li><strong>Monthly written analyst commentary</strong> (2-3 page narrative on what changed and why, what's working in the cohort, what to consider this month)</li>
-                <li><strong>Custom peer watch list</strong> of up to 6 named peers tracked monthly — this is what powers the cohort-aware alerts above</li>
+                <li><strong>Custom peer watch list</strong> of up to 6 named peers tracked monthly, which powers the cohort-aware alerts above</li>
                 <li><strong>Sentiment Synthesizer refreshed monthly</strong> (vs. one-time at Diagnose tier)</li>
                 <li><strong>Visual Asset Inventory + AI Model Split</strong> rendered at depth on each scorecard</li>
                 <li><strong>Top-3 prioritized action items per month</strong> with effort/impact rationale</li>
