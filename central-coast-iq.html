@@ -646,6 +646,76 @@
       .cciq-specialty-grid { grid-template-columns: 1fr; }
     }
 
+    /* Proof section */
+    .cciq-proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      max-width: 1100px;
+      margin: 2.5rem auto 0;
+    }
+    .cciq-proof-stat {
+      text-align: center;
+      padding: 1.75rem 1.25rem;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 6px;
+    }
+    .cciq-proof-stat-word { background: var(--color-ice, rgba(91,184,255,0.06)); }
+    .cciq-proof-num {
+      display: block;
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: var(--color-navy, #2B4E8C);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 0.85rem;
+    }
+    .cciq-proof-stat p {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin: 0;
+      font-weight: 300;
+      opacity: 0.85;
+    }
+    .cciq-proof-blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 3rem auto 0;
+    }
+    .cciq-proof-block {
+      padding: 1.75rem;
+      background: var(--color-ice, rgba(91,184,255,0.06));
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .cciq-proof-block h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0 0 0.75rem;
+      color: var(--color-navy, inherit);
+      line-height: 1.4;
+    }
+    .cciq-proof-block p {
+      font-size: 0.93rem;
+      line-height: 1.65;
+      font-weight: 300;
+      margin: 0 0 0.85rem;
+    }
+    .cciq-proof-cta {
+      display: inline-flex;
+      margin-top: 0.25rem;
+    }
+    @media (max-width: 900px) {
+      .cciq-proof-strip { grid-template-columns: repeat(2, 1fr); }
+      .cciq-proof-blocks { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 540px) {
+      .cciq-proof-strip { grid-template-columns: 1fr; }
+    }
+
     /* Where to Start: assessment-hook CTA stack */
     .cciq-where-cta {
       display: flex;
@@ -1043,6 +1113,48 @@
         </div>
       </div>
       <p class="cciq-table-footer">Choose the mode by where the bottleneck is. Most operators start with Discover or Diagnose to validate the framework, then add Monitor or Monitor Plus when the work compounds.</p>
+    </div>
+  </section>
+
+  <!-- ===== PROOF ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Proof</span>
+        <h2 class="section-title">The work is already running. You can see it.</h2>
+        <p class="section-subtitle">Most consultants pitch from a deck. Central Coast IQ is already running the practice across every tracked Central Coast winery, every month. The vendors and tools you are paying separately for, we are running together.</p>
+      </div>
+
+      <div class="cciq-proof-strip">
+        <div class="cciq-proof-stat">
+          <span class="cciq-proof-num">188+</span>
+          <p>Santa Barbara County wineries tracked today</p>
+        </div>
+        <div class="cciq-proof-stat">
+          <span class="cciq-proof-num">48</span>
+          <p>AI prompts run per month, per winery, across ChatGPT, Claude, Perplexity, Gemini</p>
+        </div>
+        <div class="cciq-proof-stat">
+          <span class="cciq-proof-num">8</span>
+          <p>scoring dimensions applied to every winery, every month</p>
+        </div>
+        <div class="cciq-proof-stat cciq-proof-stat-word">
+          <span class="cciq-proof-num">One</span>
+          <p>unified frame across SEO, GEO, AEO, listings, schema, social, and reputation</p>
+        </div>
+      </div>
+
+      <div class="cciq-proof-blocks">
+        <div class="cciq-proof-block">
+          <h3>The methodology is on the public record.</h3>
+          <p>Our SEO, GEO, and AEO framework is documented in <a href="/blog/seo-vs-geo-vs-aeo-explained">the SEO vs GEO vs AEO explainer</a>. The eight dimensions we score are detailed in the methodology section below. The Drift Watch alerts (Search and AI, Reputation, Discoverability Wall, Schema, Social Cadence) run live on every Monitor scorecard. None of this is theory. It is the work.</p>
+        </div>
+        <div class="cciq-proof-block">
+          <h3>The Wine Country Intelligence Report is the visible artifact.</h3>
+          <p>Quarterly, scoring every tracked winery on the same eight dimensions, with quarter-over-quarter movement called out. A sample is one form-fill away.</p>
+          <a href="#report-signup" class="btn btn-primary cciq-proof-cta">See a sample of the Report &rarr;</a>
+        </div>
+      </div>
     </div>
   </section>
 
