@@ -303,7 +303,11 @@ No annual plan survives contact with reality — so build one that doesn't need 
 
 ---
 
-## Acquisition & Growth Series (5 parts)
+## Acquisition & Growth Series (6 parts)
+
+### SEO vs GEO vs AEO: What Each One Actually Does for Growth
+
+Three acronyms have shown up in the last 18 months and most operators assume they are the same thing dressed up in different fonts. They are not. SEO is the discipline of ranking in classic search engines. GEO is the discipline of making sure AI models can reach your site at all and know your brand exists. AEO is the discipline of structuring content so it can be quoted directly inside an answer surface like ChatGPT, Claude, Perplexity, or Google's featured snippets. Covers what each one is in plain terms, why each matters, how they stack (SEO is the floor, GEO is the entry ticket to AI search, AEO is what turns an AI mention into an actual visit), and how to figure out which layer is leaking the most before allocating the next quarter of marketing budget. The growth question is not "should we do SEO or GEO or AEO." All three matter. The question is which one is leaking the most right now and what is the most efficient path to plug it.
 
 ### If Your Month-End Close Takes More Than 7 Days, Read This
 
