@@ -695,6 +695,14 @@ section { padding: var(--section-padding); }
   color: var(--navy);
   font-family: var(--font-body);
 }
+.faq-q {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+  line-height: 1.4;
+}
 .faq-question svg {
   flex-shrink: 0;
   margin-left: 1rem;
