@@ -228,7 +228,7 @@
               <li>Wine-Searcher merchant listing (single, consolidated)</li>
               <li>Vivino producer listing</li>
               <li>TripAdvisor listing presence</li>
-              <li>AI assistant mentions across 48 monthly queries (12 prompts run against ChatGPT, Claude, Perplexity, Gemini)</li>
+              <li>AI assistant mentions across 144 monthly samples (12 prompts &times; 4 platforms &times; 3 repetitions, ChatGPT, Claude, Perplexity, Gemini, majority-vote scoring)</li>
               <li>Wine-industry directory presence (regional wine routes, varietal directories)</li>
             </ul>
           </div>
@@ -436,6 +436,45 @@
           <div class="problem-item">
             <h3>Why This Matters Now</h3>
             <p>AI search is still young. The wineries that get visible now, while competitors are still figuring it out, will be the ones AI recommends for the next five years. This is the equivalent of SEO in 2005. Get it right now or play catch-up later.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ: ACCURACY & REPRODUCIBILITY ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="split-section">
+        <div class="section-header">
+          <span class="section-label">Accuracy and Reproducibility</span>
+          <h2 class="section-title">How we make sure the numbers hold up</h2>
+          <p class="section-subtitle">AI search is stochastic. The same question, two minutes apart, can produce a different answer. Here is how we keep the visibility number from moving on a single run, and how we frame what the number actually represents.</p>
+        </div>
+        <div class="problem-list">
+          <div class="problem-item">
+            <h3>Why your test on ChatGPT might disagree with our report</h3>
+            <p>Our visibility test runs against each platform's API. The consumer chat surfaces (claude.ai, chatgpt.com) include web search, conversation history, and a system prompt that the API does not. A logged-in user asking the same question may see different specific recommendations. Our score reflects baseline model knowledge of your brand, which is what informs every higher-context surface, including the chat product you use yourself.</p>
+          </div>
+          <div class="problem-item">
+            <h3>Three runs per query, majority vote</h3>
+            <p>Each prompt is sent to each platform three times. A brand mention only counts when it appears in a majority of runs. This smooths over the run-to-run variance inherent to AI assistants and keeps the visibility number from swinging on a single sample. With 12 prompts, four platforms, and three repetitions, every monthly score is built from 144 underlying samples.</p>
+          </div>
+          <div class="problem-item">
+            <h3>Pinned model snapshots and timestamped runs</h3>
+            <p>Every report names the exact model version used, in UTC, on the exact date the audit ran. Providers occasionally roll new snapshots under the same name. The timestamp pins what was current at audit time, so a re-test next month can be compared apples to apples instead of confused by a silent model upgrade.</p>
+          </div>
+          <div class="problem-item">
+            <h3>Why we re-run, not expand</h3>
+            <p>The variance in AI visibility lives in how a model answers a single question, not in how many questions you ask. Twelve prompts at three runs each is more reliable than thirty prompts run once. The bigger lever is cadence. We re-run the same panel monthly and report the trend, so a winery's improvement after schema or content fixes is the story, not a single point estimate.</p>
+          </div>
+          <div class="problem-item">
+            <h3>What we do not claim to measure</h3>
+            <p>The score is a measure of mention probability across a defined query set. It is not a measure of the dollar value of those mentions, the conversion rate of AI-driven visits, or the personalized recommendations a logged-in user with browsing history will see. It is a leading indicator of brand presence in generative search, useful for tracking change over time and for identifying where structured-data and content investments are working.</p>
+          </div>
+          <div class="problem-item">
+            <h3>The query panel is published, not hidden</h3>
+            <p>The 12 prompts are project-specific and chosen from real Google autocomplete demand. They are not a secret. Every report includes the verbatim queries, the platforms tested, the model snapshots, and the timestamp. A winery can take any prompt and re-run it themselves to verify what we saw. This transparency is the contract.</p>
           </div>
         </div>
       </div>
