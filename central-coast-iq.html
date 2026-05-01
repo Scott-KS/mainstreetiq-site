@@ -90,9 +90,17 @@
         },
         {
           "@type": "Offer",
-          "name": "Diagnose, Single-Site Audit",
-          "description": "Three-layer SEO, GEO, and AEO audit of one URL plus technical performance (Core Web Vitals, indexation, broken links, redirects), mobile friendliness, accessibility (WCAG 2.2 AA), and wine-specific signal detection. Vendor-ready findings.",
+          "name": "Diagnose, Website Audit",
+          "description": "Three-layer SEO, GEO, and AEO audit across every accessible page on the site, plus technical performance (Core Web Vitals, indexation, broken links, redirects), mobile friendliness, accessibility (WCAG 2.2 AA), and wine-specific signal detection. Vendor-ready findings.",
           "price": "1495.00",
+          "priceCurrency": "USD",
+          "category": "Project"
+        },
+        {
+          "@type": "Offer",
+          "name": "Diagnose, Website Audit Pro",
+          "description": "Everything in the Website Audit, plus keyword and ranking intelligence (GSC + Ahrefs), content depth and freshness audit, E-E-A-T signal audit, per-page mini-audits on the top 10 most-issue pages, multi-viewport mobile rendering, multi-page Core Web Vitals, schema variation analysis with auto-generated JSON-LD, internal link equity flow analysis, local-pack visibility checks, platform-specific remediation guides, punch-list export, and a 6-month KPI roadmap.",
+          "price": "2995.00",
           "priceCurrency": "USD",
           "category": "Project"
         },
@@ -107,7 +115,7 @@
         {
           "@type": "Offer",
           "name": "Diagnose, Full Business Diagnostic",
-          "description": "Single-Site Audit foundation plus social media analysis, reviews module with Sentiment Synthesizer, store setup audit, wine club audit, conversion journey audit, content gap analysis vs. four named peers, pricing comparison vs. the Valley cohort, and backlink profile (when available). All 8 dimensions scored, CAC computation, revenue opportunity sizing across 5 to 7 levers, 90-day priority roadmap.",
+          "description": "Website Audit foundation plus social media analysis, reviews module with Sentiment Synthesizer, store setup audit, wine club audit, conversion journey audit, content gap analysis vs. four named peers, pricing comparison vs. the Valley cohort, and backlink profile (when available). All 8 dimensions scored, CAC computation, revenue opportunity sizing across 5 to 7 levers, 90-day priority roadmap.",
           "price": "4995.00",
           "priceCurrency": "USD",
           "category": "Project"
@@ -743,74 +751,6 @@
       font-size: 0.9rem;
       opacity: 0.55;
       letter-spacing: 0.04em;
-    }
-
-    /* Journey strip */
-    .cciq-journey-wrap {
-      max-width: 1100px;
-      margin: 2.5rem auto 0;
-    }
-    .cciq-journey-lead {
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1.6;
-      font-weight: 300;
-      margin: 0 auto 1.5rem;
-      max-width: 900px;
-      opacity: 0.85;
-    }
-    .cciq-journey {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
-      gap: 0.4rem;
-      align-items: stretch;
-    }
-    .cciq-journey-node {
-      background: var(--white);
-      border: 1px solid rgba(0,0,0,0.08);
-      border-radius: 6px;
-      padding: 1.1rem 0.9rem;
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.15s ease, transform 0.15s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-    }
-    .cciq-journey-node:hover {
-      border-color: var(--color-sky, #5BB8FF);
-      transform: translateY(-2px);
-    }
-    .cciq-journey-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--color-sky, #5BB8FF);
-      font-weight: 500;
-    }
-    .cciq-journey-node p {
-      font-size: 0.82rem;
-      line-height: 1.45;
-      margin: 0;
-      font-weight: 300;
-    }
-    .cciq-journey-arrow {
-      color: var(--color-sky, #5BB8FF);
-      font-size: 1.3rem;
-      align-self: center;
-      opacity: 0.45;
-    }
-    @media (max-width: 900px) {
-      .cciq-journey {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-      }
-      .cciq-journey-arrow {
-        transform: rotate(90deg);
-        margin: 0 auto;
-        font-size: 1rem;
-      }
     }
 
     /* Compare-at-a-glance strip */
