@@ -183,16 +183,92 @@
 
   <!-- ===== CCIQ-specific styles (scoped, no global override) ===== -->
   <style>
-    /* Tier cards */
-    .cciq-tier-card {
+    /* Tier accordions (collapsed-by-default) */
+    .cciq-tier-accordion {
       background: var(--white);
       border: 1px solid rgba(0,0,0,0.08);
       border-radius: 6px;
-      padding: 2rem;
+      overflow: hidden;
+      transition: border-color 200ms ease;
+    }
+    .cciq-tier-accordion:target {
+      border-color: var(--accent, #1f4d8c);
+    }
+    .cciq-tier-accordion > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.4rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      transition: background 150ms ease;
+    }
+    .cciq-tier-accordion > summary::-webkit-details-marker { display: none; }
+    .cciq-tier-accordion > summary:hover {
+      background: rgba(31, 77, 140, 0.03);
+    }
+    .cciq-tier-accordion > summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      opacity: 0.55;
+      flex-shrink: 0;
+      width: 1.25rem;
+      text-align: center;
+      line-height: 1;
+    }
+    .cciq-tier-accordion[open] > summary::after { content: '−'; }
+    .cciq-tier-summary-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .cciq-tier-summary-title {
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.35;
+    }
+    .cciq-tier-summary-price {
+      font-size: 1rem;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .cciq-tier-summary-price-meta {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      opacity: 0.65;
+      margin-top: 0.15rem;
+    }
+    .cciq-tier-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
     }
+    @media (max-width: 600px) {
+      .cciq-tier-accordion > summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .cciq-tier-summary-price {
+        text-align: left;
+      }
+      .cciq-tier-accordion > summary::after {
+        position: absolute;
+        right: 1.75rem;
+        top: 1.4rem;
+      }
+    }
+    /* Shared selectors used inside accordions (also work standalone) */
+    .cciq-tier-accordion .tier-label,
     .cciq-tier-card .tier-label {
       font-size: 0.75rem;
       letter-spacing: 0.18em;
@@ -200,22 +276,26 @@
       color: var(--color-sky, #5BB8FF);
       font-weight: 500;
     }
+    .cciq-tier-accordion h3,
     .cciq-tier-card h3 {
       font-size: 1.5rem;
       font-weight: 400;
       margin: 0;
     }
+    .cciq-tier-accordion .tier-mindset,
     .cciq-tier-card .tier-mindset {
       font-size: 0.95rem;
       font-style: italic;
       opacity: 0.75;
       margin: 0 0 0.5rem;
     }
+    .cciq-tier-accordion ul,
     .cciq-tier-card ul {
       list-style: none;
       padding: 0;
       margin: 0.5rem 0 1rem;
     }
+    .cciq-tier-accordion ul li,
     .cciq-tier-card ul li {
       padding: 0.4rem 0 0.4rem 1.1rem;
       position: relative;
@@ -223,7 +303,9 @@
       line-height: 1.55;
       border-bottom: 1px solid rgba(0,0,0,0.06);
     }
+    .cciq-tier-accordion ul li:last-child,
     .cciq-tier-card ul li:last-child { border-bottom: none; }
+    .cciq-tier-accordion ul li::before,
     .cciq-tier-card ul li::before {
       content: '';
       position: absolute;
@@ -288,11 +370,12 @@
       margin: 0.5rem 0 0;
       line-height: 1.55;
     }
+    .cciq-tier-accordion .tier-cta,
     .cciq-tier-card .tier-cta {
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
-      margin-top: auto;
+      margin-top: 0.5rem;
     }
     .cciq-best-for {
       font-size: 0.85rem;
@@ -310,16 +393,19 @@
     .cciq-tier-roi strong { color: var(--color-navy, inherit); }
 
     /* Engage/Manage muted variant */
+    .cciq-tier-accordion.tier-talk,
     .cciq-tier-card.tier-talk {
       background: rgba(0,0,0,0.02);
     }
+    .cciq-tier-accordion.tier-talk .tier-label,
     .cciq-tier-card.tier-talk .tier-label { opacity: 0.85; }
 
     /* Operating-floor anchor on Monitor card */
+    .cciq-tier-accordion .tier-anchor,
     .cciq-tier-card .tier-anchor {
       display: inline-block;
-      margin: 0 0 0.5rem;
-      padding: 0.25rem 0.6rem;
+      margin: 0 0 0.25rem;
+      padding: 0.2rem 0.55rem;
       font-size: 0.7rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -327,7 +413,9 @@
       color: var(--white, #ffffff);
       background: var(--accent, #1f4d8c);
       border-radius: 2px;
+      align-self: flex-start;
     }
+    .cciq-tier-accordion .tier-wedge,
     .cciq-tier-card .tier-wedge {
       margin: 0.25rem 0 0.85rem;
       padding: 0.65rem 0.85rem;
@@ -1085,9 +1173,15 @@
       <div class="cciq-tier-grid">
 
         <!-- DISCOVER -->
-        <div class="cciq-tier-card" id="discover">
-          <span class="tier-label">Discover</span>
-          <h3>Wine Country Intelligence Report subscription</h3>
+        <details class="cciq-tier-accordion" id="discover">
+          <summary>
+            <div class="cciq-tier-summary-left">
+              <span class="tier-label">Discover</span>
+              <span class="cciq-tier-summary-title">Wine Country Intelligence Report subscription</span>
+            </div>
+            <span class="cciq-tier-summary-price">$1,000/yr<span class="cciq-tier-summary-price-meta">Bundle, 1 county</span></span>
+          </summary>
+          <div class="cciq-tier-body">
           <p class="tier-mindset">"What's happening in my market, and where do operators stand relative to each other?"</p>
           <ul>
             <li>Quarterly Wine Country Intelligence Report per county (25-40 page branded PDF): every tracked winery scored on 8 dimensions, AVA spotlights, AI visibility leaderboard, technical findings, quarter-over-quarter movement</li>
@@ -1137,13 +1231,20 @@
             <a href="mailto:scott@mainstreetiq.com?subject=Subscribe%20to%20CCIQ%20Discover%20Bundle" class="btn btn-primary">Subscribe to Discover &rarr;</a>
             <a href="/samples/wine-country-intelligence-report-sample.pdf" class="btn btn-secondary" target="_blank" rel="noopener">See a sample of the Report</a>
           </div>
-        </div>
+          </div>
+        </details>
 
         <!-- MONITOR -->
-        <div class="cciq-tier-card" id="monitor">
-          <span class="tier-anchor">The operating floor</span>
-          <span class="tier-label">Monitor</span>
-          <h3>Ongoing intelligence subscription</h3>
+        <details class="cciq-tier-accordion" id="monitor">
+          <summary>
+            <div class="cciq-tier-summary-left">
+              <span class="tier-anchor">The operating floor</span>
+              <span class="tier-label">Monitor</span>
+              <span class="cciq-tier-summary-title">Ongoing intelligence subscription</span>
+            </div>
+            <span class="cciq-tier-summary-price">$3,600/yr<span class="cciq-tier-summary-price-meta">or $400/mo (no Discover)</span></span>
+          </summary>
+          <div class="cciq-tier-body">
           <p class="tier-wedge"><strong>Peace of mind that your digital, client-facing presence is as sharp as it can get, every month, not once a year.</strong></p>
           <p class="tier-mindset">"Every winery in the region is being measured monthly. I want to see what you see, when you see it, and act on it."</p>
           <ul>
@@ -1183,12 +1284,19 @@
           <div class="tier-cta">
             <a href="mailto:scott@mainstreetiq.com?subject=Subscribe%20to%20CCIQ%20Monitor" class="btn btn-primary">Subscribe to Monitor &rarr;</a>
           </div>
-        </div>
+          </div>
+        </details>
 
         <!-- MONITOR PLUS -->
-        <div class="cciq-tier-card" id="monitor-plus">
-          <span class="tier-label">Monitor Plus</span>
-          <h3>Deeper analysis subscription</h3>
+        <details class="cciq-tier-accordion" id="monitor-plus">
+          <summary>
+            <div class="cciq-tier-summary-left">
+              <span class="tier-label">Monitor Plus</span>
+              <span class="cciq-tier-summary-title">Deeper analysis subscription</span>
+            </div>
+            <span class="cciq-tier-summary-price">$6,000/yr<span class="cciq-tier-summary-price-meta">or $600/mo (no Discover)</span></span>
+          </summary>
+          <div class="cciq-tier-body">
           <p class="tier-mindset">"Monitor watches my business. I also want to know when the cohort around me is moving, and I want help thinking through what to do about it, every month, without committing to a retainer."</p>
           <p class="tier-wedge"><strong>Monitor Plus extends the watch beyond your business to the cohort around you.</strong> Monitor watches you; Plus also watches your named peers and tells you when they move. On top of the cohort-aware alerts, Plus adds a recurring 1-on-1 conversation with Scott, written commentary, and deeper analysis modules. The next tier up, Engage, adds Scott to the room when partners are coordinating execution.</p>
           <details class="cciq-drift-watch">
@@ -1231,12 +1339,19 @@
           <div class="tier-cta">
             <a href="mailto:scott@mainstreetiq.com?subject=Subscribe%20to%20CCIQ%20Monitor%20Plus" class="btn btn-primary">Subscribe to Monitor Plus &rarr;</a>
           </div>
-        </div>
+          </div>
+        </details>
 
         <!-- DIAGNOSE -->
-        <div class="cciq-tier-card" id="diagnose">
-          <span class="tier-label">Diagnose</span>
-          <h3>Project-based analysis</h3>
+        <details class="cciq-tier-accordion" id="diagnose">
+          <summary>
+            <div class="cciq-tier-summary-left">
+              <span class="tier-label">Diagnose</span>
+              <span class="cciq-tier-summary-title">Project-based analysis</span>
+            </div>
+            <span class="cciq-tier-summary-price">$1,495+<span class="cciq-tier-summary-price-meta">per project</span></span>
+          </summary>
+          <div class="cciq-tier-body">
           <p class="tier-mindset">"Tell me what's wrong with my X."</p>
           <p class="tier-wedge">Four projects. Two ask the same question at different depths (Audit, Audit Pro), one asks a comparative question (Benchmark), one asks the whole-business question (Full Diagnostic). Pick by the question you're trying to answer.</p>
           <details class="cciq-collapse">
@@ -1272,12 +1387,19 @@
           <div class="tier-cta">
             <a href="mailto:scott@mainstreetiq.com?subject=Diagnose%20project%20request" class="btn btn-primary">Request a Diagnose project &rarr;</a>
           </div>
-        </div>
+          </div>
+        </details>
 
         <!-- WORK WITH SCOTT (Engage + Manage) -->
-        <div class="cciq-tier-card tier-talk" id="engage">
-          <span class="tier-label">Engage / Manage</span>
-          <h3>Retainer engagements with Scott</h3>
+        <details class="cciq-tier-accordion tier-talk" id="engage">
+          <summary>
+            <div class="cciq-tier-summary-left">
+              <span class="tier-label">Engage / Manage</span>
+              <span class="cciq-tier-summary-title">Retainer engagements with Scott</span>
+            </div>
+            <span class="cciq-tier-summary-price">Custom<span class="cciq-tier-summary-price-meta">scoped per engagement</span></span>
+          </summary>
+          <div class="cciq-tier-body">
           <p class="tier-mindset">"Help me execute, hold my partners accountable, and put a CFO's lens on the marketing decisions when the stakes are real."</p>
           <p class="tier-wedge">Two retainer paths, scoped on the discovery call. <strong>Engage</strong> is guidance and oversight: Scott advises you and coordinates your partners; you make the calls. <strong>Manage</strong> adds Scott to the room when the call is made: pricing changes, capital allocation, club LTV decisions, board prep. Manage is the CFO function with CCIQ intelligence integrated; Engage is the marketing oversight layer.</p>
           <details class="cciq-collapse">
@@ -1312,7 +1434,8 @@
           <div class="tier-cta">
             <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=cciq-work-with-scott" class="btn btn-primary" target="_blank" rel="noopener">Schedule a discovery call &rarr;</a>
           </div>
-        </div>
+          </div>
+        </details>
 
       </div>
     </div>
@@ -1560,12 +1683,33 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.cciq-tier-card, .case-card, .cciq-framework-cell').forEach(el => {
+    document.querySelectorAll('.cciq-tier-accordion, .case-card, .cciq-framework-cell').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
     });
+
+    // Auto-open the targeted tier accordion when a hash link points to it
+    function openTargetedAccordion() {
+      const hash = window.location.hash;
+      if (!hash) return;
+      let target;
+      try { target = document.querySelector(hash); } catch (_) { return; }
+      if (!target) return;
+      // Walk up the DOM and open every details ancestor (and self if it is one)
+      let el = target;
+      while (el) {
+        if (el.tagName === 'DETAILS') el.open = true;
+        el = el.parentElement;
+      }
+    }
+    window.addEventListener('hashchange', openTargetedAccordion);
+    if (document.readyState !== 'loading') {
+      openTargetedAccordion();
+    } else {
+      document.addEventListener('DOMContentLoaded', openTargetedAccordion);
+    }
 
     // CCIQ report signup: show thank-you state when Zoho redirects back with ?signup=success
     (function(){
