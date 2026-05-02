@@ -34,6 +34,9 @@
 
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Preload hero LCP image (AVIF; browsers without AVIF support skip this) -->
+  <link rel="preload" as="image" href="assets/images/hero-central-coast.avif" type="image/avif" fetchpriority="high">
+
   <!-- Structured Data: WebSite with SearchAction -->
   <script type="application/ld+json">
   {
@@ -219,7 +222,11 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero hero-has-bg">
-    <img src="assets/images/hero-central-coast.jpg" alt="" class="hero-bg" aria-hidden="true">
+    <picture>
+      <source srcset="assets/images/hero-central-coast.avif" type="image/avif">
+      <source srcset="assets/images/hero-central-coast.webp" type="image/webp">
+      <img src="assets/images/hero-central-coast.jpg" alt="" class="hero-bg" aria-hidden="true" fetchpriority="high" decoding="async" width="1600" height="900">
+    </picture>
     <div class="hero-overlay"></div>
     <div class="container">
       <span class="section-label">Fractional CFO + AI — Central Coast, CA</span>
@@ -650,6 +657,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
+          <a href="mailto:scott@mainstreetiq.com">scott@mainstreetiq.com</a>
           <a href="/cfo-assessment">CFO Diagnostic</a>
           <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=homepage" target="_blank" rel="noopener">Book a Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
