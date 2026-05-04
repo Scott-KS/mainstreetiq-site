@@ -210,8 +210,8 @@
         <div class="cciq-form-divider"></div>
 
         <div id="cciq-form-wrap">
-          <h3 class="cciq-form-h">Send my CCIQ Profile and a sample of the Wine Country Intelligence Report</h3>
-          <p class="cciq-form-p">Drop your details and we'll email your CCIQ Profile, plus a sample of the Wine Country Intelligence Report for your county. If you ask for a call, Scott reaches out within 48 business hours. No drip blast, no spam.</p>
+          <h3 class="cciq-form-h">Send my CCIQ Profile</h3>
+          <p class="cciq-form-p">Drop your details and we'll email your personalized CCIQ Profile. If you ask for a call, Scott reaches out within 48 business hours. No drip blast, no spam.</p>
 
           <!-- Zoho Web-to-Lead form -->
           <form action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" id="cciqAssessmentForm" onsubmit="return cciqValidateForm()">
@@ -270,7 +270,7 @@
       <div class="cciq-card cciq-success-card" id="cciq-form-success" style="display:none;">
         <span class="section-label" style="color: var(--color-navy);">Submitted</span>
         <h2 class="section-title">Your CCIQ Profile is on the way.</h2>
-        <p>Check your inbox for your personalized CCIQ Profile, plus the latest Wine Country Intelligence Report for your county. If you asked for a call, Scott will reach out within 48 business hours.</p>
+        <p>Check your inbox for your personalized CCIQ Profile. If you asked for a call, Scott will reach out within 48 business hours.</p>
         <p>If you'd like to talk through your result while it's fresh, you can <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=cciq-assessment-thanks" target="_blank" rel="noopener" class="cciq-link">book a 30-minute call</a>. No pitch, just the data.</p>
       </div>
     </div>
@@ -370,7 +370,7 @@
         </details>
         <details class="faq-item">
           <summary>What happens to my data?</summary>
-          <p>Your responses and contact information are sent to our CRM (Zoho) so we can build and send your CCIQ Profile, plus a sample of the Wine Country Intelligence Report. We do not sell or share your data. Unsubscribe at any time.</p>
+          <p>Your responses and contact information are sent to our CRM (Zoho) so we can build and send your CCIQ Profile. We do not sell or share your data. Unsubscribe at any time.</p>
         </details>
       </div>
     </div>
@@ -1231,20 +1231,20 @@
       if (revIs5MPlus && (wantsBoardPlan || wantsFreeTime || wantsLessWaste)) {
         return { tier: "diagnose_full", followsWith: "manage",
           reasons: [
-            `${rev} operators wanting board-ready planning, time displacement, or wasted-spend reduction land in Manage territory.`,
-            `Full Diagnostic first scopes the opportunity; Manage retainer captures it through CFO + CCIQ marketing intelligence under one voice.`,
-            `Quarterly board package, capital allocation memos, and pricing-decision participation are all in scope.`
+            `At ${rev} revenue with goals around board-ready planning, time displacement, or wasted-spend reduction, the right starting point is a Full Diagnostic that scopes the opportunity quantitatively.`,
+            `From there, most operators in your band convert to a Manage retainer, where Scott participates in pricing, allocation, and capital decisions under a unified CFO + CCIQ marketing intelligence voice.`,
+            `Diagnose first means quarterly board packages, capital allocation memos, and pricing-decision participation all roll out against a shared 90-day plan, not a sales pitch.`
           ]
         };
       }
 
-      // Engage path
+      // Engage path (Diagnose first, converts to Engage)
       if (revIs1Mto5M && (ambIs15x || ambIsAggressive) && (wantsLessWaste || ownerVendorPressure)) {
         return { tier: "diagnose_full", followsWith: "engage",
           reasons: [
-            `Your revenue band and growth ambition make Engage the right fit; we typically convert from a Full Diagnostic.`,
-            `Engage coordinates your existing partner stack rather than displacing it, with Scott as the strategic oversight layer.`,
-            `SLA-committed outcomes on review response, wine club growth, DTC lift, and AI visibility get baked into the engagement.`
+            `At ${rev} revenue with ${amb.toLowerCase()} ambition, the right starting point is a Full Diagnostic that quantifies the opportunity across 5 to 7 levers.`,
+            `Most operators in your situation convert into Engage afterward, where Scott coordinates your existing partner stack against the diagnostic's findings rather than displacing it.`,
+            `Diagnose first means the Engage retainer, if it follows, is scoped against a shared 90-day plan with SLA-committed outcomes on review response, wine club growth, DTC lift, and AI visibility.`
           ]
         };
       }
