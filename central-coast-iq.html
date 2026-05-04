@@ -927,6 +927,139 @@
       .cciq-problem-closing { font-size: 1rem; line-height: 1.6; margin-top: 2rem; }
     }
 
+    /* What This Is / Is Not (comparison section) */
+    .cciq-compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 2rem auto 0;
+    }
+    .cciq-compare-col {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 6px;
+      padding: 1.75rem 2rem;
+    }
+    .cciq-compare-col.cciq-compare-not {
+      background: rgba(0,0,0,0.025);
+      border-color: rgba(0,0,0,0.1);
+    }
+    .cciq-compare-col.cciq-compare-is {
+      border-left: 3px solid var(--accent, #1f4d8c);
+    }
+    .cciq-compare-col h3 {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-sky, #5BB8FF);
+      font-weight: 500;
+      margin: 0 0 1rem;
+    }
+    .cciq-compare-col.cciq-compare-not h3 {
+      color: rgba(0,0,0,0.55);
+    }
+    .cciq-compare-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .cciq-compare-col ul li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-weight: 300;
+    }
+    .cciq-compare-col ul li:last-child { border-bottom: none; }
+    .cciq-compare-col.cciq-compare-not ul li { opacity: 0.7; }
+    @media (max-width: 800px) {
+      .cciq-compare-grid { grid-template-columns: 1fr; gap: 1rem; }
+    }
+
+    /* Find / Serve / Retain loops list */
+    .cciq-loops-list {
+      max-width: 780px;
+      margin: 1.25rem auto 1rem;
+      list-style: none;
+      padding: 0;
+    }
+    .cciq-loops-list li {
+      padding: 0.9rem 0;
+      font-size: 1rem;
+      line-height: 1.6;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      font-weight: 300;
+    }
+    .cciq-loops-list li:last-child { border-bottom: none; }
+    .cciq-loops-list li strong {
+      display: inline-block;
+      min-width: 4.5rem;
+      color: var(--accent, #1f4d8c);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .cciq-loops-calibration {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      font-weight: 300;
+      opacity: 0.8;
+      font-style: italic;
+    }
+    .cciq-loops-transition {
+      max-width: 780px;
+      margin: 2.75rem auto 0;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-sky, #5BB8FF);
+      font-weight: 500;
+    }
+
+    /* Bridge: transitional beat between system and tiers */
+    .cciq-bridge {
+      padding: 3rem 0 2.5rem;
+      text-align: center;
+    }
+    .cciq-bridge-lead {
+      max-width: 720px;
+      margin: 0 auto 0.85rem;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      font-weight: 300;
+      color: var(--color-navy, inherit);
+    }
+    .cciq-bridge-lead strong {
+      font-weight: 500;
+      color: var(--accent, #1f4d8c);
+    }
+    .cciq-bridge-body {
+      max-width: 660px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.65;
+      font-weight: 300;
+      opacity: 0.85;
+    }
+    .cciq-bridge-roi {
+      max-width: 720px;
+      margin: 1.5rem auto 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      font-weight: 400;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    @media (max-width: 720px) {
+      .cciq-bridge { padding: 2.25rem 0 2rem; }
+      .cciq-bridge-lead { font-size: 1.2rem; }
+      .cciq-bridge-roi { font-size: 0.9rem; }
+    }
+
     /* Tier-card grid container */
     .cciq-tier-grid {
       display: grid;
@@ -1007,41 +1140,59 @@
     <div class="hero-overlay"></div>
     <div class="container">
       <span class="section-label">Central Coast IQ | A Mainstreet IQ Practice</span>
-      <h1>You make the wine. We make sure the customer finds you.</h1>
-      <p>Every month we watch the digital surface around your winery, name what's leaking visitors, and give you the choice: fix it yourself, hand it to us, or send the findings to your existing partners.</p>
+      <h1>See exactly where revenue is leaking out of your winery.</h1>
+      <p><strong>Right now, and every month.</strong> Not a marketing agency. A CFO-designed system that identifies the leak, shows what's causing it, and what to fix next. Built for Central Coast wineries.</p>
+      <p style="margin-top: 0.85rem; font-size: 0.95rem; font-style: italic; opacity: 0.85;">If you haven't looked at your visibility, listings, and AI presence in the last 30 days, something has already changed.</p>
       <div class="hero-ctas" style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
         <a href="/cciq-assessment" class="btn btn-primary">Take the CCIQ Assessment &rarr;</a>
-        <a href="/samples/wine-country-intelligence-report-sample.pdf" class="btn btn-outline-white" target="_blank" rel="noopener">See a sample of the Wine Country Intelligence Report</a>
       </div>
       <p style="margin-top: 1rem; font-size: 0.88rem; opacity: 0.8;">Six minutes. A personalized CCIQ Profile. A recommended starting point. No pitch.</p>
     </div>
   </section>
 
-  <!-- ===== PROBLEM ===== -->
+  <!-- ===== WHAT THIS IS ===== -->
   <section>
     <div class="container">
       <div class="section-header">
-        <span class="section-label">The Problem</span>
-        <h2 class="section-title">A visitor who would have loved your winery this week. She never found you.</h2>
+        <span class="section-label">What This Is</span>
+        <h2 class="section-title">Something different.</h2>
+        <p class="section-subtitle">Most operators are doing the right things. Just not in a way that connects back to revenue. Central Coast IQ is a different category of work, designed by a CFO and run as one practice.</p>
       </div>
-      <div class="problem-list">
-        <div class="problem-item">
-          <h3>The weekend planner</h3>
-          <p>Sarah is booking an anniversary weekend in the Santa Ynez Valley. She asks ChatGPT for "a winery with a beautiful patio, great food, and Sunday hours, somewhere quiet." Three names come back. Yours has all three. None of them are yours. Sarah books one of the three, walks in expecting magic, and gets exactly what your Sunday afternoons deliver every week. Your patio sits half empty.</p>
+      <div class="cciq-compare-grid">
+        <div class="cciq-compare-col cciq-compare-is">
+          <h3>What CCIQ is</h3>
+          <ul>
+            <li>A continuously monitored system, every winery, every month</li>
+            <li>Designed by a CFO, focused on revenue decisions, not channel tactics</li>
+            <li>What corporate teams of analysts, marketers, creatives, and managers cost, productized at a winery's scale</li>
+          </ul>
+        </div>
+        <div class="cciq-compare-col cciq-compare-not">
+          <h3>What CCIQ is not</h3>
+          <ul>
+            <li>Not a marketing agency that runs your campaigns</li>
+            <li>Not a SaaS dashboard you log into and ignore</li>
+            <li>Not a one-time consultant who delivers a deck and leaves</li>
+          </ul>
         </div>
       </div>
-      <p class="cciq-problem-closing">There are dozens of visitors like Sarah every week, looking for what your winery already delivers. Your tasting room never sees them, because the gap is not at the door. It is upstream of it, on the digital surface around your winery, and nobody is watching it.</p>
     </div>
   </section>
 
-  <!-- ===== WHAT WE DO ===== -->
+  <!-- ===== HOW THE WORK RUNS ===== -->
   <section class="bg-light">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">The whole digital surface, watched every month, by one team</h2>
-        <p class="section-subtitle">Central Coast IQ runs a single coordinated practice across the work that decides whether visitors find you. Every month, on every winery in our coverage, we do three things.</p>
+        <span class="section-label">How The Work Runs</span>
+        <h2 class="section-title">Three loops decide whether revenue moves.</h2>
       </div>
+      <ul class="cciq-loops-list">
+        <li><strong>Find.</strong> Are the right people encountering you, in search, in maps, in AI assistants, in editorial coverage.</li>
+        <li><strong>Serve.</strong> When they land, does the experience match what they came for.</li>
+        <li><strong>Retain.</strong> Do they stay, come back, and bring others.</li>
+      </ul>
+      <p class="cciq-loops-calibration">The system is consistent across every winery. The scoring is calibrated to how each one makes money.</p>
+      <p class="cciq-loops-transition">Every month, on every winery in our coverage, this is the work.</p>
       <div class="cciq-do-grid">
         <div class="cciq-do-step">
           <span class="cciq-do-num">1</span>
@@ -1059,20 +1210,7 @@
           <p>You decide what happens next. Fix it yourself with the finding in hand. Hand it to us through Engage or Manage. Send it to your existing partners and let them act. Whichever path, the work moves and we track whether it lands.</p>
         </div>
       </div>
-      <p class="cciq-do-closing">That is the practice. The Wine Country Intelligence Report is the quarterly view of it. The Monitor scorecard is the monthly view. The Diagnose project is the deep view of one winery. Every product is a different lens on the same continuous work.</p>
-    </div>
-  </section>
-
-  <!-- ===== PROOF ===== -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Proof</span>
-        <h2 class="section-title">The work is already running. You can see it.</h2>
-        <p class="section-subtitle">Most consultants pitch from a deck. Central Coast IQ is already running the practice across every tracked Central Coast winery, every month. The vendors and tools you are paying separately for, we are running together.</p>
-      </div>
-
-      <div class="cciq-proof-strip">
+      <div class="cciq-proof-strip" style="margin-top: 2.5rem;">
         <div class="cciq-proof-stat">
           <span class="cciq-proof-num">175+</span>
           <p>Santa Barbara County wineries tracked today</p>
@@ -1085,23 +1223,20 @@
           <span class="cciq-proof-num">8</span>
           <p>scoring dimensions applied to every winery, every month</p>
         </div>
-        <div class="cciq-proof-stat cciq-proof-stat-word">
+        <div class="cciq-proof-stat">
           <span class="cciq-proof-num">One</span>
           <p>unified frame across SEO, GEO, AEO, listings, schema, social, and reputation</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="cciq-proof-blocks">
-        <div class="cciq-proof-block">
-          <h3>The methodology is on the public record.</h3>
-          <p>Our SEO, GEO, and AEO framework is documented in <a href="/blog/seo-vs-geo-vs-aeo-explained">the SEO vs GEO vs AEO explainer</a>. The eight dimensions we score are detailed on <a href="/cciq-methodology">the methodology page</a>. The Drift Watch alerts (Search and AI, Reputation, Discoverability Wall, Schema, Social Cadence) run live on every Monitor scorecard. None of this is theory. It is the work.</p>
-        </div>
-        <div class="cciq-proof-block">
-          <h3>The Wine Country Intelligence Report is the visible artifact.</h3>
-          <p>Quarterly, scoring every tracked winery on the same eight dimensions, with quarter-over-quarter movement called out. A sample is one form-fill away.</p>
-          <a href="/samples/wine-country-intelligence-report-sample.pdf" class="btn btn-primary cciq-proof-cta" target="_blank" rel="noopener">See a sample of the Report &rarr;</a>
-        </div>
-      </div>
+  <!-- ===== BRIDGE: WHAT THIS MEANS IN PRACTICE ===== -->
+  <section class="cciq-bridge">
+    <div class="container">
+      <p class="cciq-bridge-lead">Most wineries don't have a visibility problem. They have a <strong>coordination problem</strong>.</p>
+      <p class="cciq-bridge-body">Most wineries are managing this across 5 to 10 tools, 2 to 3 vendors, and no single owner. Signals exist; nobody is connecting them every month, against revenue. That is the work.</p>
+      <p class="cciq-bridge-roi">For most wineries, the cost of one missed channel for one season exceeds the annual cost of Monitor.</p>
     </div>
   </section>
 
@@ -1111,7 +1246,7 @@
       <div class="section-header">
         <span class="section-label">Where to Start</span>
         <h2 class="section-title">Two ways to find the right fit</h2>
-        <p class="section-subtitle">Most operators do not start by picking a tier. They start by figuring out which tier fits. The 6-minute Assessment names a recommended starting point. The comparison strip below lets you scan all six tiers at once. Each tier shows its own mid-band annual benefit by operator scale; wine operations take 18 to 24 months to compound, so year 1 builds the foundation and the higher multiples land in years 2-3 on a maturing baseline.</p>
+        <p class="section-subtitle">Most operators do not start by picking a tier. They start by figuring out which tier fits their situation. The 6-minute Assessment names a recommended starting point. The comparison strip below lets you scan all six tiers at once. Each tier shows its own mid-band annual benefit by operator scale; wine operations take 18 to 24 months to compound, so year 1 builds the foundation and the higher multiples land in years 2-3 on a maturing baseline.</p>
         <div class="cciq-where-cta">
           <a href="/cciq-assessment" class="btn btn-primary">Take the CCIQ Assessment &rarr;</a>
           <span class="cciq-where-or">or</span>
@@ -1245,7 +1380,7 @@
             <span class="cciq-tier-summary-price">$3,600/yr<span class="cciq-tier-summary-price-meta">or $400/mo (no Discover)</span></span>
           </summary>
           <div class="cciq-tier-body">
-          <p class="tier-wedge"><strong>Peace of mind that your digital, client-facing presence is as sharp as it can get, every month, not once a year.</strong></p>
+          <p class="tier-wedge"><strong>Without Monitor, these signals go unwatched. Left alone, they don't stay flat. They compound.</strong> Peace of mind that your digital, client-facing presence is as sharp as it can get, every month.</p>
           <p class="tier-mindset">"Every winery in the region is being measured monthly. I want to see what you see, when you see it, and act on it."</p>
           <ul>
             <li>Monthly auto-generated scorecard: 8-dim score, peer cohort positioning, AI visibility status, review velocity, technical health snapshot</li>
