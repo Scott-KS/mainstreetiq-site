@@ -1,4 +1,4 @@
-# Mainstreet IQ — Brand Guide
+# Main Street IQ — Brand Guide
 
 **Positioning:** CFO + AI. The whole back office, without the overhead.
 
@@ -140,7 +140,7 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
 
 - **Name:** Scott Hess
 - **Title:** Fractional CFO
-- **Company:** Mainstreet IQ
+- **Company:** Main Street IQ
 - **Email:** scott@mainstreetiq.com
 - **Phone:** Not listed publicly — see /card for 1:1 networking use
 - **Website:** mainstreetiq.com

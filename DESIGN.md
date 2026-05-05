@@ -1,6 +1,6 @@
 ---
 name: MSIQ Design Spec
-description: Machine-readable canonical brand voice, color, typography, layout rules and prohibitions for Mainstreet IQ. Loaded by any agent producing MSIQ-branded output.
+description: Machine-readable canonical brand voice, color, typography, layout rules and prohibitions for Main Street IQ. Loaded by any agent producing MSIQ-branded output.
 version: 1.0.0
 applies_to: msiq-site, msiq-claude-skills, all MSIQ deliverables (audits, blog posts, LinkedIn, emails, decks, lead magnets)
 last_reviewed: 2026-05-01
@@ -8,7 +8,7 @@ last_reviewed: 2026-05-01
 
 # MSIQ Design Spec
 
-Canonical brand spec for Mainstreet IQ. Single source of truth for any agent or human producing MSIQ-branded output. Supersedes scattered design notes; memory entries link here for the why.
+Canonical brand spec for Main Street IQ. Single source of truth for any agent or human producing MSIQ-branded output. Supersedes scattered design notes; memory entries link here for the why.
 
 ## Brand tokens
 
