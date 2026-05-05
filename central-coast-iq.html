@@ -1020,6 +1020,82 @@
       font-weight: 500;
     }
 
+    /* Journey strip: standard CCIQ path before tier accordions */
+    .cciq-journey-strip {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: stretch;
+      gap: 0.5rem;
+      max-width: 1000px;
+      margin: 2rem auto 0.75rem;
+    }
+    .cciq-journey-step {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 6px;
+      padding: 1.25rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .cciq-journey-step-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-sky, #5BB8FF);
+      font-weight: 500;
+    }
+    .cciq-journey-step h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin: 0;
+      color: var(--color-navy, inherit);
+    }
+    .cciq-journey-step p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 0;
+      font-weight: 300;
+      opacity: 0.85;
+    }
+    .cciq-journey-arrow {
+      align-self: center;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--color-sky, #5BB8FF);
+      opacity: 0.7;
+    }
+    .cciq-journey-aside {
+      max-width: 880px;
+      margin: 0.5rem auto 1.5rem;
+      padding: 0.85rem 1.25rem;
+      text-align: center;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      font-weight: 300;
+      opacity: 0.85;
+      background: rgba(0,0,0,0.03);
+      border-radius: 4px;
+    }
+    .cciq-journey-aside strong {
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: var(--color-sky, #5BB8FF);
+    }
+    @media (max-width: 800px) {
+      .cciq-journey-strip {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      .cciq-journey-arrow {
+        transform: rotate(90deg);
+        margin: 0 auto;
+        align-self: center;
+      }
+    }
+
     /* Bridge: transitional beat between system and tiers */
     .cciq-bridge {
       padding: 3rem 0 2.5rem;
@@ -1254,6 +1330,28 @@
         </div>
       </div>
 
+      <!-- Journey strip: the standard CCIQ path -->
+      <div class="cciq-journey-strip">
+        <div class="cciq-journey-step">
+          <span class="cciq-journey-step-num">Step 1</span>
+          <h3>Discover</h3>
+          <p>Stay current with the regional view. Free first issue per region.</p>
+        </div>
+        <div class="cciq-journey-arrow" aria-hidden="true">&rarr;</div>
+        <div class="cciq-journey-step">
+          <span class="cciq-journey-step-num">Step 2</span>
+          <h3>Diagnose + Blueprint</h3>
+          <p>Find where revenue is leaking. Get the 90-day priority plan.</p>
+        </div>
+        <div class="cciq-journey-arrow" aria-hidden="true">&rarr;</div>
+        <div class="cciq-journey-step">
+          <span class="cciq-journey-step-num">Step 3</span>
+          <h3>Monitor / Monitor Plus</h3>
+          <p>Watch every month. Act on what changes. Your demand-side P&amp;L.</p>
+        </div>
+      </div>
+      <p class="cciq-journey-aside"><strong>By application:</strong> Engage and Manage for operators who want Scott in the room for execution oversight or major decisions. Selectively scoped, custom-priced.</p>
+
       <!-- Compare-at-a-glance -->
       <p class="cciq-compare-lead">Most operators are already paying $7K to $30K a year across SEO contractors, social tools, agency retainers, listing services, and reputation SaaS. Central Coast IQ replaces those line items or consolidates them under one practice, for less than the sum of the parts. Each tier below is also priced in the language you already speak.</p>
       <div class="cciq-compare">
@@ -1487,20 +1585,20 @@
             <span class="cciq-tier-summary-price">Starting at $1,495<span class="cciq-tier-summary-price-meta">per project</span></span>
           </summary>
           <div class="cciq-tier-body">
-          <p class="tier-mindset">"Tell me what's wrong with my X."</p>
-          <p class="tier-wedge">Four projects. Two ask the same question at different depths (Audit, Audit Pro), one asks a comparative question (Benchmark), one asks the whole-business question (Full Diagnostic). Pick by the question you're trying to answer.</p>
+          <p class="tier-mindset">"Tell me where revenue is leaking, and what to do about it."</p>
+          <p class="tier-wedge">Pick by the axis you care about. <strong>Full Business Diagnostic</strong> goes broad: all eight dimensions, the whole business, ends in your CCIQ Blueprint. The recommended Diagnose tier for most wineries. The other three projects answer narrower questions: a single asset (Website Audit), a single channel in depth (Audit Pro), or a comparative read against named peers (Competitor Benchmark).</p>
           <details class="cciq-collapse">
             <summary><strong>Website Audit</strong> | $1,495 / $1,995 with 30-min readout · 5-7 business days</summary>
             <div class="collapse-body">
               <p>Three-layer SEO, GEO, and AEO audit across every accessible page on the site (sitemap-first discovery up to 100 pages); per-page coverage with affected-URL lists; technical performance (Core Web Vitals, server response, indexation, broken links, redirects, SSL); mobile friendliness (viewport, tap targets, breakpoints); accessibility (WCAG 2.2 AA); wine-specific signal detection (wine club, shipping, Commerce7 health, Wine-Searcher); AI visibility test across 48 monthly queries (12 prompts × 4 assistants); vendor-ready findings.</p>
-              <p><strong>Choose this when:</strong> you have a web person ready to fix things and you need a clean, vendor-ready punch list. If you also want the strategic playbook around the punch list, step up to Audit Pro.</p>
+              <p><strong>Choose this when:</strong> the question is the website specifically, and you have a web person ready to fix what we surface. The narrowest scope. If the question is broader than the website, step up to Full Business Diagnostic instead.</p>
             </div>
           </details>
           <details class="cciq-collapse">
             <summary><strong>Website Audit | Pro</strong> | $2,995 (includes 30-min readout) · 7-10 business days</summary>
             <div class="collapse-body">
               <p>Everything in the Website Audit, plus the strategic-depth modules an agency would charge $5K+ to deliver: keyword and ranking intelligence (GSC + Ahrefs); content depth and freshness audit; E-E-A-T signal audit; per-page mini-audits on the top 10 most-issue pages; multi-viewport mobile rendering (375 / 414 / 768 / 1024 px); multi-page Core Web Vitals on home plus 5-10 high-leverage pages; schema variation analysis with auto-generated JSON-LD; internal link equity flow analysis; local-pack visibility checks; platform-specific remediation guides (Squarespace / Shopify / Commerce7 / Orderport); punch-list export (CSV / Trello / ClickUp / Asana); 6-month KPI roadmap.</p>
-              <p><strong>Choose this when:</strong> you want to understand the strategy, not just hand a list off to your dev. Step up from the base Website Audit when keyword intelligence, content and E-E-A-T audit, and a 6-month KPI roadmap matter to you. Choose this over Competitor Benchmark when the question is about your own site, not how you stack against named peers.</p>
+              <p><strong>Choose this when:</strong> your website is the named bottleneck and you want strategic depth, not just a punch list. Best for wineries where DTC e-commerce or content discovery is doing the heavy lifting. Most wine bottlenecks are cross-channel rather than website-only; if you don't know where the leak is, choose Full Business Diagnostic instead.</p>
             </div>
           </details>
           <details class="cciq-collapse">
@@ -1513,8 +1611,9 @@
           <details class="cciq-collapse">
             <summary><strong>Full Business Diagnostic</strong> | $4,995 / $7,995 with 90-min session · 14-21 business days</summary>
             <div class="collapse-body">
-              <p>Website Audit foundation plus social media analysis; reviews module with Sentiment Synthesizer; store setup audit; wine club audit; conversion journey audit; content gap analysis vs. four named peers; pricing comparison vs. the Valley cohort; backlink profile when available; all 8 dimensions scored; DTC CAC computation; revenue opportunity sizing across 5-7 levers; 90-day priority roadmap with 13 fully-formatted findings; partner recommendations.</p>
-              <p><strong>Choose this when:</strong> you are considering meaningful marketing investment and want a single comprehensive plan, not one project. Includes the Website Audit foundation plus brand, commerce, CRO, pricing, and strategy modules; designed as the on-ramp to a retainer engagement.</p>
+              <p><strong>Your CCIQ Blueprint:</strong> a 90-day priority roadmap with 13 fully-formatted findings, opportunity sizing across 5 to 7 levers, DTC CAC computation, and partner recommendations. The widest-scope Diagnose tier, designed to answer "where is revenue leaking, and what do we do first."</p>
+              <p>Includes: Website Audit foundation; social media analysis; reviews module with Sentiment Synthesizer; store setup audit; wine club audit; conversion journey audit; content gap analysis vs. four named peers; pricing comparison vs. the Valley cohort; backlink profile when available. All 8 dimensions scored.</p>
+              <p><strong>Choose this when:</strong> you don't know where the leak is, or you know there are several. Goes broad across the whole business, ends in the Blueprint. The recommended Diagnose tier for most wineries.</p>
             </div>
           </details>
           <p class="cciq-tier-roi"><strong>Mid-band benefit, year 1:</strong> $5K to $50K at $1M scale (3-15x), $20K to $190K at $5M (4-25x), $50K to $400K at $10M (10-50x). Replaces $2.5K to $50K per project in agency audits, competitive research, or consultancy diagnostics that produce decks instead of fixes.</p>
