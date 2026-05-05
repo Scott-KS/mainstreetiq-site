@@ -457,8 +457,8 @@
             <p>Our visibility test runs against each platform's API. The consumer chat surfaces (claude.ai, chatgpt.com) include web search, conversation history, and a system prompt that the API does not. A logged-in user asking the same question may see different specific recommendations. Our score reflects baseline model knowledge of your brand, which is what informs every higher-context surface, including the chat product you use yourself.</p>
           </div>
           <div class="problem-item">
-            <h3>Three runs per query, majority vote</h3>
-            <p>Each prompt is sent to each platform three times. A brand mention only counts when it appears in a majority of runs. This smooths over the run-to-run variance inherent to AI assistants and keeps the visibility number from swinging on a single sample. With 12 prompts, four platforms, and three repetitions, every monthly score is built from 144 underlying samples.</p>
+            <h3>Variance is real, and we say so</h3>
+            <p>Each prompt runs once against each assistant. AI answers are stochastic; the same question two minutes apart can produce different answers. We do not run repeated samples and average them. We run the 48-query panel once a month at a pinned model snapshot and report the snapshot. The number is a leading indicator, not a precision measurement; the reliability comes from cadence and timestamped repeatability, not from oversampling.</p>
           </div>
           <div class="problem-item">
             <h3>Pinned model snapshots and timestamped runs</h3>
@@ -466,7 +466,7 @@
           </div>
           <div class="problem-item">
             <h3>Why we re-run, not expand</h3>
-            <p>The variance in AI visibility lives in how a model answers a single question, not in how many questions you ask. Twelve prompts at three runs each is more reliable than thirty prompts run once. The bigger lever is cadence. We re-run the same panel monthly and report the trend, so a winery's improvement after schema or content fixes is the story, not a single point estimate.</p>
+            <p>The variance in AI visibility lives in how a model answers a single question, not in how many questions you ask. A focused twelve-prompt panel run monthly is more reliable than a thirty-prompt panel run once. The bigger lever is cadence. We re-run the same panel monthly and report the trend, so a winery's improvement after schema or content fixes is the story, not a single point estimate.</p>
           </div>
           <div class="problem-item">
             <h3>What we do not claim to measure</h3>
