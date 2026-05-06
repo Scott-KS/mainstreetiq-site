@@ -269,8 +269,12 @@
       <div class="cciq-card cciq-success-card" id="cciq-form-success" style="display:none;">
         <span class="section-label" style="color: var(--color-navy);">Submitted</span>
         <h2 class="section-title">Your CCIQ Profile is on the way.</h2>
-        <p>Check your inbox for your personalized CCIQ Profile. If you asked for a call, Scott will reach out within 48 business hours.</p>
-        <p>If you'd like to talk through your result while it's fresh, you can <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=cciq-assessment-thanks" target="_blank" rel="noopener" class="cciq-link">book a 30-minute call</a>. No pitch, just the data.</p>
+        <p>Check your inbox for your personalized CCIQ Profile.</p>
+        <p style="margin-top: 1.5rem;"><strong>Want to talk through your result while it's fresh?</strong> Thirty minutes with Scott, no pitch.</p>
+        <div style="margin-top: 1rem; text-align: center;">
+          <a id="cciqBookCallBtn" href="https://calendly.com/scott_mainstreetiq/30-min-cciq-conversation?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=cciq-assessment-thanks" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Book your 30-min CCIQ conversation &rarr;</a>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.9em; opacity: 0.8;">If you asked for a call in your follow-up preference, Scott will reach out within 48 business hours either way. Otherwise, the profile is yours to keep.</p>
       </div>
     </div>
   </section>
@@ -1702,16 +1706,47 @@
       ].join(' || ');
       document.getElementById('cciqDescription').value = desc;
 
+      // Capture lead data for post-redirect Calendly prefill on the success card
+      try {
+        sessionStorage.setItem('cciqLeadData', JSON.stringify({
+          first_name: form['First Name'].value.trim(),
+          last_name: lastName,
+          email: email,
+          company: company
+        }));
+      } catch (e) { /* sessionStorage unavailable in private browsing; non-fatal, link falls back to default */ }
+
       return true;
     }
 
-    // On thank-you redirect, swap to success card
+    // On thank-you redirect, swap to success card and prefill the Calendly link with the lead's name + email
     (function(){
       if (new URLSearchParams(window.location.search).get('submitted') === 'success') {
         introEl.style.display = 'none';
         qCardEl.style.display = 'none';
         resultsEl.style.display = 'none';
         successEl.style.display = 'block';
+
+        // Prefill the Calendly book-call link with the data captured pre-submit
+        try {
+          var leadData = JSON.parse(sessionStorage.getItem('cciqLeadData') || 'null');
+          if (leadData) {
+            var bookBtn = document.getElementById('cciqBookCallBtn');
+            if (bookBtn) {
+              var fullName = ((leadData.first_name || '') + ' ' + (leadData.last_name || '')).trim();
+              var params = new URLSearchParams({
+                name: fullName,
+                email: leadData.email || '',
+                utm_source: 'mainstreetiq-site',
+                utm_medium: 'website',
+                utm_campaign: 'cciq-assessment-thanks'
+              });
+              bookBtn.href = 'https://calendly.com/scott_mainstreetiq/30-min-cciq-conversation?' + params.toString();
+            }
+            sessionStorage.removeItem('cciqLeadData');
+          }
+        } catch (e) { /* sessionStorage unavailable; default link still works without prefill */ }
+
         setTimeout(function() {
           var t = document.getElementById('assessment');
           if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
