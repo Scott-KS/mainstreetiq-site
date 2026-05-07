@@ -1072,7 +1072,7 @@
           { v: "Outperform a specific named competitor I have in mind" },
           { v: "Free up my time so I can focus on winemaking and team" },
           { v: "Reduce wasted marketing spend / agency frustration" },
-          { v: "Get a board-ready plan for growth (capital raise, expansion, succession)" },
+          { v: "Get a board-ready plan for the next phase of growth" },
           { v: "Build / refresh my brand identity" }
         ]
       },
@@ -1083,8 +1083,7 @@
           { v: "Hold steady (focus is on operations, not growth)" },
           { v: "Grow 1.5x" },
           { v: "Grow 2x" },
-          { v: "Grow 3x or more" },
-          { v: "Exit / succession-prep horizon" }
+          { v: "Grow 3x or more" }
         ]
       },
       {
@@ -1134,8 +1133,8 @@
         headline: "Reduce wasted marketing spend by 20-30%",
         detail: "Engage tier typically captures 20-30% effective CAC reduction by aligning the partner stack against the same monthly scorecard."
       },
-      "Get a board-ready plan for growth (capital raise, expansion, succession)": {
-        headline: "Build a board-ready plan for growth or transition",
+      "Get a board-ready plan for the next phase of growth": {
+        headline: "Build a board-ready plan for the next phase of growth",
         detail: "Diagnose: Full Business Diagnostic produces a 90-day plan with quantified opportunity sizing across 5-7 levers. Manage tier adds quarterly board package on an ongoing basis."
       },
       "Build / refresh my brand identity": {
@@ -1199,7 +1198,7 @@
       "manage": {
         headline: "Manage: fractional CFO + CCIQ marketing intelligence under one voice",
         pricing: "Custom retainer scoped per engagement. Best fit at $3M+ revenue.",
-        roi: "$150K-$500K year 1 at $5M scale plus capital event support, 6-12x ROI at maturity. Scott in the room for pricing, allocation, and major decisions."
+        roi: "$150K-$500K year 1 at $5M scale, 6-12x ROI at maturity. Scott in the room for pricing, allocation, and major decisions."
       }
     };
 
@@ -1221,7 +1220,7 @@
       const revIs300Kto1M = (rev === "$300K - $750K" || rev === "$750K - $2M");
       const revUnder300K = (rev === "Under $300K");
 
-      const wantsBoardPlan = out.indexOf("Get a board-ready plan for growth (capital raise, expansion, succession)") !== -1;
+      const wantsBoardPlan = out.indexOf("Get a board-ready plan for the next phase of growth") !== -1;
       const wantsFreeTime = out.indexOf("Free up my time so I can focus on winemaking and team") !== -1;
       const wantsLessWaste = out.indexOf("Reduce wasted marketing spend / agency frustration") !== -1;
       const wantsCompetitorWin = out.indexOf("Outperform a specific named competitor I have in mind") !== -1;
@@ -1349,7 +1348,7 @@
       };
       const ambWt = {
         "Grow 2x": 100, "Grow 3x or more": 95, "Grow 1.5x": 75,
-        "Exit / succession-prep horizon": 60, "Hold steady (focus is on operations, not growth)": 25
+        "Hold steady (focus is on operations, not growth)": 25
       };
       const r = revWt[answers.revenue_band] || 50;
       const t = tlWt[answers.timeline] || 35;
@@ -1667,7 +1666,7 @@
       var ans = cciqState.answers;
       var revWt = { "$5M - $10M": 100, "$2M - $5M": 90, "$750K - $2M": 70, "$10M+": 60, "$300K - $750K": 40, "Under $300K": 15, "Prefer not to say": 50 };
       var tlWt = { "Immediate; ready to engage now": 100, "Next 30 days": 90, "30 - 90 days": 65, "90+ days": 35, "Just exploring, no specific timeline": 15 };
-      var ambWt = { "Grow 2x": 100, "Grow 3x or more": 95, "Grow 1.5x": 75, "Exit / succession-prep horizon": 60, "Hold steady (focus is on operations, not growth)": 25 };
+      var ambWt = { "Grow 2x": 100, "Grow 3x or more": 95, "Grow 1.5x": 75, "Hold steady (focus is on operations, not growth)": 25 };
       var r = revWt[ans.revenue_band] || 50, t = tlWt[ans.timeline] || 35, a = ambWt[ans.ambition] || 50;
       var rescored = Math.round((r * 0.40) + (dm * 0.25) + (t * 0.20) + (a * 0.15));
       var bucket;
