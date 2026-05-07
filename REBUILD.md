@@ -16,7 +16,7 @@ This is **not** a content draft. Page copy is drafted in subsequent PRs, with `c
 2. **Lead magnet.** CFO Assessment leads on the new home. Existing `/cfo-assessment` migrates to `/assessment`.
 3. **CCIQ.com.** Sunset clean. Full 301 map to `mainstreetiq.com/wine`. Domain stays registered; DNS retires after 90 days of stable redirect traffic.
 4. **Verticals at launch.** Wine, Elective Medicine, Wellness & Longevity, Hospitality, Food & Beverage. Five.
-5. **Tier ladder.** Discover (segment-specific only, not in top nav), Monitor, Diagnose, Engage, Manage. **Capital Event tier retired** as of 2026-05-05; canonical-facts.md updated. Capital-event-shaped work is sold as a Diagnose project or an Engage/Manage retainer addition.
+5. **Tier ladder.** Discover (segment-specific only, not in top nav), Monitor, Diagnose, Engage, Manage. **Capital Event tier and the four underlying SKUs (Capital Raise Prep, M&A Acquisition Diligence Support, Lender Package Prep, Succession / Exit Planning) removed entirely** as of 2026-05-07. Operators with active capital events are routed to their banker, attorney, or audit firm. Do not add this work back into any tier.
 6. **Diagnose absorbs all one-time projects.** No standalone `/audit` page. Audit Pro is one of the projects under Diagnose.
 7. **Pricing.** Wine pricing canonical from `MSIQ/canonical-facts.md`. Pricing for Elective Medicine, Wellness & Longevity, Hospitality, F&B is **TBD by Scott** before launch; templates use placeholders until filled.
 8. **Case studies on launch.** Wine = existing CCIQ portfolio. Wellness & Longevity = Lucid (named on launch if closed by mid-June; design-partner CTA otherwise). Elective Medicine = Eternity Health (same conditions). Hospitality + F&B = design-partner CTAs.
@@ -249,6 +249,18 @@ Consolidated Billing $500/mo, Additional partner track $500/mo, Additional named
 | 6 | Jun 10-16 | Chrome DevTools walk-through of every page. Reality-check claims vs canonical-facts.md. Brand-guardian + accessibility audits. End-to-end CTA tests. Update sitemap.xml, llms.txt, robots.txt. |
 | 7 | Jun 17-23 | Soft launch on staging subdomain. 3-5 advisor reviews. Buffer for structural fixes. |
 | 8 | Jun 24-30 | Apply advisor feedback. Final reality check. Merge `july-rebuild` to main. DNS flip + cciq.com 301s active July 1. |
+
+## Hygiene checkpoints
+
+Items rolled into the rebuild from prior synthesis work. Tracked here so they don't get lost in week-level summaries.
+
+**Week 1-2 templates (May 6-19):** Bake `Organization` + `WebSite` JSON-LD into the new home template (`@id`: `https://mainstreetiq.com/#organization`, `@id`: `https://mainstreetiq.com/#website`, with `WebSite.publisher` cross-referencing the Organization). Classical-search hygiene per `feedback_no_overclaim_geo_mechanism`, not framed as AI-citation lever.
+
+**Week 6 (Jun 10-16) robots.txt:** explicit `Allow: /` rules for GPTBot, Google-Extended, anthropic-ai, ClaudeBot, PerplexityBot, CCBot, Bytespider. Forward-compatibility hedge with uncertain payoff, no citation guarantee.
+
+**Week 6 (Jun 10-16) blog post schemas:** cross-check all `BlogPosting`/`Article` schemas reference the new homepage Organization via `"publisher": {"@id": "https://mainstreetiq.com/#organization"}` rather than embedding standalone Organization blobs. Batch-fix orphans in one commit.
+
+Source: Brodie Clark synthesis 2026-04-28, originally queued as a separate hygiene PR but deferred to rebuild scope 2026-05-07 (homepage `/` is being replaced; standalone hygiene PR is throwaway).
 
 ## Open / pending decisions
 
