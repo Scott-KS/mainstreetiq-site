@@ -78,8 +78,8 @@ The kit splits into three layers: full lockups (mark + name + tagline), namemark
 |---|---|---|
 | `logo-full-light.svg` / `-dark.svg` | Lockup | Hero sections, marketing materials, deliverable covers |
 | `logo-stacked-light.svg` / `-dark.svg` | Lockup | Social cards, square formats, email sigs |
-| `logo-horizontal-light.svg` / `-dark.svg` | Lockup | Compact horizontal applications |
-| `logo-namemark-light.svg` / `-dark.svg` | Mark + name | Nav headers (tagline too small to read) |
+| `logo-horizontal-light.svg` / `-dark.svg` | Lockup | Nav headers (default), footer, compact horizontal applications |
+| `logo-namemark-light.svg` / `-dark.svg` | Mark + name | Reserved alternative when tagline space is too tight (currently unused on the site) |
 | `logo-mark-light.svg` / `-dark.svg` | Component | App icons, social avatars, small spaces |
 | `logo-wordmark-light.svg` / `-dark.svg` | Component | Compositing, text-only contexts |
 | `logo-tagline-light.svg` / `-dark.svg` | Component | Footers, sub-block under custom marks |
