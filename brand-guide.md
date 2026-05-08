@@ -1,15 +1,18 @@
 # Main Street IQ — Brand Guide
 
-**Positioning:** CFO + AI. The whole back office, without the overhead.
+**Positioning:** AI-Augmented Strategic Advisory.
 
 ---
 
 ## Colors
 
+### Brand palette (3 blues + warm neutrals)
+
 | Token | Hex | Usage |
 |---|---|---|
 | Midnight | `#0F1C2E` | Dark backgrounds, footer, hero overlays, email header/footer bg |
 | Navy | `#2B4E8C` | Primary — CTAs, headings, logo on light bg, card top-borders, button bg |
+| Navy Hover | `#1A3560` | Hover state for Navy CTAs and primary buttons |
 | Sky | `#5BB8FF` | Accent — links, hover states, emphasis on dark backgrounds |
 | Dark Text | `#1A1F2B` | Primary body text on light backgrounds |
 | Neutral | `#6B7480` | Secondary text, captions, nav links, muted body copy |
@@ -17,10 +20,21 @@
 | Ice | `#FAFAF7` | Light section backgrounds, off-white (not pure white) |
 | White | `#FFFFFF` | Card backgrounds, clean sections |
 
+### Semantic palette (functional UI states only)
+
+These exist outside the brand palette for state semantics. Use only for the listed purpose.
+
+| Token | Hex | Usage |
+|---|---|---|
+| Error | `#B54040` | Form validation errors, destructive action confirmations |
+| Success | `#10B981` | Success states, form submission confirmations |
+
+CSS tokens: `--color-error`, `--color-success`. Do not introduce other semantic colors without updating this guide and `canonical-facts.md`.
+
 ### Color rules
 - **Dark sections** use Midnight (`#0F1C2E`) background with white text. Links/accents use Sky (`#5BB8FF`).
 - **Light sections** use Ice (`#FAFAF7`) or White background. Headings and CTAs use Navy (`#2B4E8C`). Body text uses Dark Text (`#1A1F2B`) or Neutral (`#6B7480`).
-- **Buttons** — primary is Navy bg with white text. On dark backgrounds, use white bg with Navy text.
+- **Buttons** — primary is Navy bg with white text. Hover darkens to Navy Hover (`#1A3560`). On dark backgrounds, use white bg with Navy text.
 - **No gold, no warm accent colors.** The old gold (`#D4913B`) has been fully retired.
 
 ---
@@ -58,19 +72,20 @@ All files in `assets/logos/`. Available in SVG format.
 
 ### Variants
 
-| File | Format | Use case |
+The kit splits into three layers: full lockups (mark + name + tagline), namemark (mark + name only), and standalone components (each piece alone).
+
+| File | Layer | Use case |
 |---|---|---|
-| `logo-horizontal-light.svg` | Horizontal | Nav header on light/white pages |
-| `logo-horizontal-dark.svg` | Horizontal | Nav header on dark pages, footer |
-| `logo-full-light.svg` | Full lockup | Hero sections, marketing materials (light bg) |
-| `logo-full-dark.svg` | Full lockup | Hero sections, marketing materials (dark bg) |
-| `logo-stacked-light.svg` | Stacked | Social cards, square formats, email signatures (light bg) |
-| `logo-stacked-dark.svg` | Stacked | Social cards, square formats (dark bg) |
-| `logo-mark-light.svg` | Icon only | Favicons, app icons, small spaces (light bg) |
-| `logo-mark-dark.svg` | Icon only | Favicons, app icons, small spaces (dark bg) |
+| `logo-full-light.svg` / `-dark.svg` | Lockup | Hero sections, marketing materials, deliverable covers |
+| `logo-stacked-light.svg` / `-dark.svg` | Lockup | Social cards, square formats, email sigs |
+| `logo-horizontal-light.svg` / `-dark.svg` | Lockup | Compact horizontal applications |
+| `logo-namemark-light.svg` / `-dark.svg` | Mark + name | Nav headers (tagline too small to read) |
+| `logo-mark-light.svg` / `-dark.svg` | Component | App icons, social avatars, small spaces |
+| `logo-wordmark-light.svg` / `-dark.svg` | Component | Compositing, text-only contexts |
+| `logo-tagline-light.svg` / `-dark.svg` | Component | Footers, sub-block under custom marks |
 | `favicon.svg` | Icon | Browser tab favicon |
 
-All SVGs embed the sub-tagline: **CFO + AI -- THE WHOLE BACK OFFICE** in Outfit.
+All lockup SVGs embed the tagline: **AI-Augmented Strategic Advisory** in Outfit, Title Case.
 
 ### Logo usage rules
 - Light-bg pages: use `-light` logo (navy on white/ice)
