@@ -6,7 +6,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Colors — MSIQ Brand System (CFO + AI) — consolidated: 3 blues + warm neutrals */
+  /* Colors — MSIQ Brand System — consolidated: 3 blues + warm neutrals */
   --color-midnight:    #0F1C2E;   /* single dark — backgrounds, overlays, footer */
   --color-navy:        #2B4E8C;   /* primary — CTAs, headings, logo, card top-border */
   --color-sky:         #5BB8FF;   /* single accent — links, hover, emphasis on dark bg */
@@ -15,6 +15,9 @@
   --color-ice:         #FAFAF7;   /* true warm off-white — light sections */
   --color-white:       #FFFFFF;
   --color-dark-text:   #1A1F2B;   /* near-black (slightly warm) — primary text on light */
+  --color-navy-hover:  #1A3560;   /* hover state for Navy CTAs/buttons */
+  --color-error:       #B54040;   /* semantic — form validation, destructive actions */
+  --color-success:     #10B981;   /* semantic — success states, confirmations */
 
   /* Legacy variable aliases — remapped to consolidated palette */
   --navy:       #0F1C2E;
@@ -26,7 +29,6 @@
   --off-white:  #FAFAF7;
   --gold:       #2B4E8C;      /* accent → navy everywhere gold was used on light bg */
   --gold-light: #5BB8FF;      /* accent-lighter → sky for highlights */
-  --gold-dark:  #1A3560;      /* hover state for navy */
   --accent:     #2B4E8C;
   --accent-light:#5BB8FF;
   --success:    #10b981;
@@ -104,7 +106,7 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   background: var(--color-navy);
   color: var(--white);
 }
-.btn-primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--color-navy-hover); transform: translateY(-1px); }
 .btn-secondary {
   background: transparent;
   color: var(--color-dark-text);
@@ -196,7 +198,7 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   letter-spacing: 0.08em !important;
   transition: background 0.2s !important;
 }
-.nav-cta:hover { background: var(--gold-dark) !important; }
+.nav-cta:hover { background: var(--color-navy-hover) !important; }
 
 /* Mobile nav toggle */
 .nav-toggle {
@@ -778,7 +780,7 @@ section { padding: var(--section-padding); }
 }
 .post-body blockquote p { font-style: italic; color: var(--navy); margin: 0; }
 .post-body .tldr {
-  background: var(--ice, #eef4fb);
+  background: var(--ice, #FAFAF7);
   border-left: 3px solid var(--navy);
   border-radius: 0 8px 8px 0;
   padding: 1.25rem 1.5rem;
@@ -789,7 +791,7 @@ section { padding: var(--section-padding); }
 .post-body strong { color: var(--navy); }
 
 .post-body .series-nav {
-  background: var(--ice, #eef4fb);
+  background: var(--ice, #FAFAF7);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 1.25rem 1.5rem;
