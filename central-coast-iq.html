@@ -380,6 +380,41 @@
       font-weight: 400;
       opacity: 0.8;
     }
+    /* Anchor variant: each price row is clickable, links to a Stripe Payment
+       Link. Arrow on the right side signals affordance; slides + brightens
+       on hover. Subtle background tint reinforces the row as actionable. */
+    a.cciq-price-row {
+      position: relative;
+      padding-right: 1.6rem;
+      text-decoration: none;
+      color: inherit;
+      transition: background-color 150ms ease;
+    }
+    a.cciq-price-row::after {
+      content: '\2192';
+      position: absolute;
+      right: 0.4rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #2B4E8C;
+      font-weight: 600;
+      font-size: 1rem;
+      opacity: 0.45;
+      transition: transform 150ms ease, opacity 150ms ease;
+    }
+    a.cciq-price-row:hover {
+      background: rgba(43, 78, 140, 0.05);
+    }
+    a.cciq-price-row:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) translateX(3px);
+    }
+    /* Sub-rows already use ::before for the indent glyph; adjust the arrow
+       offset and size to stay visually consistent at smaller text scale. */
+    a.cciq-price-row.cciq-price-sub::after {
+      font-size: 0.85rem;
+      right: 0.35rem;
+    }
     .cciq-pricing-footnote {
       font-size: 0.78rem;
       opacity: 0.65;
@@ -1453,23 +1488,23 @@
           </details>
           <p class="cciq-tier-roi"><strong>Mid-band annual benefit:</strong> $5K to $15K at $1M scale (5-15x), $10K to $30K at $5M (10-30x), $25K to $75K at $10M (25-75x). Replaces $5K to $25K/yr in ad-hoc research and the once-a-year agency "state of the region" deck.</p>
           <div class="cciq-pricing-block">
-            <a class="cciq-price-row" href="https://buy.stripe.com/3cIbJ2d0T7xO1eG1M9a3u00" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+            <a class="cciq-price-row" href="https://buy.stripe.com/3cIbJ2d0T7xO1eG1M9a3u00" target="_blank" rel="noopener">
               <span><strong>Bundle (recommended)</strong><span class="price-amt-sub">Save ~38% vs single issues. Regional + Pricing reports.</span></span>
               <span class="price-amt">$1,000/yr<span class="price-amt-sub">$800/yr each additional county</span></span>
             </a>
-            <a class="cciq-price-row" href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+            <a class="cciq-price-row" href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener">
               <span>Wine Country Intelligence Report only</span>
               <span class="price-amt">$800/yr<span class="price-amt-sub">$640/yr each additional county</span></span>
             </a>
-            <a class="cciq-price-row cciq-price-sub" href="https://buy.stripe.com/cNi9AUe4X19q4qS4Yla3u02" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+            <a class="cciq-price-row cciq-price-sub" href="https://buy.stripe.com/cNi9AUe4X19q4qS4Yla3u02" target="_blank" rel="noopener">
               <span>Single issue (quarterly)</span>
               <span class="price-amt">$250</span>
             </a>
-            <a class="cciq-price-row" href="https://buy.stripe.com/dRmdRae4X5pG0aC3Uha3u03" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+            <a class="cciq-price-row" href="https://buy.stripe.com/dRmdRae4X5pG0aC3Uha3u03" target="_blank" rel="noopener">
               <span>Wine Pricing Report only</span>
               <span class="price-amt">$500/yr<span class="price-amt-sub">$400/yr each additional county</span></span>
             </a>
-            <a class="cciq-price-row cciq-price-sub" href="https://buy.stripe.com/5kQ6oI3qjg4k2iKfCZa3u04" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+            <a class="cciq-price-row cciq-price-sub" href="https://buy.stripe.com/5kQ6oI3qjg4k2iKfCZa3u04" target="_blank" rel="noopener">
               <span>Single issue (semi-annual)</span>
               <span class="price-amt">$300</span>
             </a>
