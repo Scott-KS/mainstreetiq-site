@@ -410,7 +410,13 @@
       transform: translateY(-50%) translateX(3px);
     }
     /* Sub-rows already use ::before for the indent glyph; adjust the arrow
-       offset and size to stay visually consistent at smaller text scale. */
+       offset and size to stay visually consistent at smaller text scale.
+       Also reclaim right-padding because the .cciq-price-sub div rule sets
+       padding shorthand to 0 on the right, which would let the price text
+       overlap the arrow. */
+    a.cciq-price-row.cciq-price-sub {
+      padding-right: 1.4rem;
+    }
     a.cciq-price-row.cciq-price-sub::after {
       font-size: 0.85rem;
       right: 0.35rem;
@@ -1555,14 +1561,14 @@
           </details>
           <p class="cciq-tier-roi"><strong>Mid-band annual benefit:</strong> $5K to $30K at $1M scale (1.5-8x), $10K to $75K at $5M (2-20x), $30K to $150K at $10M (8-40x). Replaces $1K to $6K/yr in fragmented reputation and analytics SaaS most operators read once a quarter, if at all.</p>
           <div class="cciq-pricing-block">
-            <div class="cciq-price-row">
+            <a class="cciq-price-row" href="https://buy.stripe.com/7sYfZi7Gz7xOcXo1M9a3u06" target="_blank" rel="noopener">
               <span><strong>Annual</strong><span class="price-amt-sub">Save 25% vs monthly. Includes Discover Bundle, $1,000 value, at no additional cost.</span></span>
               <span class="price-amt">$3,600/yr</span>
-            </div>
-            <div class="cciq-price-row">
+            </a>
+            <a class="cciq-price-row" href="https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05" target="_blank" rel="noopener">
               <span>Monthly<span class="price-amt-sub">Discover Bundle not included; available separately at $1,000/yr.</span></span>
               <span class="price-amt">$400/mo</span>
-            </div>
+            </a>
           </div>
           <p class="cciq-best-for"><strong>Best for:</strong> Any operator who wants to act on the data, not just read about the region. Discover keeps the door open if you are not yet ready; Monitor is the floor for participants. Most operators start here.</p>
           <div class="tier-cta">
@@ -1611,14 +1617,14 @@
           </details>
           <p class="cciq-tier-roi"><strong>Mid-band annual benefit:</strong> $15K to $60K at $1M scale (2.5-10x), $25K to $120K at $5M (4-20x), $50K to $250K at $10M (8-40x). Replaces $4K to $12K/yr in reputation and analytics SaaS plus 1-on-1 advisory hours pieced together from agency partners and consultants.</p>
           <div class="cciq-pricing-block">
-            <div class="cciq-price-row">
+            <a class="cciq-price-row" href="https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08" target="_blank" rel="noopener">
               <span><strong>Annual</strong><span class="price-amt-sub">Save ~17% vs monthly. Includes Discover Bundle, $1,000 value, at no additional cost.</span></span>
               <span class="price-amt">$6,000/yr</span>
-            </div>
-            <div class="cciq-price-row">
+            </a>
+            <a class="cciq-price-row" href="https://buy.stripe.com/aFa9AUe4X2du3mO76ta3u07" target="_blank" rel="noopener">
               <span>Monthly<span class="price-amt-sub">Discover Bundle not included; available separately at $1,000/yr.</span></span>
               <span class="price-amt">$600/mo</span>
-            </div>
+            </a>
           </div>
           <p class="cciq-best-for"><strong>Best for:</strong> $1M to $3M operators who want depth without retainer commitment, or larger operators who self-execute strongly. Operators stuck deciding between Monitor and Engage often land here.</p>
           <div class="tier-cta">
