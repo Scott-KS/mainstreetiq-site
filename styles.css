@@ -490,6 +490,86 @@ section { padding: var(--section-padding); }
 .footer-social a { color: rgba(255,255,255,0.4); transition: color 0.2s; }
 .footer-social a:hover { color: var(--gold); }
 
+/* --- Footer newsletter --- */
+.footer-newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-newsletter-pitch h4 {
+  color: var(--white);
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0 0 0.4rem;
+  font-weight: 600;
+}
+.footer-newsletter-pitch p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+}
+.footer-newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.footer-newsletter-form .footer-newsletter-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.footer-newsletter-form input[type="email"] {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--white);
+  font: inherit;
+  font-size: 0.95rem;
+  border-radius: 4px;
+}
+.footer-newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-navy);
+  background: rgba(255,255,255,0.08);
+}
+.footer-newsletter-form input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+.footer-newsletter-form button {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-navy);
+  color: var(--white);
+  border: none;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.footer-newsletter-form button:hover { background: var(--color-navy-hover); }
+.footer-newsletter-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+.footer-newsletter-msg {
+  flex: 0 0 100%;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  min-height: 1.25rem;
+}
+.footer-newsletter-msg.ok { color: #6dd2a5; }
+.footer-newsletter-msg.err { color: #f08585; }
+@media (max-width: 900px) {
+  .footer-newsletter { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+
 /* --- About page --- */
 .about-hero {
   padding: 10rem 0 4rem;

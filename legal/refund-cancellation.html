@@ -150,6 +150,18 @@ Email: billing@mainstreetiq.com</p>
 
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-newsletter">
+        <div class="footer-newsletter-pitch">
+          <h4>Founder-to-founder thinking on revenue</h4>
+          <p>One short note when there’s something worth saying. No drip, no sequence, no pitch.</p>
+        </div>
+        <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+          <input type="email" id="footerNewsletterEmail" name="email" placeholder="you@company.com" required autocomplete="email" maxlength="100" aria-label="Email address">
+          <input type="text" name="honeypot" class="footer-newsletter-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit">Subscribe</button>
+          <div class="footer-newsletter-msg" id="footerNewsletterMsg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo"><img src="../assets/logos/logo-horizontal-dark.svg" alt="Main Street IQ - AI-Augmented Strategic Advisory"></a>
@@ -190,6 +202,8 @@ Email: billing@mainstreetiq.com</p>
       </div>
     </div>
   </footer>
+
+  <script src="/assets/js/newsletter.js" defer></script>
 
   <script>
     const header = document.getElementById('site-header');
